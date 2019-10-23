@@ -1,0 +1,47 @@
+****************************************
+Report : power
+        -analysis_effort low
+Design : Mole
+Version: M-2016.12
+Date   : Thu Oct 17 21:17:54 2019
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /usr/cad/CBDK/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 401.4336 uW   (96%)
+  Net Switching Power  =  14.9956 uW    (4%)
+                         ---------
+Total Dynamic Power    = 416.4292 uW  (100%)
+
+Cell Leakage Power     =  12.7191 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.3844        9.2217e-04        5.5508e+06            0.3908  (  91.07%)
+sequential     7.7801e-03        6.1765e-04        1.2001e+06        9.5979e-03  (   2.24%)
+combinational  9.2961e-03        1.3456e-02        5.9682e+06        2.8720e-02  (   6.69%)
+--------------------------------------------------------------------------------------------------
+Total              0.4014 mW     1.4996e-02 mW     1.2719e+07 pW         0.4291 mW
