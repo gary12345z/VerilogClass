@@ -1,9 +1,9 @@
 //Please enter which module you want to test:
 `define Mole 
 //Please enter the name of the wave file:
-`define DUMPFILENAME "syn.fsdb"
+`define DUMPFILENAME "rtl.fsdb"
 //SYN
-`define SYN
+//`define SYN
 
 `timescale 10ns/100ps
 module test();
@@ -135,9 +135,171 @@ module test();
 	Mole U5(Game_start, Set, Clk, Seed, Hit_point, Countdown, Score, Good_mole, Bad_mole);
 	initial begin
 		Seed = 123456789;
+		$display("- Seed:%b, %b\n",Seed[29:15],Seed[14:0]);
 		Hit_point = 0;
 		Game_start = 0;
 		#10 Game_start = 1;
+		$display("- Game Start");
+		#5 Game_start = 0;
+		wait(Good_mole)
+		$display("- Go");
+		//time:30
+#4 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#5;
+//score:6
+//time:29
+#6 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#3;
+//score:10
+//time:28
+#6 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#3;
+//score:14
+//time:27
+#6 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#3;
+//score:18
+//time:26
+#5 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#4;
+//score:23
+//time:25
+#4 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#5;
+//score:29
+//time:24
+#3 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#6;
+//score:36
+//time:23
+#5 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#4;
+//score:41
+//time:22
+#5 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#4;
+//score:46
+//time:21
+#4 Hit_point = Bad_mole;
+#1 Hit_point = 0;
+#5;
+//score:41
+//time:20
+#5 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#4;
+//score:46
+//time:19
+#6 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#3;
+//score:50
+//time:18
+#7 Hit_point = Bad_mole;
+#1 Hit_point = 0;
+#2;
+//score:45
+//time:17
+#5 Hit_point = Bad_mole;
+#1 Hit_point = 0;
+#4;
+//score:40
+//time:16
+#6 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#3;
+//score:44
+//time:15
+#4 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#5;
+//score:50
+//time:14
+#3 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#6;
+//score:57
+//time:13
+#5 Hit_point = Bad_mole;
+#1 Hit_point = 0;
+#4;
+//score:52
+//time:12
+#3 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#6;
+//score:59
+//time:11
+#5 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#4;
+//score:64
+//time:10
+#5 Hit_point = Bad_mole;
+#1 Hit_point = 0;
+#4;
+//score:59
+//time:9
+#4 Hit_point = Bad_mole;
+#1 Hit_point = 0;
+#5;
+//score:54
+//time:8
+#7 Hit_point = Bad_mole;
+#1 Hit_point = 0;
+#2;
+//score:49
+//time:7
+#4 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#5;
+//score:55
+//time:6
+#5 Hit_point = Bad_mole;
+#1 Hit_point = 0;
+#4;
+//score:50
+//time:5
+#6 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#3;
+//score:54
+//time:4
+#7 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#2;
+//score:57
+//time:3
+#5 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#4;
+//score:62
+//time:2
+#5 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#4;
+//score:67
+//time:1
+#4 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#5;
+//score:73
+//time:0
+#6 Hit_point = Good_mole;
+#1 Hit_point = 0;
+#3;
+//score:77
+		$display("- Game End");
+		#1000 Game_start = 1;
 		$display("- Game Start");
 		#5 Game_start = 0;
 		wait(Good_mole)
@@ -146,6 +308,7 @@ module test();
 			r = $random%2;
 			#2 Hit_point = (r)? Good_mole : Bad_mole;
 			#1 Hit_point = 0;
+			$display("\tGenerator:%d",U5.Good_Addr.addr);
 			#7;
 			end
 		$display("- Game End");
@@ -155,7 +318,7 @@ module test();
 		wait(Good_mole)
 		$display("- Go");
 		for(i=0; i<30; i=i+1)
-			#300;
+			#10;
 		$display("- Game End"); #1000 $finish;
 	end
 	initial
