@@ -1,7 +1,9 @@
 //Please enter which module you want to test:
 `define Mole 
 //Please enter the name of the wave file:
-`define DUMPFILENAME "test_gate.fsdb"
+`define DUMPFILENAME "syn.fsdb"
+//SYN
+`define SYN
 
 `timescale 10ns/100ps
 module test();
@@ -129,34 +131,46 @@ module test();
 	wire[15:0] Good_mole, Bad_mole;
 	wire[9:0] Score;
 	wire[4:0] Countdown;
+	integer i, j, r;
 	Mole U5(Game_start, Set, Clk, Seed, Hit_point, Countdown, Score, Good_mole, Bad_mole);
 	initial begin
 		Seed = 123456789;
 		Hit_point = 0;
 		Game_start = 0;
-		#10;
-		Game_start = 1;
-		#5;
-		Game_start = 0;
-		#200;
-		Hit_point = 16'b0000_0000_0000_0100;
-		#10000;
-		Game_start = 1;
-		#5;
-		Game_start = 0;
-		#200;
-		Hit_point = 16'b0000_0000_1000_0000;
-		#10000; $finish;
+		#10 Game_start = 1;
+		$display("- Game Start");
+		#5 Game_start = 0;
+		wait(Good_mole)
+		$display("- Go");
+		for(i=0; i<30; i=i+1) begin
+			r = $random%2;
+			#2 Hit_point = (r)? Good_mole : Bad_mole;
+			#1 Hit_point = 0;
+			#7;
+			end
+		$display("- Game End");
+		#1000 Game_start = 1;
+		$display("- Game Start");
+		#5 Game_start = 0;
+		wait(Good_mole)
+		$display("- Go");
+		for(i=0; i<30; i=i+1)
+			#300;
+		$display("- Game End"); #1000 $finish;
 	end
 	initial
-		$monitor("G:(%b)\nB:(%b)\n(%d,%d)",Good_mole, Bad_mole, Countdown, Score);
+		$monitor("@%.2f sec\n\tG:(%b)\n\tB:(%b)\n\t(%d,%d)", $realtime/10, Good_mole, Bad_mole, Countdown, Score);
 `endif
 
 `ifdef DUMPFILENAME
-	initial	$sdf_annotate("mole_gate.sdf",U5);
+	//
 	initial begin
 		$dumpfile(`DUMPFILENAME);
 		$dumpvars;
 	end
+`endif
+
+`ifdef SYN
+	initial	$sdf_annotate("mole_syn.sdf",U5);
 `endif
 endmodule

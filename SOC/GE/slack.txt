@@ -6,13 +6,13 @@ Report : timing
         -sort_by group
 Design : Mole
 Version: M-2016.12
-Date   : Thu Oct 17 21:17:46 2019
+Date   : Fri Oct 25 08:30:10 2019
 ****************************************
 
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: M[13]/cell_score_reg[1]
+  Startpoint: M[4]/cell_score_reg[0]
               (rising edge-triggered flip-flop clocked by clk)
   Endpoint: Score_reg[9]
             (rising edge-triggered flip-flop clocked by clk)
@@ -21,42 +21,44 @@ Wire Load Model Mode: top
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
-  clock clk (rise edge)                                   5.00       5.00
-  clock network delay (ideal)                             0.00       5.00
-  M[13]/cell_score_reg[1]/CK (DFFRX1)                     0.00       5.00 r
-  M[13]/cell_score_reg[1]/Q (DFFRX1)                      0.55       5.55 f
-  M[13]/cell_score[1] (Mole_Cell_2)                       0.00       5.55 f
-  Select/cell_score[131] (Select_16_to_1)                 0.00       5.55 f
-  Select/U6/Y (AO22X1)                                    0.32       5.86 f
-  Select/U5/Y (AOI221XL)                                  0.22       6.08 r
-  Select/U25/Y (NAND4X1)                                  0.14       6.22 f
-  Select/U24/Y (AOI222XL)                                 0.37       6.59 r
-  Select/U23/Y (CLKINVX1)                                 0.14       6.72 f
-  Select/add_score[1] (Select_16_to_1)                    0.00       6.72 f
-  add_175_2/B[1] (Mole_DW01_add_0)                        0.00       6.72 f
-  add_175_2/U1_1/CO (ADDFXL)                              0.63       7.36 f
-  add_175_2/U1_2/CO (ADDFXL)                              0.38       7.73 f
-  add_175_2/U1_3/CO (ADDFXL)                              0.38       8.11 f
-  add_175_2/U1_4/CO (ADDFXL)                              0.38       8.49 f
-  add_175_2/U1_5/CO (ADDFXL)                              0.38       8.86 f
-  add_175_2/U1_6/CO (ADDFXL)                              0.38       9.24 f
-  add_175_2/U1_7/CO (ADDFXL)                              0.38       9.61 f
-  add_175_2/U1_8/CO (ADDFXL)                              0.38       9.99 f
-  add_175_2/U1_9/Y (XOR3X1)                               0.24      10.24 r
-  add_175_2/SUM[9] (Mole_DW01_add_0)                      0.00      10.24 r
-  U32/Y (NOR2BX1)                                         0.13      10.37 r
-  Score_reg[9]/D (DFFRX1)                                 0.00      10.37 r
-  data arrival time                                                 10.37
+  clock clk (rise edge)                                  50.00      50.00
+  clock network delay (ideal)                             0.00      50.00
+  M[4]/cell_score_reg[0]/CK (DFFRX1)                      0.00      50.00 r
+  M[4]/cell_score_reg[0]/Q (DFFRX1)                       0.51      50.51 f
+  M[4]/cell_score[0] (Mole_Cell_11)                       0.00      50.51 f
+  Select/cell_score[40] (Select_16_to_1)                  0.00      50.51 f
+  Select/U59/Y (AO22X1)                                   0.31      50.81 f
+  Select/U57/Y (AOI221XL)                                 0.17      50.99 r
+  Select/U56/Y (AO21X1)                                   0.19      51.17 r
+  Select/U22/Y (AND4X1)                                   0.20      51.37 r
+  Select/U21/Y (OAI2BB2XL)                                0.14      51.52 f
+  Select/add_score[0] (Select_16_to_1)                    0.00      51.52 f
+  add_195_2/B[0] (Mole_DW01_add_0)                        0.00      51.52 f
+  add_195_2/U3/Y (CLKINVX1)                               0.08      51.59 r
+  add_195_2/U2/Y (NOR2X1)                                 0.06      51.65 f
+  add_195_2/U1_1/CO (ADDFXL)                              0.35      52.00 f
+  add_195_2/U1_2/CO (ADDFXL)                              0.38      52.37 f
+  add_195_2/U1_3/CO (ADDFXL)                              0.38      52.75 f
+  add_195_2/U1_4/CO (ADDFXL)                              0.38      53.12 f
+  add_195_2/U1_5/CO (ADDFXL)                              0.38      53.50 f
+  add_195_2/U1_6/CO (ADDFXL)                              0.38      53.88 f
+  add_195_2/U1_7/CO (ADDFXL)                              0.38      54.25 f
+  add_195_2/U1_8/CO (ADDFXL)                              0.38      54.63 f
+  add_195_2/U1_9/Y (XOR3X1)                               0.24      54.88 r
+  add_195_2/SUM[9] (Mole_DW01_add_0)                      0.00      54.88 r
+  U49/Y (NOR2BX1)                                         0.13      55.01 r
+  Score_reg[9]/D (DFFRX1)                                 0.00      55.01 r
+  data arrival time                                                 55.01
 
-  clock clk (rise edge)                                  15.00      15.00
-  clock network delay (ideal)                             0.00      15.00
-  Score_reg[9]/CK (DFFRX1)                                0.00      15.00 r
-  library setup time                                     -0.23      14.77
-  data required time                                                14.77
+  clock clk (rise edge)                                 150.00     150.00
+  clock network delay (ideal)                             0.00     150.00
+  Score_reg[9]/CK (DFFRX1)                                0.00     150.00 r
+  library setup time                                     -0.23     149.77
+  data required time                                               149.77
   --------------------------------------------------------------------------
-  data required time                                                14.77
-  data arrival time                                                -10.37
+  data required time                                               149.77
+  data arrival time                                                -55.01
   --------------------------------------------------------------------------
-  slack (MET)                                                        4.40
+  slack (MET)                                                       94.76
 
 

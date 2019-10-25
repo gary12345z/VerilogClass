@@ -3,7 +3,7 @@ Report : power
         -analysis_effort low
 Design : Mole
 Version: M-2016.12
-Date   : Thu Oct 17 21:17:54 2019
+Date   : Fri Oct 25 08:30:22 2019
 ****************************************
 
 
@@ -25,12 +25,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  = 401.4336 uW   (96%)
-  Net Switching Power  =  14.9956 uW    (4%)
+  Cell Internal Power  =  53.4418 uW   (97%)
+  Net Switching Power  =   1.9350 uW    (3%)
                          ---------
-Total Dynamic Power    = 416.4292 uW  (100%)
+Total Dynamic Power    =  55.3768 uW  (100%)
 
-Cell Leakage Power     =  12.7191 uW
+Cell Leakage Power     =  14.5248 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -40,8 +40,8 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           0.3844        9.2217e-04        5.5508e+06            0.3908  (  91.07%)
-sequential     7.7801e-03        6.1765e-04        1.2001e+06        9.5979e-03  (   2.24%)
-combinational  9.2961e-03        1.3456e-02        5.9682e+06        2.8720e-02  (   6.69%)
+register       5.1371e-02        1.7540e-04        7.4209e+06        5.8968e-02  (  84.36%)
+sequential     9.0750e-04        5.2926e-05        1.2001e+06        2.1606e-03  (   3.09%)
+combinational  1.1631e-03        1.7066e-03        5.9038e+06        8.7735e-03  (  12.55%)
 --------------------------------------------------------------------------------------------------
-Total              0.4014 mW     1.4996e-02 mW     1.2719e+07 pW         0.4291 mW
+Total          5.3442e-02 mW     1.9350e-03 mW     1.4525e+07 pW     6.9902e-02 mW
