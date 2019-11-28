@@ -1,0 +1,13 @@
+(DELAYFILE
+(SDFVERSION "OVI 2.1")
+(DESIGN "test_module")
+(DATE "Wed Oct 30 13:12:43 2019")
+(VENDOR "slow")
+(PROGRAM "Synopsys Design Compiler cmos")
+(VERSION "M-2016.12")
+(DIVIDER /)
+(VOLTAGE 1.08:1.08:1.08)
+(PROCESS "slow")
+(TEMPERATURE 125.00:125.00:125.00)
+(TIMESCALE 1ns)
+)

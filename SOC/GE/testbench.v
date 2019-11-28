@@ -143,161 +143,85 @@ module test();
 		#5 Game_start = 0;
 		wait(Good_mole)
 		$display("- Go");
-		//time:30
-#4 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#5;
-//score:6
-//time:29
-#6 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#3;
-//score:10
-//time:28
-#6 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#3;
-//score:14
-//time:27
-#6 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#3;
-//score:18
-//time:26
-#5 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#4;
-//score:23
-//time:25
-#4 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#5;
-//score:29
-//time:24
-#3 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#6;
-//score:36
-//time:23
-#5 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#4;
-//score:41
-//time:22
-#5 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#4;
-//score:46
-//time:21
-#4 Hit_point = Bad_mole;
-#1 Hit_point = 0;
-#5;
-//score:41
-//time:20
-#5 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#4;
-//score:46
-//time:19
-#6 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#3;
-//score:50
-//time:18
-#7 Hit_point = Bad_mole;
-#1 Hit_point = 0;
-#2;
-//score:45
-//time:17
-#5 Hit_point = Bad_mole;
-#1 Hit_point = 0;
-#4;
-//score:40
-//time:16
-#6 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#3;
-//score:44
-//time:15
-#4 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#5;
-//score:50
-//time:14
-#3 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#6;
-//score:57
-//time:13
-#5 Hit_point = Bad_mole;
-#1 Hit_point = 0;
-#4;
-//score:52
-//time:12
-#3 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#6;
-//score:59
-//time:11
-#5 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#4;
-//score:64
-//time:10
-#5 Hit_point = Bad_mole;
-#1 Hit_point = 0;
-#4;
-//score:59
-//time:9
-#4 Hit_point = Bad_mole;
-#1 Hit_point = 0;
-#5;
-//score:54
-//time:8
-#7 Hit_point = Bad_mole;
-#1 Hit_point = 0;
-#2;
-//score:49
-//time:7
-#4 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#5;
-//score:55
-//time:6
-#5 Hit_point = Bad_mole;
-#1 Hit_point = 0;
-#4;
-//score:50
-//time:5
-#6 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#3;
-//score:54
-//time:4
-#7 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#2;
-//score:57
-//time:3
-#5 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#4;
-//score:62
-//time:2
-#5 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#4;
-//score:67
-//time:1
-#4 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#5;
-//score:73
-//time:0
-#6 Hit_point = Good_mole;
-#1 Hit_point = 0;
-#3;
-//score:77
+		#10; // MISS
+		#10; // MISS
+		#10; // MISS
+		#8 Hit_point = Bad_mole;
+		#1 Hit_point = 0;
+		#1;
+		//time:27, score:0
+		#8 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#1;
+		//time:26, score:2
+		#8 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#1;
+		//time:25, score:4
+		#6 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#3;
+		//time:24, score:8
+		#10; // MISS
+		#6 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#3;
+		//time:22, score:12
+		#6 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#3;
+		//time:21, score:16
+		#7 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#2;
+		//time:20, score:19
+		#7 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#2;
+		//time:19, score:22
+		#6 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#3;
+		//time:18, score:26
+		#6 Hit_point = Bad_mole;
+		#1 Hit_point = 0;
+		#3;
+		//time:17, score:21
+		#8 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#1;
+		//time:16, score:23
+		#10; // MISS
+		#10; // MISS
+		#10; // MISS
+		#6 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#3;
+		//time:12, score:27
+		#7 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#2;
+		//time:11, score:30
+		#10; // MISS
+		#10; // MISS
+		#10; // MISS
+		#10; // MISS
+		#10; // MISS
+		#10; // MISS
+		#10; // MISS
+		#10; // MISS
+		#7 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#2;
+		//time:2, score:33
+		#7 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#2;
+		//time:1, score:36
+		#8 Hit_point = Good_mole;
+		#1 Hit_point = 0;
+		#1;
+		//time:0, score:38
 		$display("- Game End");
 		#1000 Game_start = 1;
 		$display("- Game Start");

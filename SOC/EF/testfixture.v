@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define SDFFILE    "../SYN/SET_syn.sdf"    // Modify your sdf file name here
+`define SDFFILE    "SET_syn.sdf"    // Modify your sdf file name here
 `define cycle 10.0
 `define terminate_cycle 200000 // Modify your terminate ycle here
 
@@ -29,11 +29,11 @@ reg [23:0] central_pat_mem [0:63];
 reg [11:0] radius_pat_mem[0:63];
 reg [7:0] expected_mem [0:63];
 
-`ifdef SDF
+`ifdef SDFFILE
 initial $sdf_annotate(`SDFFILE, u_set);
 `endif
 
-initial begin
+initial begin // source  nWave
 	$fsdbDumpfile("SET.fsdb");
 	$fsdbDumpvars;
 end
@@ -112,6 +112,7 @@ for (k = 0; k<=63; k = k+1) begin
 				if (candidate === expected_mem[k])
 					$display(" Pattern %d at Mode %d is PASS !", k, mode);
 				else begin
+					$display("%b %b %b", central, radius, mode);
 					$display(" Pattern %d at Mode %d is FAIL !. Expected candidate = %d, but the Response candidate = %d !! ", k, mode, expected_mem[k], candidate);
 					err_cnt = err_cnt + 1;
 				end
