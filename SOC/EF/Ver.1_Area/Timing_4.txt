@@ -1,0 +1,59 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : SET
+Version: P-2019.03
+Date   : Sat Nov 30 00:58:29 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: x2_reg[3] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: t2_reg (falling edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  x2_reg[3]/CK (EDFFX4)                    0.00       2.00 r
+  x2_reg[3]/Q (EDFFX4)                     0.25       2.25 r
+  C2/center_x[3] (MapCell_2)               0.00       2.25 r
+  C2/U16/Y (XNOR2X4)                       0.15       2.40 f
+  C2/U75/Y (AOI32X2)                       0.19       2.59 r
+  C2/U70/Y (NAND2X2)                       0.09       2.67 f
+  C2/U66/Y (OR2X8)                         0.15       2.82 f
+  C2/U65/Y (MXI2X4)                        0.12       2.94 f
+  C2/U9/Y (NOR2X4)                         0.08       3.02 r
+  C2/U61/Y (INVX4)                         0.05       3.07 f
+  C2/U63/Y (NAND3BX1)                      0.16       3.23 f
+  C2/U161/Y (AOI2BB1X2)                    0.19       3.43 f
+  C2/U217/Y (OAI211X1)                     0.14       3.57 r
+  C2/U216/Y (AND2X2)                       0.15       3.72 r
+  C2/U189/Y (OAI211X2)                     0.09       3.81 f
+  C2/U112/Y (NOR3BX2)                      0.11       3.92 r
+  C2/U42/Y (NAND2X1)                       0.07       4.00 f
+  C2/result (MapCell_2)                    0.00       4.00 f
+  t2_reg/D (DFFNSRX4)                      0.00       4.00 f
+  data arrival time                                   4.00
+
+  clock clk (fall edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  t2_reg/CKN (DFFNSRX4)                    0.00       4.00 f
+  library setup time                      -0.13       3.87
+  data required time                                  3.87
+  -----------------------------------------------------------
+  data required time                                  3.87
+  data arrival time                                  -4.00
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.12
+
+
+1

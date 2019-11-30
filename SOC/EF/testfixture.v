@@ -112,7 +112,7 @@ for (k = 0; k<=63; k = k+1) begin
 				if (candidate === expected_mem[k])
 					$display(" Pattern %d at Mode %d is PASS !", k, mode);
 				else begin
-					$display("%b %b %b", central, radius, mode);
+					$display($time, "  %b %b %b", central, radius, mode);
 					$display(" Pattern %d at Mode %d is FAIL !. Expected candidate = %d, but the Response candidate = %d !! ", k, mode, expected_mem[k], candidate);
 					err_cnt = err_cnt + 1;
 				end

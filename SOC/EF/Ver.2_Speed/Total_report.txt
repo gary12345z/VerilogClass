@@ -1,0 +1,229 @@
+
+
+Period: 40
+  slack (MET)                                        14.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       4.2098e-02        1.8457e-03        1.8261e+06        4.5770e-02  (  60.29%)
+combinational  1.3838e-02        1.0971e-02        5.3387e+06        3.0147e-02  (  39.71%)
+Total Dynamic Power    =  68.7519 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          5.5935e-02 mW     1.2816e-02 mW     7.1648e+06 pW     7.5917e-02 mW
+
+Period: 38
+  slack (MET)                                        13.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       4.4313e-02        1.9429e-03        1.8261e+06        4.8082e-02  (  60.45%)
+combinational  1.4566e-02        1.1548e-02        5.3387e+06        3.1453e-02  (  39.55%)
+Total Dynamic Power    =  72.3704 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          5.8879e-02 mW     1.3491e-02 mW     7.1648e+06 pW     7.9535e-02 mW
+
+Period: 36
+  slack (MET)                                        12.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       4.6775e-02        2.0508e-03        1.8261e+06        5.0652e-02  (  60.62%)
+combinational  1.5375e-02        1.2190e-02        5.3387e+06        3.2904e-02  (  39.38%)
+Total Dynamic Power    =  76.3910 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          6.2151e-02 mW     1.4240e-02 mW     7.1648e+06 pW     8.3556e-02 mW
+
+Period: 34
+  slack (MET)                                        11.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       4.9527e-02        2.1714e-03        1.8261e+06        5.3524e-02  (  60.79%)
+combinational  1.6280e-02        1.2907e-02        5.3387e+06        3.4525e-02  (  39.21%)
+Total Dynamic Power    =  80.8846 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          6.5806e-02 mW     1.5078e-02 mW     7.1648e+06 pW     8.8049e-02 mW
+
+Period: 32
+  slack (MET)                                        10.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       5.2622e-02        2.3071e-03        1.8261e+06        5.6755e-02  (  60.94%)
+combinational  1.7309e-02        1.3734e-02        5.3402e+06        3.6384e-02  (  39.06%)
+Total Dynamic Power    =  85.9727 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          6.9932e-02 mW     1.6041e-02 mW     7.1663e+06 pW     9.3139e-02 mW
+
+Period: 30
+  slack (MET)                                         9.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       5.6130e-02        2.4609e-03        1.8261e+06        6.0417e-02  (  61.11%)
+combinational  1.8463e-02        1.4649e-02        5.3402e+06        3.8453e-02  (  38.89%)
+Total Dynamic Power    =  91.7042 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          7.4594e-02 mW     1.7110e-02 mW     7.1663e+06 pW     9.8871e-02 mW
+
+Period: 28
+  slack (MET)                                         8.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       6.0140e-02        2.6367e-03        1.8261e+06        6.4603e-02  (  61.28%)
+combinational  1.9782e-02        1.5696e-02        5.3402e+06        4.0818e-02  (  38.72%)
+Total Dynamic Power    =  98.2545 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          7.9922e-02 mW     1.8333e-02 mW     7.1663e+06 pW         0.1054 mW
+
+Period: 26
+  slack (MET)                                         7.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       6.4766e-02        2.8396e-03        1.8261e+06        6.9431e-02  (  61.46%)
+combinational  2.1304e-02        1.6903e-02        5.3402e+06        4.3547e-02  (  38.54%)
+Total Dynamic Power    = 105.8126 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          8.6070e-02 mW     1.9743e-02 mW     7.1663e+06 pW         0.1130 mW
+
+Period: 24
+  slack (MET)                                         6.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       7.0163e-02        3.0762e-03        1.8261e+06        7.5065e-02  (  61.63%)
+combinational  2.3079e-02        1.8312e-02        5.3402e+06        4.6731e-02  (  38.37%)
+Total Dynamic Power    = 114.6303 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          9.3242e-02 mW     2.1388e-02 mW     7.1663e+06 pW         0.1218 mW
+
+Period: 22
+  slack (MET)                                         5.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       7.6541e-02        3.3558e-03        1.8261e+06        8.1723e-02  (  61.81%)
+combinational  2.5177e-02        1.9977e-02        5.3402e+06        5.0494e-02  (  38.19%)
+Total Dynamic Power    = 125.0512 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1017 mW     2.3332e-02 mW     7.1663e+06 pW         0.1322 mW
+
+Period: 20
+  slack (MET)                                         4.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       8.4196e-02        3.6914e-03        1.8261e+06        8.9713e-02  (  61.99%)
+combinational  2.7695e-02        2.1974e-02        5.3402e+06        5.5009e-02  (  38.01%)
+Total Dynamic Power    = 137.5563 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1119 mW     2.5666e-02 mW     7.1663e+06 pW         0.1447 mW
+
+Period: 18
+  slack (MET)                                         3.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register       9.3551e-02        4.1016e-03        1.8261e+06        9.9478e-02  (  62.17%)
+combinational  3.0772e-02        2.4416e-02        5.3402e+06        6.0528e-02  (  37.83%)
+Total Dynamic Power    = 152.8404 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1243 mW     2.8517e-02 mW     7.1663e+06 pW         0.1600 mW
+
+Period: 16
+  slack (MET)                                         2.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register           0.1052        4.6143e-03        1.8261e+06            0.1117  (  62.35%)
+combinational  3.4619e-02        2.7468e-02        5.3402e+06        6.7427e-02  (  37.65%)
+Total Dynamic Power    = 171.9454 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1399 mW     3.2082e-02 mW     7.1663e+06 pW         0.1791 mW
+
+Period: 14
+  slack (MET)                                         1.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register           0.1203        5.2735e-03        1.8261e+06            0.1274  (  62.54%)
+combinational  3.9565e-02        3.1392e-02        5.3402e+06        7.6296e-02  (  37.46%)
+Total Dynamic Power    = 196.5090 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1598 mW     3.6665e-02 mW     7.1663e+06 pW         0.2037 mW
+
+Period: 12
+  slack (MET)                                         0.40
+Combinational area:               7840.290542
+Buf/Inv area:                      658.591190
+Noncombinational area:            2525.731255
+Total cell area:                 10366.021797
+register           0.1403        6.1524e-03        1.8261e+06            0.1483  (  62.73%)
+combinational  4.6159e-02        3.6624e-02        5.3402e+06        8.8122e-02  (  37.27%)
+Total Dynamic Power    = 229.2605 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1865 mW     4.2776e-02 mW     7.1663e+06 pW         0.2364 mW
+
+Period: 10
+  slack (MET)                                         0.03
+Combinational area:               7881.028142
+Buf/Inv area:                      658.591190
+Noncombinational area:            2539.310455
+Total cell area:                 10420.338598
+register           0.1696        7.3978e-03        1.8298e+06            0.1788  (  63.05%)
+combinational  5.5719e-02        4.3685e-02        5.4130e+06            0.1048  (  36.95%)
+Total Dynamic Power    = 276.4073 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.2253 mW     5.1083e-02 mW     7.2429e+06 pW         0.2837 mW
+
+Period: 8
+  slack (MET)                                         0.00
+Combinational area:               8313.865109
+Buf/Inv area:                      682.354789
+Noncombinational area:            2539.310455
+Total cell area:                 10853.175564
+register           0.2120        8.2644e-03        1.8298e+06            0.2221  (  63.12%)
+combinational  7.0711e-02        5.2318e-02        6.6938e+06            0.1297  (  36.88%)
+Total Dynamic Power    = 343.2515 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.2827 mW     6.0582e-02 mW     8.5237e+06 pW         0.3518 mW
+
+Period: 6
+  slack (MET)                                         0.00
+Combinational area:               9851.709495
+Buf/Inv area:                      999.768582
+Noncombinational area:            2860.119038
+Total cell area:                 12711.828532
+register           0.3624        1.0788e-02        2.2258e+06            0.3754  (  61.41%)
+combinational      0.1336        9.3065e-02        9.2540e+06            0.2359  (  38.59%)
+Total Dynamic Power    = 599.8772 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.4960 mW         0.1039 mW     1.1480e+07 pW         0.6114 mW
+
+Period: 4
+  slack (VIOLATED)                                   -0.35
+Combinational area:              13735.360703
+Buf/Inv area:                     1853.560767
+Noncombinational area:            3654.502214
+Total cell area:                 17389.862918
+register           0.8212        2.1583e-02        3.2920e+06            0.8460  (  59.18%)
+combinational      0.3308            0.2403        1.2562e+07            0.5836  (  40.82%)
+Total Dynamic Power    =   1.4138 mW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              1.1520 mW         0.2619 mW     1.5854e+07 pW         1.4297 mW

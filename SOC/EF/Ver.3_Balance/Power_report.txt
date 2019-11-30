@@ -1,0 +1,58 @@
+
+Total Dynamic Power    =  58.0868 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          4.8015e-02 mW     1.0071e-02 mW     6.2893e+06 pW     6.4376e-02 mW
+Total Dynamic Power    =  61.1440 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          5.0543e-02 mW     1.0601e-02 mW     6.2893e+06 pW     6.7433e-02 mW
+Total Dynamic Power    =  64.5409 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          5.3350e-02 mW     1.1190e-02 mW     6.2893e+06 pW     7.0830e-02 mW
+Total Dynamic Power    =  68.3654 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          5.6499e-02 mW     1.1866e-02 mW     6.2908e+06 pW     7.4656e-02 mW
+Total Dynamic Power    =  72.6382 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          6.0030e-02 mW     1.2608e-02 mW     6.2908e+06 pW     7.8929e-02 mW
+Total Dynamic Power    =  77.4808 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          6.4032e-02 mW     1.3449e-02 mW     6.2908e+06 pW     8.3772e-02 mW
+Total Dynamic Power    =  83.0151 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          6.8606e-02 mW     1.4409e-02 mW     6.2908e+06 pW     8.9306e-02 mW
+Total Dynamic Power    =  89.4009 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          7.3883e-02 mW     1.5518e-02 mW     6.2908e+06 pW     9.5692e-02 mW
+Total Dynamic Power    =  96.8510 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          8.0040e-02 mW     1.6811e-02 mW     6.2908e+06 pW         0.1031 mW
+Total Dynamic Power    = 105.6556 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          8.7317e-02 mW     1.8339e-02 mW     6.2908e+06 pW         0.1119 mW
+Total Dynamic Power    = 116.2212 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total          9.6048e-02 mW     2.0173e-02 mW     6.2908e+06 pW         0.1225 mW
+Total Dynamic Power    = 129.1346 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1067 mW     2.2414e-02 mW     6.2908e+06 pW         0.1354 mW
+Total Dynamic Power    = 145.2170 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1200 mW     2.5179e-02 mW     6.2893e+06 pW         0.1515 mW
+Total Dynamic Power    = 165.9623 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1372 mW     2.8775e-02 mW     6.2893e+06 pW         0.1723 mW
+Total Dynamic Power    = 193.6227 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1601 mW     3.3571e-02 mW     6.2893e+06 pW         0.1999 mW
+Total Dynamic Power    = 231.8791 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.1926 mW     3.9268e-02 mW     6.2933e+06 pW         0.2382 mW
+Total Dynamic Power    = 294.4364 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.2475 mW     4.6931e-02 mW     7.2908e+06 pW         0.3017 mW
+Total Dynamic Power    = 463.6693 uW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.3901 mW     7.3596e-02 mW     9.1308e+06 pW         0.4728 mW
+Total Dynamic Power    =   1.0919 mW  (100%)
+                 Internal         Switching           Leakage            Total
+Total              0.8979 mW         0.1941 mW     1.1840e+07 pW         1.1038 mW

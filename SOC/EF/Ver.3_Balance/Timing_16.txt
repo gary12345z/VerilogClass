@@ -1,0 +1,66 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : SET
+Version: P-2019.03
+Date   : Sat Nov 30 10:55:01 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: reg_mode_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: tmp_2_reg (falling edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    8.00       8.00
+  clock network delay (ideal)              0.00       8.00
+  reg_mode_reg[1]/CK (EDFFX1)              0.00       8.00 r
+  reg_mode_reg[1]/Q (EDFFX1)               0.48       8.48 r
+  U140/Y (XOR2X1)                          0.23       8.71 r
+  U134/Y (NAND2BX1)                        0.23       8.94 f
+  U135/Y (OAI222XL)                        0.41       9.35 r
+  MapCell_2/center_y[0] (MapCell_1)        0.00       9.35 r
+  MapCell_2/U124/Y (NOR2X1)                0.17       9.51 f
+  MapCell_2/U101/Y (OAI2BB1X1)             0.18       9.70 f
+  MapCell_2/U100/Y (OA21XL)                0.19       9.89 f
+  MapCell_2/U86/Y (OAI2BB1X1)              0.18      10.06 f
+  MapCell_2/U85/Y (AOI2BB2X1)              0.17      10.24 r
+  MapCell_2/U59/Y (CLKINVX1)               0.09      10.33 f
+  MapCell_2/U7/Y (OAI22XL)                 0.44      10.77 r
+  MapCell_2/U54/Y (CLKINVX1)               0.28      11.05 f
+  MapCell_2/U52/Y (NAND2X1)                0.17      11.22 r
+  MapCell_2/U3/Y (OAI21XL)                 0.17      11.39 f
+  MapCell_2/U148/Y (AO22X1)                0.35      11.74 f
+  MapCell_2/U149/Y (AOI222XL)              0.38      12.11 r
+  MapCell_2/U152/Y (OAI22XL)               0.11      12.23 f
+  MapCell_2/U153/Y (AO22X1)                0.33      12.56 f
+  MapCell_2/U47/Y (NAND3X1)                0.11      12.66 r
+  MapCell_2/U112/Y (AND4X1)                0.22      12.88 r
+  MapCell_2/U110/Y (OAI211X1)              0.09      12.97 f
+  MapCell_2/result (MapCell_1)             0.00      12.97 f
+  tmp_2_reg/D (DFFNSRX1)                   0.00      12.97 f
+  data arrival time                                  12.97
+
+  clock clk (fall edge)                   16.00      16.00
+  clock network delay (ideal)              0.00      16.00
+  tmp_2_reg/CKN (DFFNSRX1)                 0.00      16.00 f
+  library setup time                      -0.24      15.76
+  data required time                                 15.76
+  -----------------------------------------------------------
+  data required time                                 15.76
+  data arrival time                                 -12.97
+  -----------------------------------------------------------
+  slack (MET)                                         2.79
+
+
+1

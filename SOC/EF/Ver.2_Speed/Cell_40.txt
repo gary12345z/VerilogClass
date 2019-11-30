@@ -1,0 +1,190 @@
+ 
+****************************************
+Report : cell
+Design : SET
+Version: P-2019.03
+Date   : Sat Nov 30 00:30:56 2019
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+Ar_reg[0]                 EDFFX1          slow            35.645401 n
+Ar_reg[1]                 EDFFX1          slow            35.645401 n
+Ar_reg[2]                 EDFFX1          slow            35.645401 n
+Ar_reg[3]                 EDFFX1          slow            35.645401 n
+Ax_reg[0]                 EDFFX1          slow            35.645401 n
+Ax_reg[1]                 EDFFX1          slow            35.645401 n
+Ax_reg[2]                 EDFFX1          slow            35.645401 n
+Ax_reg[3]                 EDFFX1          slow            35.645401 n
+Ay_reg[0]                 EDFFX1          slow            35.645401 n
+Ay_reg[1]                 EDFFX1          slow            35.645401 n
+Ay_reg[2]                 EDFFX1          slow            35.645401 n
+Ay_reg[3]                 EDFFX1          slow            35.645401 n
+Br_reg[0]                 EDFFX1          slow            35.645401 n
+Br_reg[1]                 EDFFX1          slow            35.645401 n
+Br_reg[2]                 EDFFX1          slow            35.645401 n
+Br_reg[3]                 EDFFX1          slow            35.645401 n
+Bx_reg[0]                 EDFFX1          slow            35.645401 n
+Bx_reg[1]                 EDFFX1          slow            35.645401 n
+Bx_reg[2]                 EDFFX1          slow            35.645401 n
+Bx_reg[3]                 EDFFX1          slow            35.645401 n
+By_reg[0]                 EDFFX1          slow            35.645401 n
+By_reg[1]                 EDFFX1          slow            35.645401 n
+By_reg[2]                 EDFFX1          slow            35.645401 n
+By_reg[3]                 EDFFX1          slow            35.645401 n
+Controler                 Control                         2838.052771
+                                                                    h, n
+Cr_reg[0]                 EDFFX1          slow            35.645401 n
+Cr_reg[1]                 EDFFX1          slow            35.645401 n
+Cr_reg[2]                 EDFFX1          slow            35.645401 n
+Cr_reg[3]                 EDFFX1          slow            35.645401 n
+Cx_reg[0]                 EDFFX1          slow            35.645401 n
+Cx_reg[1]                 EDFFX1          slow            35.645401 n
+Cx_reg[2]                 EDFFX1          slow            35.645401 n
+Cx_reg[3]                 EDFFX1          slow            35.645401 n
+Cy_reg[0]                 EDFFX1          slow            35.645401 n
+Cy_reg[1]                 EDFFX1          slow            35.645401 n
+Cy_reg[2]                 EDFFX1          slow            35.645401 n
+Cy_reg[3]                 EDFFX1          slow            35.645401 n
+MapCell_0                 MapCell_0                       1127.073591
+                                                                    h
+MapCell_1                 MapCell_3                       1127.073591
+                                                                    h
+MapCell_2                 MapCell_2                       1127.073591
+                                                                    h
+MapCell_3                 MapCell_1                       1127.073591
+                                                                    h
+U129                      OAI222XL        slow            13.579200 
+U130                      OAI222XL        slow            13.579200 
+U131                      OAI222XL        slow            13.579200 
+U132                      CLKINVX1        slow            3.394800  
+U133                      OAI222XL        slow            13.579200 
+U134                      OAI222XL        slow            13.579200 
+U135                      OAI22XL         slow            8.487000  
+U136                      OAI22XL         slow            8.487000  
+U137                      OAI22XL         slow            8.487000  
+U138                      OAI22XL         slow            8.487000  
+U139                      NAND2X1         slow            5.092200  
+U140                      NOR2X1          slow            5.092200  
+U141                      CLKINVX1        slow            3.394800  
+U142                      CLKINVX1        slow            3.394800  
+U143                      OAI222XL        slow            13.579200 
+U144                      OAI222XL        slow            13.579200 
+U145                      OAI22XL         slow            8.487000  
+U146                      OAI22XL         slow            8.487000  
+U147                      OAI22XL         slow            8.487000  
+U148                      OAI22XL         slow            8.487000  
+U149                      OAI22XL         slow            8.487000  
+U150                      OAI22XL         slow            8.487000  
+U151                      OAI22XL         slow            8.487000  
+U152                      OAI22XL         slow            8.487000  
+U153                      OAI22XL         slow            8.487000  
+U154                      OAI22XL         slow            8.487000  
+U155                      OAI22XL         slow            8.487000  
+U156                      OAI22XL         slow            8.487000  
+U157                      OAI22XL         slow            8.487000  
+U158                      OAI22XL         slow            8.487000  
+U159                      OAI222XL        slow            13.579200 
+U160                      OAI222XL        slow            13.579200 
+U161                      OAI222XL        slow            13.579200 
+U162                      OAI222XL        slow            13.579200 
+U163                      OAI22XL         slow            8.487000  
+U164                      OAI22XL         slow            8.487000  
+U165                      NOR2BX1         slow            6.789600  
+U166                      NOR2BX1         slow            6.789600  
+U167                      OAI22XL         slow            8.487000  
+U168                      OAI22XL         slow            8.487000  
+U169                      NOR2BX1         slow            6.789600  
+U170                      NOR2BX1         slow            6.789600  
+U171                      NOR2BX1         slow            6.789600  
+U172                      NOR2BX1         slow            6.789600  
+U173                      NOR2BX1         slow            6.789600  
+U174                      NOR2BX1         slow            6.789600  
+U175                      OAI222XL        slow            13.579200 
+U176                      OAI22XL         slow            8.487000  
+U177                      OAI22XL         slow            8.487000  
+U178                      NOR2BX1         slow            6.789600  
+U179                      OAI2BB1X1       slow            8.487000  
+U180                      OAI21XL         slow            6.789600  
+U181                      NAND3X1         slow            6.789600  
+U182                      CLKINVX1        slow            3.394800  
+U183                      OAI31XL         slow            8.487000  
+U184                      OA21XL          slow            8.487000  
+U185                      CLKINVX1        slow            3.394800  
+U186                      XNOR2X1         slow            11.881800 
+U187                      NAND2X1         slow            5.092200  
+U188                      OAI2BB2XL       slow            10.184400 
+U189                      XOR2X1          slow            11.881800 
+U190                      NOR2BX1         slow            6.789600  
+U191                      NOR2BX1         slow            6.789600  
+U192                      NOR2BX1         slow            6.789600  
+U193                      NOR2BX1         slow            6.789600  
+U194                      NOR2BX1         slow            6.789600  
+U195                      NOR2BX1         slow            6.789600  
+U196                      NOR2BX1         slow            6.789600  
+U197                      NOR2BX1         slow            6.789600  
+U198                      NOR2BX1         slow            6.789600  
+U199                      NOR2BX1         slow            6.789600  
+U200                      NOR2BX1         slow            6.789600  
+U201                      NOR2BX1         slow            6.789600  
+U202                      NOR2BX1         slow            6.789600  
+U203                      NOR2BX1         slow            6.789600  
+U204                      NOR2BX1         slow            6.789600  
+U205                      NOR2BX1         slow            6.789600  
+U206                      OAI2BB1X1       slow            8.487000  
+U207                      OAI2BB1X1       slow            8.487000  
+U208                      OAI2BB1X1       slow            8.487000  
+U209                      OAI2BB1X1       slow            8.487000  
+U210                      OAI2BB1X1       slow            8.487000  
+U211                      NAND3X1         slow            6.789600  
+U212                      CLKINVX1        slow            3.394800  
+U213                      CLKINVX1        slow            3.394800  
+U214                      CLKINVX1        slow            3.394800  
+candidate_reg[0]          DFFQX1          slow            25.461000 n
+candidate_reg[1]          DFFQX1          slow            25.461000 n
+candidate_reg[2]          DFFQX1          slow            25.461000 n
+candidate_reg[3]          DFFQX1          slow            25.461000 n
+candidate_reg[4]          DFFQX1          slow            25.461000 n
+candidate_reg[5]          DFFQX1          slow            25.461000 n
+candidate_reg[6]          DFFQX1          slow            25.461000 n
+candidate_reg[7]          DFFQX1          slow            25.461000 n
+now_0_reg[0]              DFFQX1          slow            25.461000 n
+now_0_reg[1]              DFFQX1          slow            25.461000 n
+now_0_reg[2]              DFFQX1          slow            25.461000 n
+now_0_reg[3]              DFFQX1          slow            25.461000 n
+now_0_reg[4]              DFFQX1          slow            25.461000 n
+now_0_reg[5]              DFFQX1          slow            25.461000 n
+now_1_reg[0]              DFFQX1          slow            25.461000 n
+now_1_reg[1]              DFFQX1          slow            25.461000 n
+now_1_reg[2]              DFFQX1          slow            25.461000 n
+now_1_reg[3]              DFFQX1          slow            25.461000 n
+now_1_reg[4]              DFFQX1          slow            25.461000 n
+now_1_reg[5]              DFFQX1          slow            25.461000 n
+now_2_reg[0]              DFFQX1          slow            25.461000 n
+now_2_reg[1]              DFFQX1          slow            25.461000 n
+now_2_reg[2]              DFFQX1          slow            25.461000 n
+now_2_reg[3]              DFFQX1          slow            25.461000 n
+now_2_reg[4]              DFFQX1          slow            25.461000 n
+now_2_reg[5]              DFFQX1          slow            25.461000 n
+now_3_reg[0]              DFFQX1          slow            25.461000 n
+now_3_reg[1]              DFFQX1          slow            25.461000 n
+now_3_reg[2]              DFFQX1          slow            25.461000 n
+now_3_reg[3]              DFFQX1          slow            25.461000 n
+now_3_reg[4]              DFFQX1          slow            25.461000 n
+now_3_reg[5]              DFFQX1          slow            25.461000 n
+reg_mode_reg[0]           EDFFX1          slow            35.645401 n
+reg_mode_reg[1]           EDFFX1          slow            35.645401 n
+tmp_0_reg                 DFFNSRX1        slow            37.342800 n
+tmp_1_reg                 DFFNSRX1        slow            37.342800 n
+tmp_2_reg                 DFFNSRX1        slow            37.342800 n
+tmp_3_reg                 DFFNSRX1        slow            37.342800 n
+--------------------------------------------------------------------------------
+Total 165 cells                                           10366.021797
+1

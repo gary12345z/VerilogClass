@@ -1,0 +1,67 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : SET
+Version: P-2019.03
+Date   : Sat Nov 30 00:31:55 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: reg_mode_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: tmp_3_reg (falling edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  reg_mode_reg[1]/CK (EDFFX2)              0.00       4.00 r
+  reg_mode_reg[1]/Q (EDFFX2)               0.22       4.22 f
+  U134/Y (NAND2X1)                         0.15       4.37 r
+  U156/Y (CLKINVX4)                        0.17       4.54 f
+  U157/Y (MXI2X1)                          0.24       4.78 f
+  U187/Y (OAI222XL)                        0.40       5.18 r
+  MapCell_3/center_x[0] (MapCell_1)        0.00       5.18 r
+  MapCell_3/U81/Y (NOR2XL)                 0.14       5.32 f
+  MapCell_3/U6/Y (AO21X1)                  0.32       5.64 f
+  MapCell_3/U175/Y (AO21X4)                0.20       5.84 f
+  MapCell_3/U176/Y (AO22X4)                0.23       6.07 f
+  MapCell_3/U71/Y (CLKINVX4)               0.05       6.11 r
+  MapCell_3/U12/Y (CLKMX2X4)               0.23       6.34 f
+  MapCell_3/U70/Y (INVXL)                  0.10       6.44 r
+  MapCell_3/U131/Y (OR2X1)                 0.17       6.61 r
+  MapCell_3/U46/Y (INVX1)                  0.08       6.69 f
+  MapCell_3/U34/Y (AO21X4)                 0.18       6.87 f
+  MapCell_3/U177/Y (AO21X4)                0.16       7.03 f
+  MapCell_3/U98/Y (AOI21X1)                0.12       7.15 r
+  MapCell_3/U116/Y (NAND4X1)               0.10       7.25 f
+  MapCell_3/U114/Y (AOI22X1)               0.19       7.44 r
+  MapCell_3/U121/Y (NAND4X1)               0.11       7.55 f
+  MapCell_3/U136/Y (AOI22X1)               0.13       7.67 r
+  MapCell_3/U133/Y (NAND3BX1)              0.09       7.77 f
+  MapCell_3/result (MapCell_1)             0.00       7.77 f
+  tmp_3_reg/D (DFFNSRX1)                   0.00       7.77 f
+  data arrival time                                   7.77
+
+  clock clk (fall edge)                    8.00       8.00
+  clock network delay (ideal)              0.00       8.00
+  tmp_3_reg/CKN (DFFNSRX1)                 0.00       8.00 f
+  library setup time                      -0.23       7.77
+  data required time                                  7.77
+  -----------------------------------------------------------
+  data required time                                  7.77
+  data arrival time                                  -7.77
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

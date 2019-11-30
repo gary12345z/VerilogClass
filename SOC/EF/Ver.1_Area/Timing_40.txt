@@ -1,0 +1,68 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : SET
+Version: P-2019.03
+Date   : Sat Nov 30 00:57:23 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: now_y_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: t1_reg (falling edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  now_y_reg[0]/CK (EDFFX1)                 0.00      20.00 r
+  now_y_reg[0]/Q (EDFFX1)                  0.43      20.43 r
+  C1/now_y[0] (MapCell_0)                  0.00      20.43 r
+  C1/U119/Y (CLKINVX1)                     0.09      20.52 f
+  C1/U114/Y (NAND2X1)                      0.12      20.65 r
+  C1/U112/Y (CLKINVX1)                     0.07      20.72 f
+  C1/U111/Y (OAI2BB1X1)                    0.17      20.88 f
+  C1/U110/Y (OAI21XL)                      0.14      21.03 r
+  C1/U115/Y (NOR2BX1)                      0.10      21.13 f
+  C1/U102/Y (OAI22XL)                      0.26      21.39 r
+  C1/U10/Y (XNOR2X1)                       0.30      21.68 r
+  C1/U79/Y (CLKINVX1)                      0.19      21.87 f
+  C1/U7/Y (AOI22X1)                        0.27      22.14 r
+  C1/U44/Y (CLKINVX1)                      0.14      22.28 f
+  C1/U45/Y (NOR2X1)                        0.15      22.43 r
+  C1/U46/Y (AND2X2)                        0.15      22.58 r
+  C1/U3/Y (OAI21XL)                        0.16      22.73 f
+  C1/U151/Y (AO22X1)                       0.34      23.07 f
+  C1/U152/Y (AOI222XL)                     0.38      23.45 r
+  C1/U155/Y (OAI22XL)                      0.11      23.56 f
+  C1/U156/Y (AO22X1)                       0.34      23.90 f
+  C1/U122/Y (AOI31X1)                      0.17      24.07 r
+  C1/U121/Y (OAI2BB1X1)                    0.08      24.14 f
+  C1/U126/Y (AOI211X1)                     0.14      24.28 r
+  C1/U123/Y (OAI211X1)                     0.11      24.39 f
+  C1/result (MapCell_0)                    0.00      24.39 f
+  t1_reg/D (DFFNSRX1)                      0.00      24.39 f
+  data arrival time                                  24.39
+
+  clock clk (fall edge)                   40.00      40.00
+  clock network delay (ideal)              0.00      40.00
+  t1_reg/CKN (DFFNSRX1)                    0.00      40.00 f
+  library setup time                      -0.24      39.76
+  data required time                                 39.76
+  -----------------------------------------------------------
+  data required time                                 39.76
+  data arrival time                                 -24.39
+  -----------------------------------------------------------
+  slack (MET)                                        15.37
+
+
+1
