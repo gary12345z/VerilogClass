@@ -1,0 +1,70 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : huffman
+Version: P-2019.03
+Date   : Wed Dec 11 20:54:17 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: Sort_U/data_reg[43]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Sort_U/data_reg[39]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  Sort_U/data_reg[43]/CK (MDFFHQX4)        0.00       5.00 r
+  Sort_U/data_reg[43]/Q (MDFFHQX4)         0.17       5.17 r
+  U76/Y (NOR2BX1)                          0.18       5.35 r
+  U79/Y (OAI32X1)                          0.15       5.50 f
+  U81/Y (OAI221XL)                         0.27       5.76 r
+  U94/Y (OAI31XL)                          0.13       5.89 f
+  Sort_U/Cell0/U62/Y (NAND2X1)             0.52       6.41 r
+  Sort_U/Cell0/U60/Y (CLKINVX1)            0.55       6.97 f
+  Sort_U/Cell0/U35/Y (OAI22XL)             0.48       7.45 r
+  U118/Y (NOR2BX1)                         0.24       7.68 r
+  U121/Y (OAI32X1)                         0.15       7.84 f
+  U123/Y (OAI221XL)                        0.28       8.11 r
+  U136/Y (OAI31XL)                         0.13       8.24 f
+  Sort_U/Cell1/U62/Y (NAND2X1)             0.52       8.76 r
+  Sort_U/Cell1/U60/Y (CLKINVX1)            0.55       9.31 f
+  Sort_U/Cell1/U29/Y (OAI22XL)             0.51       9.83 r
+  SelectLast_U/U95/Y (CLKINVX1)            0.14       9.97 f
+  SelectLast_U/U61/Y (OAI221XL)            0.89      10.87 r
+  Merge_U/add_182/U1_1/CO (ADDFHX4)        0.35      11.22 r
+  Merge_U/add_182/U1_2/CO (ADDFHX4)        0.14      11.36 r
+  Merge_U/add_182/U1_3/CO (ADDFHX4)        0.14      11.50 r
+  Merge_U/add_182/U1_4/CO (ADDFHX4)        0.14      11.65 r
+  Merge_U/add_182/U1_5/CO (ADDFHX4)        0.14      11.79 r
+  Merge_U/add_182/U1_6/CO (ADDFHX4)        0.14      11.93 r
+  Merge_U/add_182/U1_7/S (ADDFHX4)         0.22      12.16 r
+  Sort_U/U154/Y (CLKINVX1)                 0.07      12.23 f
+  Sort_U/U76/Y (OAI221XL)                  0.22      12.45 r
+  Sort_U/data_reg[39]/D (DFFHQX4)          0.00      12.45 r
+  data arrival time                                  12.45
+
+  clock clk (rise edge)                   15.00      15.00
+  clock network delay (ideal)              0.00      15.00
+  Sort_U/data_reg[39]/CK (DFFHQX4)         0.00      15.00 r
+  library setup time                      -0.19      14.81
+  data required time                                 14.81
+  -----------------------------------------------------------
+  data required time                                 14.81
+  data arrival time                                 -12.45
+  -----------------------------------------------------------
+  slack (MET)                                         2.37
+
+
+1

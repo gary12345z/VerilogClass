@@ -4,8 +4,6 @@
 `define CLK_period 10                // CLK period. DO NOT modify period
 `define SDFFILE "./huffman_syn.sdf"  // Modify your sdf file name
 
-`define tb1
-
 `ifdef tb1
   `define PAT "./pattern1.dat"
   `define EXP "./golden1.dat"
@@ -62,10 +60,10 @@ wire [47:0] M_G, M_EXP;
   initial $sdf_annotate(`SDFFILE, u_huffman);
 `endif
 
-//initial begin
-//$fsdbDumpfile("huffman.fsdb");
-//$fsdbDumpvars;
-//end
+initial begin
+$fsdbDumpfile("huffman.fsdb");
+$fsdbDumpvars;
+end
 
 
 huffman u_huffman(.clk(CLK), .reset(reset), .gray_valid(gray_valid), .gray_data(gray_data),
@@ -145,7 +143,8 @@ always@(negedge CLK) begin
     end
 
     if(code_valid == 1'b1) begin
-
+		//$display("HC:\n%b\n%b\n",HC_G, HC_EXP);
+		//$display("M:\n%b\n%b\n",M_G, M_EXP);
       case ({(HC_G == HC_EXP),(M_G == M_EXP)})   // (HC_G == HC_EXP) true means HC PASS
         2'b00: begin                             // (M_G == M_EXP) true means M PASS
                  $display("Check HC : ERROR");
@@ -180,7 +179,12 @@ always@(negedge CLK) begin
 
   end
 end
-
+/*
+initial begin
+	$monitor("%b(%d,%d)", u_huffman.Sort_U.sorted_flag, u_huffman.Control_U.state, u_huffman.Sort_U.num_reg);
+end*/
+//001000 100000 010000 000010 000001 000100
+//001000 100000 010000 000011 000010 000100
 
 /*
 initial begin
