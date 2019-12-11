@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : huffman
 Version: P-2019.03
-Date   : Wed Dec 11 20:54:17 2019
+Date   : Wed Dec 11 23:03:40 2019
 ****************************************
 
 
@@ -30,12 +30,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =   1.0424 mW   (99%)
-  Net Switching Power  =  12.7767 uW    (1%)
+  Cell Internal Power  = 518.5753 uW   (98%)
+  Net Switching Power  =   8.8285 uW    (2%)
                          ---------
-Total Dynamic Power    =   1.0552 mW  (100%)
+Total Dynamic Power    = 527.4037 uW  (100%)
 
-Cell Leakage Power     =  19.6791 uW
+Cell Leakage Power     =  12.0485 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -45,9 +45,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           1.0386        9.4543e-04        1.1853e+07            1.0514  (  97.82%)
+register           0.5149        1.1944e-03        7.2617e+06            0.5234  (  97.03%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  3.7672e-03        1.1831e-02        7.8257e+06        2.3424e-02  (   2.18%)
+combinational  3.6273e-03        7.6341e-03        4.7867e+06        1.6048e-02  (   2.97%)
 --------------------------------------------------------------------------------------------------
-Total              1.0424 mW     1.2777e-02 mW     1.9679e+07 pW         1.0748 mW
+Total              0.5186 mW     8.8285e-03 mW     1.2048e+07 pW         0.5395 mW
 1

@@ -131,6 +131,7 @@ always@(negedge CLK) begin
   end else begin
 
     if(CNT_valid == 1'b1) begin
+		//$display("CNT:\n%b\n%b\n",CNT_G, CNT_EXP);
       if (CNT_G == CNT_EXP) begin     // flag1 1 means PASS, 0 means ERROR
         $display("Check CNT : PASS");
         flag1 <= 1'b1;

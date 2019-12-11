@@ -13,14 +13,15 @@ output reg[7:0] CNT1, CNT2, CNT3, CNT4, CNT5, CNT6;
 reg[7:0] next_CNT1, next_CNT2, next_CNT3, next_CNT4, next_CNT5, next_CNT6;
 always@(*) begin
 	{next_CNT1, next_CNT2, next_CNT3, next_CNT4, next_CNT5, next_CNT6} = {CNT1, CNT2, CNT3, CNT4, CNT5, CNT6};
-	case(gray_data)
-		A1: next_CNT1 = CNT1 + 8'd1;
-		A2: next_CNT2 = CNT2 + 8'd1;
-		A3: next_CNT3 = CNT3 + 8'd1;
-		A4: next_CNT4 = CNT4 + 8'd1;
-		A5: next_CNT5 = CNT5 + 8'd1;
-		A6: next_CNT6 = CNT6 + 8'd1;
-	endcase
+	if(en)
+		case(gray_data)
+			A1: next_CNT1 = CNT1 + 8'd1;
+			A2: next_CNT2 = CNT2 + 8'd1;
+			A3: next_CNT3 = CNT3 + 8'd1;
+			A4: next_CNT4 = CNT4 + 8'd1;
+			A5: next_CNT5 = CNT5 + 8'd1;
+			A6: next_CNT6 = CNT6 + 8'd1;
+		endcase
 end
 always@(posedge clk or posedge rst) begin
 	if(rst) {CNT1, CNT2, CNT3, CNT4, CNT5, CNT6} <= 48'b0;
@@ -251,8 +252,11 @@ SplitCell SC[`SORT_FLAG_LENGTH-1 : 0](.rst(rst), .en(en), .clk(clk), .flag_A(fla
 .HC({HC6, HC5, HC4, HC3, HC2, HC1}), .M({M6, M5, M4, M3, M2, M1}));
 endmodule
 
-module Control(clk, reset, gray_valid, counter_en, CNT_valid, sort_set, sort_update_en, sort_done, sort_num, split_en, code_valid);
+module Control(clk, reset, gray_valid, gray_data_in, gray_data_out, counter_en, CNT_valid, 
+sort_set, sort_update_en, sort_done, sort_num, split_en, code_valid);
+input[7:0] gray_data_in;
 input clk, reset, gray_valid, sort_done;
+output[7:0] gray_data_out;
 output[2:0] sort_num;
 output counter_en, CNT_valid, sort_set, sort_update_en, split_en, code_valid;
 // state define
@@ -264,6 +268,7 @@ output counter_en, CNT_valid, sort_set, sort_update_en, split_en, code_valid;
 `define RESULT 3'd5
 `define SETUP 3'd6
 // These are register
+reg[7:0] gray_data_out;
 reg[2:0] state, sort_num;
 // These are wire
 reg[2:0] next_state, next_sort_num;
@@ -361,10 +366,12 @@ always@(posedge clk or posedge reset) begin
 	if(reset) begin
 		state <= `WAIT;
 		sort_num <= 3'd6;
+		gray_data_out <= gray_data_in;
 	end
 	else begin
 		state <= next_state;
 		sort_num <= next_sort_num;
+		gray_data_out <= gray_data_in;
 	end
 end
 endmodule
@@ -385,14 +392,16 @@ wire[6*`SORT_DATA_LENGTH-1 : 0] sorted_data;
 wire[6*`SORT_FLAG_LENGTH-1 : 0] sorted_flag;
 wire[`SORT_DATA_LENGTH-1 : 0] update_data, data_A, data_B;
 wire[`SORT_FLAG_LENGTH-1 : 0] update_flag, flag_A, flag_B;
+wire[7:0] gray_data_out;
 wire[2:0] sort_num, num_reg;
 wire counter_en, sort_set, sort_done, sort_update_en, split_en;
 Control Control_U(.clk(clk), .reset(reset), 
-	.gray_valid(gray_valid), .counter_en(counter_en), .CNT_valid(CNT_valid),
+	.gray_valid(gray_valid), .gray_data_in(gray_data), .gray_data_out(gray_data_out), 
+	.counter_en(counter_en), .CNT_valid(CNT_valid),
 	.sort_set(sort_set), .sort_update_en(sort_update_en), .sort_done(sort_done), .sort_num(sort_num), 
 	.split_en(split_en), .code_valid(code_valid));
 Counter Counter_U(.rst(reset), .en(counter_en), .clk(clk), 
-	.gray_data(gray_data), .CNT1(CNT1), .CNT2(CNT2), .CNT3(CNT3), .CNT4(CNT4), .CNT5(CNT5), .CNT6(CNT6));
+	.gray_data(gray_data_out), .CNT1(CNT1), .CNT2(CNT2), .CNT3(CNT3), .CNT4(CNT4), .CNT5(CNT5), .CNT6(CNT6));
 Sort Sort_U(.clk(clk), .set(sort_set), .update_en(sort_update_en),
 	.unsort_data({CNT1, CNT2, CNT3, CNT4, CNT5, CNT6}), 
 	.unsort_flag({6'b000001, 6'b000010, 6'b000100, 6'b001000, 6'b010000, 6'b100000}), 
