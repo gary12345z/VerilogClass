@@ -79,13 +79,16 @@ output[6*`SORT_DATA_LENGTH-1 : 0] sorted_data;
 output[6*`SORT_FLAG_LENGTH-1 : 0] sorted_flag;
 output done, num_reg;
 // These are register
-reg[2:0] num_reg;
+reg[6*`SORT_DATA_LENGTH-1 : 0] sorted_data;
+reg[6*`SORT_FLAG_LENGTH-1 : 0] sorted_flag;
 reg[6*`SORT_DATA_LENGTH-1 : 0] data;
 reg[6*`SORT_FLAG_LENGTH-1 : 0] flag;
+reg[2:0] num_reg;
+reg[2:0] count;
 // These are wire
 reg[4:0] en;
-wire[6*`SORT_DATA_LENGTH-1 : 0] mid_data;
-wire[6*`SORT_FLAG_LENGTH-1 : 0] mid_flag;
+wire[6*`SORT_DATA_LENGTH-1 : 0] mid_data, sorting_data;
+wire[6*`SORT_FLAG_LENGTH-1 : 0] mid_flag, sorting_flag;
 // data(register) -> mid_data(wire), compare odd with even(54,32,10)
 SortCell Cell0(.data_in(data[6*`SORT_DATA_LENGTH-1 : 4*`SORT_DATA_LENGTH]), .flag_in(flag[6*`SORT_FLAG_LENGTH-1 : 4*`SORT_FLAG_LENGTH]), 
 .en(en[0]), .data_out(mid_data[6*`SORT_DATA_LENGTH-1 : 4*`SORT_DATA_LENGTH]), .flag_out(mid_flag[6*`SORT_FLAG_LENGTH-1 : 4*`SORT_FLAG_LENGTH]));
@@ -94,16 +97,16 @@ SortCell Cell2(.data_in(data[4*`SORT_DATA_LENGTH-1 : 2*`SORT_DATA_LENGTH]), .fla
 SortCell Cell4(.data_in(data[2*`SORT_DATA_LENGTH-1 : 0*`SORT_DATA_LENGTH]), .flag_in(flag[2*`SORT_FLAG_LENGTH-1 : 0*`SORT_FLAG_LENGTH]), 
 .en(en[4]), .data_out(mid_data[2*`SORT_DATA_LENGTH-1 : 0*`SORT_DATA_LENGTH]), .flag_out(mid_flag[2*`SORT_FLAG_LENGTH-1 : 0*`SORT_FLAG_LENGTH]));
 // mid_data(wire) -> data_out(wire), compare even with odd(43,21)
+assign sorting_data[6*`SORT_DATA_LENGTH-1 : 5*`SORT_DATA_LENGTH] = mid_data[6*`SORT_DATA_LENGTH-1 : 5*`SORT_DATA_LENGTH];
+assign sorting_flag[6*`SORT_FLAG_LENGTH-1 : 5*`SORT_FLAG_LENGTH] = mid_flag[6*`SORT_FLAG_LENGTH-1 : 5*`SORT_FLAG_LENGTH];
 SortCell Cell1(.data_in(mid_data[5*`SORT_DATA_LENGTH-1 : 3*`SORT_DATA_LENGTH]), .flag_in(mid_flag[5*`SORT_FLAG_LENGTH-1 : 3*`SORT_FLAG_LENGTH]), 
-.en(en[1]), .data_out(sorted_data[5*`SORT_DATA_LENGTH-1 : 3*`SORT_DATA_LENGTH]), .flag_out(sorted_flag[5*`SORT_FLAG_LENGTH-1 : 3*`SORT_FLAG_LENGTH]));
+.en(en[1]), .data_out(sorting_data[5*`SORT_DATA_LENGTH-1 : 3*`SORT_DATA_LENGTH]), .flag_out(sorting_flag[5*`SORT_FLAG_LENGTH-1 : 3*`SORT_FLAG_LENGTH]));
 SortCell Cell3(.data_in(mid_data[3*`SORT_DATA_LENGTH-1 : 1*`SORT_DATA_LENGTH]), .flag_in(mid_flag[3*`SORT_FLAG_LENGTH-1 : 1*`SORT_FLAG_LENGTH]), 
-.en(en[3]), .data_out(sorted_data[3*`SORT_DATA_LENGTH-1 : 1*`SORT_DATA_LENGTH]), .flag_out(sorted_flag[3*`SORT_FLAG_LENGTH-1 : 1*`SORT_FLAG_LENGTH]));
-assign sorted_data[6*`SORT_DATA_LENGTH-1 : 5*`SORT_DATA_LENGTH] = mid_data[6*`SORT_DATA_LENGTH-1 : 5*`SORT_DATA_LENGTH];
-assign sorted_data[1*`SORT_DATA_LENGTH-1 : 0*`SORT_DATA_LENGTH] = mid_data[1*`SORT_DATA_LENGTH-1 : 0*`SORT_DATA_LENGTH];
-assign sorted_flag[6*`SORT_FLAG_LENGTH-1 : 5*`SORT_FLAG_LENGTH] = mid_flag[6*`SORT_FLAG_LENGTH-1 : 5*`SORT_FLAG_LENGTH];
-assign sorted_flag[1*`SORT_FLAG_LENGTH-1 : 0*`SORT_FLAG_LENGTH] = mid_flag[1*`SORT_FLAG_LENGTH-1 : 0*`SORT_FLAG_LENGTH];
+.en(en[3]), .data_out(sorting_data[3*`SORT_DATA_LENGTH-1 : 1*`SORT_DATA_LENGTH]), .flag_out(sorting_flag[3*`SORT_FLAG_LENGTH-1 : 1*`SORT_FLAG_LENGTH]));
+assign sorting_data[1*`SORT_DATA_LENGTH-1 : 0*`SORT_DATA_LENGTH] = mid_data[1*`SORT_DATA_LENGTH-1 : 0*`SORT_DATA_LENGTH];
+assign sorting_flag[1*`SORT_FLAG_LENGTH-1 : 0*`SORT_FLAG_LENGTH] = mid_flag[1*`SORT_FLAG_LENGTH-1 : 0*`SORT_FLAG_LENGTH];
 // singnal for control to show that if this module finished or not
-assign done = (set==0 && data == sorted_data)? 1:0;
+assign done = ((set==0 && data == sorting_data)||(count==0))? 1:0;
 // decode input "num" into "en" signal
 always@(*) begin
 	case(num_reg)
@@ -117,17 +120,31 @@ always@(*) begin
 	endcase
 end
 always@(posedge clk) begin
-	if(set) {num_reg, data, flag} <= {num, unsort_data, unsort_flag}; // Refresh all register
-	else if(update_en) begin // Update only one of data(Merge)
-		{num_reg, data, flag} <= {num, sorted_data, sorted_flag};
-		case(num)
-			3'd5: {data[2*`SORT_DATA_LENGTH-1 : 1*`SORT_DATA_LENGTH], flag[2*`SORT_FLAG_LENGTH-1 : 1*`SORT_FLAG_LENGTH]} <= {update_data, update_flag};
-			3'd4: {data[3*`SORT_DATA_LENGTH-1 : 2*`SORT_DATA_LENGTH], flag[3*`SORT_FLAG_LENGTH-1 : 2*`SORT_FLAG_LENGTH]} <= {update_data, update_flag};
-			3'd3: {data[4*`SORT_DATA_LENGTH-1 : 3*`SORT_DATA_LENGTH], flag[4*`SORT_FLAG_LENGTH-1 : 3*`SORT_FLAG_LENGTH]} <= {update_data, update_flag};
-			3'd2: {data[5*`SORT_DATA_LENGTH-1 : 4*`SORT_DATA_LENGTH], flag[5*`SORT_FLAG_LENGTH-1 : 4*`SORT_FLAG_LENGTH]} <= {update_data, update_flag};
-		endcase
+	{sorted_data, sorted_flag} <= {sorting_data, sorting_flag};
+	if(set) begin
+		{data, flag} <= {unsort_data, unsort_flag}; // Refresh all register
+		num_reg <= num;
+		count <= num - 3'd2;
 	end
-	else {data, flag} <= {sorted_data, sorted_flag}; // Keep sorting 
+	else if(update_en) begin // Update only one of data(Merge)
+		{data, flag} <= {sorted_data, sorted_flag};
+		case(num)
+			3'd5: {data[2*`SORT_DATA_LENGTH-1 : 1*`SORT_DATA_LENGTH], flag[2*`SORT_FLAG_LENGTH-1 : 1*`SORT_FLAG_LENGTH]} 
+				<= {update_data, update_flag};
+			3'd4: {data[3*`SORT_DATA_LENGTH-1 : 2*`SORT_DATA_LENGTH], flag[3*`SORT_FLAG_LENGTH-1 : 2*`SORT_FLAG_LENGTH]} 
+				<= {update_data, update_flag};
+			3'd3: {data[4*`SORT_DATA_LENGTH-1 : 3*`SORT_DATA_LENGTH], flag[4*`SORT_FLAG_LENGTH-1 : 3*`SORT_FLAG_LENGTH]} 
+				<= {update_data, update_flag};
+			3'd2: {data[5*`SORT_DATA_LENGTH-1 : 4*`SORT_DATA_LENGTH], flag[5*`SORT_FLAG_LENGTH-1 : 4*`SORT_FLAG_LENGTH]} 
+				<= {update_data, update_flag};
+		endcase
+		num_reg <= num;
+		count <= num - 3'd2;
+	end
+	else begin
+		{data, flag} <= {sorting_data, sorting_flag}; // Keep sorting 
+		count <= count - 3'd1;
+	end
 end
 endmodule
 
@@ -265,8 +282,8 @@ output counter_en, CNT_valid, sort_set, sort_update_en, split_en, code_valid;
 `define COUNTING_RESULT 3'd2
 `define SORTING 3'd3
 `define MERGER_AND_SPLIT 3'd4
-`define RESULT 3'd5
-`define SETUP 3'd6
+`define UPDATE_SORT 3'd5
+`define RESULT 3'd6
 // These are register
 reg[7:0] gray_data_out;
 reg[2:0] state, sort_num;
@@ -308,17 +325,6 @@ always@(*) begin
 			next_sort_num = sort_num;
 			next_state = `SORTING;
 		end
-		`SETUP: begin
-			// module control signal
-			counter_en = 1'bx;
-			{sort_set, sort_update_en} = 2'b01;
-			split_en = 1'b0;
-			// output signal
-			{CNT_valid, code_valid} = 2'b00;
-			// next_state
-			next_sort_num = sort_num;
-			next_state = `SORTING;
-		end
 		`SORTING: begin
 			// module control signal
 			counter_en = 1'bx;
@@ -339,7 +345,18 @@ always@(*) begin
 			{CNT_valid, code_valid} = 2'b00;
 			// next_state
 			next_sort_num = sort_num - 3'd1;
-			next_state = (sort_num > 3'd2)? `SETUP : `RESULT;
+			next_state = (sort_num > 3'd2)? `UPDATE_SORT : `RESULT;
+		end
+		`UPDATE_SORT: begin
+			// module control signal
+			counter_en = 1'bx;
+			{sort_set, sort_update_en} = 2'b01;
+			split_en = 1'b0;
+			// output signal
+			{CNT_valid, code_valid} = 2'b00;
+			// next_state
+			next_sort_num = sort_num;
+			next_state = `SORTING;
 		end
 		`RESULT: begin
 			// module control signal
@@ -363,15 +380,14 @@ always@(*) begin
 	endcase
 end
 always@(posedge clk or posedge reset) begin
+	gray_data_out <= gray_data_in;
 	if(reset) begin
 		state <= `WAIT;
 		sort_num <= 3'd6;
-		gray_data_out <= gray_data_in;
 	end
 	else begin
 		state <= next_state;
 		sort_num <= next_sort_num;
-		gray_data_out <= gray_data_in;
 	end
 end
 endmodule

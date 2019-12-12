@@ -115,6 +115,7 @@ initial begin
   #(`CLK_period*5);
   @(negedge CLK) gray_valid = 1'b1;
   gray_data = pat_mem[i];
+  $display("%3d",$time);
   for (i=1;i<100;i=i+1)
     @(negedge CLK) gray_data = pat_mem[i];
   @(negedge CLK) gray_valid = 1'b0;
