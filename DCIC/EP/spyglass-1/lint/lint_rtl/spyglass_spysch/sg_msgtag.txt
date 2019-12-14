@@ -29,10 +29,3 @@
 [42]
 "RULEGROUP"
 ["morelint"]
--1 "W240" 3
-"TEMPLATE"
-["lint/lint_rtl"]
-"RULE_ORDER"
-[53]
-"RULEGROUP"
-["lint/Lint_Elab_Rules","lint/Usage"]

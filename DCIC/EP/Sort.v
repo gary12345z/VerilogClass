@@ -322,7 +322,7 @@ always@(*) begin
 			// output signal
 			{CNT_valid, code_valid} = 2'b10;
 			// next_state
-			next_sort_num = sort_num;
+			next_sort_num = sort_num - 3'd1;
 			next_state = `SORTING;
 		end
 		`SORTING: begin
@@ -339,24 +339,13 @@ always@(*) begin
 		`MERGER_AND_SPLIT: begin
 			// module control signal
 			counter_en = 1'bx;
-			{sort_set, sort_update_en} = 2'b00;
+			{sort_set, sort_update_en} = 2'b01;
 			split_en = 1'b1;
 			// output signal
 			{CNT_valid, code_valid} = 2'b00;
 			// next_state
 			next_sort_num = sort_num - 3'd1;
-			next_state = (sort_num > 3'd2)? `UPDATE_SORT : `RESULT;
-		end
-		`UPDATE_SORT: begin
-			// module control signal
-			counter_en = 1'bx;
-			{sort_set, sort_update_en} = 2'b01;
-			split_en = 1'b0;
-			// output signal
-			{CNT_valid, code_valid} = 2'b00;
-			// next_state
-			next_sort_num = sort_num;
-			next_state = `SORTING;
+			next_state = (sort_num > 3'd1)? `SORTING : `RESULT;
 		end
 		`RESULT: begin
 			// module control signal
@@ -380,7 +369,6 @@ always@(*) begin
 	endcase
 end
 always@(posedge clk or posedge reset) begin
-	gray_data_out <= gray_data_in;
 	if(reset) begin
 		state <= `WAIT;
 		sort_num <= 3'd6;
@@ -389,6 +377,9 @@ always@(posedge clk or posedge reset) begin
 		state <= next_state;
 		sort_num <= next_sort_num;
 	end
+end
+always@(posedge clk) begin
+	gray_data_out <= gray_data_in;
 end
 endmodule
 

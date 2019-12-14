@@ -8,75 +8,67 @@ Report : timing
         -sort_by group
 Design : huffman
 Version: P-2019.03
-Date   : Wed Dec 11 23:03:39 2019
+Date   : Sat Dec 14 14:30:35 2019
 ****************************************
 
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: Sort_U/data_reg[11]
+  Startpoint: Sort_U/data_reg[1]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: Sort_U/data_reg[39]
+  Endpoint: Control_U/state_reg[2]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
-  clock clk (rise edge)                                   5.00       5.00
-  clock network delay (ideal)                             0.00       5.00
-  Sort_U/data_reg[11]/CK (DFFQX1)                         0.00       5.00 r
-  Sort_U/data_reg[11]/Q (DFFQX1)                          0.39       5.39 r
-  Sort_U/Cell4/data_in[11] (SortCell_3)                   0.00       5.39 r
-  Sort_U/Cell4/U61/Y (NOR2BX1)                            0.21       5.60 r
-  Sort_U/Cell4/U63/Y (OAI32X1)                            0.15       5.75 f
-  Sort_U/Cell4/U65/Y (OAI221XL)                           0.27       6.01 r
-  Sort_U/Cell4/U73/Y (OAI31XL)                            0.13       6.14 f
-  Sort_U/Cell4/U31/Y (NAND2X1)                            0.26       6.40 r
-  Sort_U/Cell4/U8/Y (CLKBUFX3)                            0.27       6.67 r
-  Sort_U/Cell4/U7/Y (CLKINVX1)                            0.37       7.04 f
-  Sort_U/Cell4/U3/Y (OAI22XL)                             0.36       7.40 r
-  Sort_U/Cell4/data_out[15] (SortCell_3)                  0.00       7.40 r
-  Sort_U/Cell3/data_in[7] (SortCell_1)                    0.00       7.40 r
-  Sort_U/Cell3/U20/Y (CLKINVX1)                           0.15       7.56 f
-  Sort_U/Cell3/U68/Y (AND2X1)                             0.23       7.79 f
-  Sort_U/Cell3/U70/Y (OAI32X1)                            0.22       8.00 r
-  Sort_U/Cell3/U18/Y (CLKINVX1)                           0.08       8.09 f
-  Sort_U/Cell3/U72/Y (AO22X1)                             0.33       8.41 f
-  Sort_U/Cell3/U73/Y (OAI31XL)                            0.11       8.52 r
-  Sort_U/Cell3/U60/Y (NAND2X1)                            0.27       8.80 f
-  Sort_U/Cell3/U47/Y (CLKBUFX3)                           0.29       9.09 f
-  Sort_U/Cell3/U13/Y (CLKINVX1)                           0.34       9.43 r
-  Sort_U/Cell3/U4/Y (OAI22XL)                             0.22       9.65 f
-  Sort_U/Cell3/data_out[9] (SortCell_1)                   0.00       9.65 f
-  Sort_U/sorted_data[17] (Sort)                           0.00       9.65 f
-  U113/Y (AOI222XL)                                       0.40      10.06 r
-  U114/Y (OAI211X1)                                       0.14      10.20 f
-  Merge_U/add_183/B[1] (Merge_DW01_add_0)                 0.00      10.20 f
-  Merge_U/add_183/U1_1/CO (ADDFXL)                        0.63      10.83 f
-  Merge_U/add_183/U1_2/CO (ADDFXL)                        0.38      11.20 f
-  Merge_U/add_183/U1_3/CO (ADDFXL)                        0.38      11.58 f
-  Merge_U/add_183/U1_4/CO (ADDFXL)                        0.38      11.95 f
-  Merge_U/add_183/U1_5/CO (ADDFXL)                        0.38      12.33 f
-  Merge_U/add_183/U1_6/CO (ADDFXL)                        0.38      12.71 f
-  Merge_U/add_183/U1_7/Y (XOR3X1)                         0.22      12.93 f
-  Merge_U/add_183/SUM[7] (Merge_DW01_add_0)               0.00      12.93 f
-  Sort_U/update_data[7] (Sort)                            0.00      12.93 f
-  Sort_U/U44/Y (CLKINVX1)                                 0.09      13.02 r
-  Sort_U/U73/Y (OAI221XL)                                 0.12      13.14 f
-  Sort_U/data_reg[39]/D (DFFQX1)                          0.00      13.14 f
-  data arrival time                                                 13.14
+  clock clk (rise edge)                                   1.50       1.50
+  clock network delay (ideal)                             0.00       1.50
+  Sort_U/data_reg[1]/CK (DFFQX2)                          0.00       1.50 r
+  Sort_U/data_reg[1]/Q (DFFQX2)                           0.30       1.80 r
+  Sort_U/Cell4/data_in[1] (SortCell_3)                    0.00       1.80 r
+  Sort_U/Cell4/U33/Y (INVX3)                              0.06       1.85 f
+  Sort_U/Cell4/U66/Y (NAND2X1)                            0.10       1.95 r
+  Sort_U/Cell4/U1/Y (NAND3X2)                             0.08       2.02 f
+  Sort_U/Cell4/U39/Y (NAND3X2)                            0.07       2.09 r
+  Sort_U/Cell4/U41/Y (NAND3X2)                            0.07       2.17 f
+  Sort_U/Cell4/U13/Y (NAND3X2)                            0.11       2.28 r
+  Sort_U/Cell4/U29/Y (AND2X4)                             0.17       2.44 r
+  Sort_U/Cell4/U23/Y (CLKMX2X2)                           0.24       2.69 r
+  Sort_U/Cell4/data_out[8] (SortCell_3)                   0.00       2.69 r
+  Sort_U/Cell3/data_in[0] (SortCell_1)                    0.00       2.69 r
+  Sort_U/Cell3/U19/Y (NAND3X2)                            0.09       2.77 f
+  Sort_U/Cell3/U9/Y (CLKAND2X6)                           0.13       2.90 f
+  Sort_U/Cell3/U34/Y (NAND2X4)                            0.05       2.95 r
+  Sort_U/Cell3/U13/Y (NAND3X4)                            0.07       3.02 f
+  Sort_U/Cell3/U16/Y (NAND3X4)                            0.10       3.12 r
+  Sort_U/Cell3/U14/Y (CLKAND2X12)                         0.17       3.29 r
+  Sort_U/Cell3/U37/Y (CLKMX2X3)                           0.21       3.50 f
+  Sort_U/Cell3/data_out[11] (SortCell_1)                  0.00       3.50 f
+  Sort_U/U93/Y (XNOR2X4)                                  0.10       3.60 r
+  Sort_U/U423/Y (NAND4X2)                                 0.12       3.71 f
+  Sort_U/U424/Y (NAND4BX4)                                0.16       3.88 f
+  Sort_U/U17/Y (NOR3X4)                                   0.13       4.01 r
+  Sort_U/U422/Y (NAND4X4)                                 0.09       4.09 f
+  Sort_U/U417/Y (NAND2X4)                                 0.07       4.16 r
+  Sort_U/done (Sort)                                      0.00       4.16 r
+  Control_U/sort_done (Control)                           0.00       4.16 r
+  Control_U/U9/Y (NAND2X2)                                0.05       4.21 f
+  Control_U/U10/Y (NAND3BX2)                              0.06       4.27 r
+  Control_U/state_reg[2]/D (DFFRX1)                       0.00       4.27 r
+  data arrival time                                                  4.27
 
-  clock clk (rise edge)                                  15.00      15.00
-  clock network delay (ideal)                             0.00      15.00
-  Sort_U/data_reg[39]/CK (DFFQX1)                         0.00      15.00 r
-  library setup time                                     -0.26      14.74
-  data required time                                                14.74
+  clock clk (rise edge)                                   4.50       4.50
+  clock network delay (ideal)                             0.00       4.50
+  Control_U/state_reg[2]/CK (DFFRX1)                      0.00       4.50 r
+  library setup time                                     -0.23       4.27
+  data required time                                                 4.27
   --------------------------------------------------------------------------
-  data required time                                                14.74
-  data arrival time                                                -13.14
+  data required time                                                 4.27
+  data arrival time                                                 -4.27
   --------------------------------------------------------------------------
-  slack (MET)                                                        1.60
+  slack (MET)                                                        0.00
 
 
 1

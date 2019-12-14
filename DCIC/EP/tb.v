@@ -181,8 +181,8 @@ always@(negedge CLK) begin
 
   end
 end
-/*
-initial begin
+
+/*initial begin
 	$monitor("%b(%d,%d)", u_huffman.Sort_U.sorted_flag, u_huffman.Control_U.state, u_huffman.Sort_U.num_reg);
 end*/
 //001000 100000 010000 000010 000001 000100
