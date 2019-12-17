@@ -1,0 +1,70 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : huffman
+Version: P-2019.03
+Date   : Sun Dec 15 14:28:51 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: Sort_U/data_reg[27]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Sort_U/flag_reg[19]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  Sort_U/data_reg[27]/CK (DFFQX1)                         0.00       2.50 r
+  Sort_U/data_reg[27]/Q (DFFQX1)                          0.37       2.87 r
+  Sort_U/Cell2/data_in[11] (SortCell_4)                   0.00       2.87 r
+  Sort_U/Cell2/U61/Y (NOR2BX1)                            0.20       3.06 r
+  Sort_U/Cell2/U63/Y (OAI32X1)                            0.15       3.21 f
+  Sort_U/Cell2/U65/Y (OAI221XL)                           0.27       3.48 r
+  Sort_U/Cell2/U73/Y (OAI31XL)                            0.13       3.61 f
+  Sort_U/Cell2/U32/Y (NAND2X1)                            0.17       3.78 r
+  Sort_U/Cell2/U1/Y (BUFX2)                               0.31       4.08 r
+  Sort_U/Cell2/U3/Y (CLKINVX1)                            0.42       4.50 f
+  Sort_U/Cell2/U2/Y (OAI22XL)                             0.36       4.87 r
+  Sort_U/Cell2/data_out[15] (SortCell_4)                  0.00       4.87 r
+  Sort_U/Cell1/data_in[7] (SortCell_2)                    0.00       4.87 r
+  Sort_U/Cell1/U38/Y (CLKINVX1)                           0.15       5.02 f
+  Sort_U/Cell1/U70/Y (AND2X1)                             0.23       5.25 f
+  Sort_U/Cell1/U72/Y (OAI32X1)                            0.22       5.47 r
+  Sort_U/Cell1/U33/Y (CLKINVX1)                           0.08       5.55 f
+  Sort_U/Cell1/U74/Y (AO22X1)                             0.33       5.88 f
+  Sort_U/Cell1/U75/Y (OAI31XL)                            0.11       5.99 r
+  Sort_U/Cell1/U50/Y (NAND2X1)                            0.08       6.07 f
+  Sort_U/Cell1/U34/Y (CLKBUFX3)                           0.17       6.24 f
+  Sort_U/Cell1/U3/Y (CLKINVX1)                            0.34       6.58 r
+  Sort_U/Cell1/U1/Y (INVX1)                               0.25       6.83 f
+  Sort_U/Cell1/U31/Y (OAI22XL)                            0.23       7.06 r
+  Sort_U/Cell1/flag_out[1] (SortCell_2)                   0.00       7.06 r
+  Sort_U/U168/Y (AOI22X1)                                 0.11       7.18 f
+  Sort_U/U166/Y (OAI211X1)                                0.14       7.31 r
+  Sort_U/flag_reg[19]/D (DFFQX1)                          0.00       7.31 r
+  data arrival time                                                  7.31
+
+  clock clk (rise edge)                                   7.50       7.50
+  clock network delay (ideal)                             0.00       7.50
+  Sort_U/flag_reg[19]/CK (DFFQX1)                         0.00       7.50 r
+  library setup time                                     -0.14       7.36
+  data required time                                                 7.36
+  --------------------------------------------------------------------------
+  data required time                                                 7.36
+  data arrival time                                                 -7.31
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+1

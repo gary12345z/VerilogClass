@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : huffman
+Version: P-2019.03
+Date   : Sat Dec 14 14:30:09 2019
+****************************************
+
+Library(s) Used:
+
+    slow (File: /usr/cad/CBDK/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db)
+
+Number of ports:                          970
+Number of nets:                          2453
+Number of cells:                         1508
+Number of combinational cells:           1152
+Number of sequential cells:               332
+Number of macros/black boxes:               0
+Number of buf/inv:                        315
+Number of references:                      19
+
+Combinational area:               9155.775633
+Buf/Inv area:                     1161.021582
+Noncombinational area:            9505.439920
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 18661.215553
+Total area:                 undefined
+1

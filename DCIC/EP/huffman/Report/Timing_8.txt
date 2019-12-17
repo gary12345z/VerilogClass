@@ -1,0 +1,77 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : huffman
+Version: P-2019.03
+Date   : Sat Dec 14 14:30:00 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: Sort_U/data_reg[39]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Control_U/state_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   4.00       4.00
+  clock network delay (ideal)                             0.00       4.00
+  Sort_U/data_reg[39]/CK (DFFQX1)                         0.00       4.00 r
+  Sort_U/data_reg[39]/Q (DFFQX1)                          0.35       4.35 r
+  Sort_U/Cell0/data_in[7] (SortCell_0)                    0.00       4.35 r
+  Sort_U/Cell0/U34/Y (CLKINVX1)                           0.10       4.45 f
+  Sort_U/Cell0/U68/Y (AND2X1)                             0.22       4.67 f
+  Sort_U/Cell0/U70/Y (OAI32X1)                            0.22       4.89 r
+  Sort_U/Cell0/U32/Y (CLKINVX1)                           0.08       4.97 f
+  Sort_U/Cell0/U72/Y (AO22X1)                             0.33       5.30 f
+  Sort_U/Cell0/U73/Y (OAI31XL)                            0.11       5.41 r
+  Sort_U/Cell0/U31/Y (NAND2X1)                            0.14       5.55 f
+  Sort_U/Cell0/U9/Y (CLKINVX1)                            0.35       5.90 r
+  Sort_U/Cell0/U8/Y (CLKINVX1)                            0.43       6.33 f
+  Sort_U/Cell0/U2/Y (OAI22XL)                             0.31       6.64 r
+  Sort_U/Cell0/data_out[5] (SortCell_0)                   0.00       6.64 r
+  Sort_U/Cell1/data_in[13] (SortCell_2)                   0.00       6.64 r
+  Sort_U/Cell1/U64/Y (NAND2BX1)                           0.12       6.76 f
+  Sort_U/Cell1/U71/Y (AOI32X1)                            0.21       6.97 r
+  Sort_U/Cell1/U72/Y (AO22X1)                             0.17       7.14 r
+  Sort_U/Cell1/U73/Y (OAI31XL)                            0.09       7.23 f
+  Sort_U/Cell1/U48/Y (NAND2X1)                            0.20       7.43 r
+  Sort_U/Cell1/U21/Y (CLKBUFX3)                           0.27       7.70 r
+  Sort_U/Cell1/U1/Y (CLKINVX1)                            0.38       8.08 f
+  Sort_U/Cell1/U7/Y (OAI22XL)                             0.48       8.56 r
+  Sort_U/Cell1/data_out[4] (SortCell_2)                   0.00       8.56 r
+  Sort_U/U93/Y (XOR2X1)                                   0.28       8.84 f
+  Sort_U/U42/Y (NOR4X1)                                   0.22       9.06 r
+  Sort_U/U13/Y (NAND4X1)                                  0.10       9.16 f
+  Sort_U/U11/Y (OAI21XL)                                  0.27       9.43 r
+  Sort_U/done (Sort)                                      0.00       9.43 r
+  Control_U/sort_done (Control)                           0.00       9.43 r
+  Control_U/U6/Y (CLKINVX1)                               0.09       9.51 f
+  Control_U/U5/Y (OAI221XL)                               0.43       9.94 r
+  Control_U/U10/Y (AOI33X1)                               0.24      10.18 f
+  Control_U/U9/Y (CLKINVX1)                               0.07      10.25 r
+  Control_U/state_reg[2]/D (DFFRX1)                       0.00      10.25 r
+  data arrival time                                                 10.25
+
+  clock clk (rise edge)                                  12.00      12.00
+  clock network delay (ideal)                             0.00      12.00
+  Control_U/state_reg[2]/CK (DFFRX1)                      0.00      12.00 r
+  library setup time                                     -0.23      11.77
+  data required time                                                11.77
+  --------------------------------------------------------------------------
+  data required time                                                11.77
+  data arrival time                                                -10.25
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.52
+
+
+1

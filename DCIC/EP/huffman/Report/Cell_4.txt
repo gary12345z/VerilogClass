@@ -1,0 +1,177 @@
+ 
+****************************************
+Report : cell
+Design : huffman
+Version: P-2019.03
+Date   : Sat Dec 14 14:30:23 2019
+****************************************
+
+Attributes:
+   BO - reference allows boundary optimization
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+Control_U                 Control                         655.196399
+                                                                    h, n
+Counter_U                 Counter                         2933.107131
+                                                                    h, n
+Merge_U/add_200           Merge_DW01_add_0                263.097008
+                                                                    BO, h
+Sort_U                    Sort                            11033.099969
+                                                                    h, n
+Split_U/SC[0]             SplitCell_5                     695.933987
+                                                                    h, n
+Split_U/SC[1]             SplitCell_4                     695.933987
+                                                                    h, n
+Split_U/SC[2]             SplitCell_3                     695.933987
+                                                                    h, n
+Split_U/SC[3]             SplitCell_2                     695.933987
+                                                                    h, n
+Split_U/SC[4]             SplitCell_1                     695.933987
+                                                                    h, n
+Split_U/SC[5]             SplitCell_0                     695.933987
+                                                                    h, n
+U3                        AOI222X1        slow            15.276600 
+U4                        OR2XL           slow            6.789600  
+U5                        NAND3XL         slow            6.789600  
+U6                        OR2X1           slow            6.789600  
+U7                        OA21XL          slow            8.487000  
+U8                        NAND2X1         slow            5.092200  
+U9                        AOI222XL        slow            13.579200 
+U10                       NOR2X1          slow            5.092200  
+U11                       NOR2XL          slow            5.092200  
+U12                       NOR2BX4         slow            13.579200 
+U13                       INVX1           slow            3.394800  
+U14                       CLKINVX1        slow            3.394800  
+U15                       NOR2BXL         slow            6.789600  
+U16                       NOR2BXL         slow            6.789600  
+U17                       NOR2BXL         slow            6.789600  
+U18                       NOR2BXL         slow            6.789600  
+U19                       NAND2XL         slow            5.092200  
+U20                       NAND2XL         slow            5.092200  
+U21                       NAND2XL         slow            5.092200  
+U22                       NAND2XL         slow            5.092200  
+U23                       INVXL           slow            3.394800  
+U24                       INVXL           slow            3.394800  
+U25                       NAND2XL         slow            5.092200  
+U26                       NAND2XL         slow            5.092200  
+U27                       NAND2XL         slow            5.092200  
+U28                       INVXL           slow            3.394800  
+U29                       NAND2XL         slow            5.092200  
+U30                       CLKBUFX3        slow            6.789600  
+U31                       CLKBUFX3        slow            6.789600  
+U32                       OR2X1           slow            6.789600  
+U33                       OR2X1           slow            6.789600  
+U34                       OR2X1           slow            6.789600  
+U35                       OR2X1           slow            6.789600  
+U36                       OR2X1           slow            6.789600  
+U37                       OR2X1           slow            6.789600  
+U38                       CLKINVX1        slow            3.394800  
+U39                       CLKINVX1        slow            3.394800  
+U40                       CLKINVX1        slow            3.394800  
+U41                       CLKINVX1        slow            3.394800  
+U42                       CLKINVX1        slow            3.394800  
+U43                       CLKINVX1        slow            3.394800  
+U44                       CLKINVX1        slow            3.394800  
+U45                       CLKINVX1        slow            3.394800  
+U46                       CLKINVX1        slow            3.394800  
+U47                       CLKINVX1        slow            3.394800  
+U48                       CLKINVX1        slow            3.394800  
+U49                       CLKINVX1        slow            3.394800  
+U50                       CLKINVX1        slow            3.394800  
+U51                       CLKINVX1        slow            3.394800  
+U52                       CLKINVX1        slow            3.394800  
+U53                       CLKINVX1        slow            3.394800  
+U54                       CLKINVX1        slow            3.394800  
+U55                       CLKINVX1        slow            3.394800  
+U56                       CLKINVX1        slow            3.394800  
+U57                       CLKINVX1        slow            3.394800  
+U58                       CLKINVX1        slow            3.394800  
+U59                       CLKINVX1        slow            3.394800  
+U60                       CLKINVX1        slow            3.394800  
+U61                       CLKINVX1        slow            3.394800  
+U62                       CLKINVX1        slow            3.394800  
+U63                       CLKINVX1        slow            3.394800  
+U64                       CLKINVX1        slow            3.394800  
+U65                       CLKINVX1        slow            3.394800  
+U66                       CLKINVX1        slow            3.394800  
+U67                       CLKINVX1        slow            3.394800  
+U68                       CLKINVX1        slow            3.394800  
+U69                       CLKINVX1        slow            3.394800  
+U70                       CLKINVX1        slow            3.394800  
+U71                       CLKINVX1        slow            3.394800  
+U72                       CLKINVX1        slow            3.394800  
+U73                       CLKINVX1        slow            3.394800  
+U74                       CLKINVX1        slow            3.394800  
+U75                       CLKINVX1        slow            3.394800  
+U76                       CLKINVX1        slow            3.394800  
+U77                       CLKINVX1        slow            3.394800  
+U78                       NOR2BX1         slow            6.789600  
+U79                       AOI222XL        slow            13.579200 
+U80                       OAI221XL        slow            11.881800 
+U81                       AOI222XL        slow            13.579200 
+U82                       OAI221XL        slow            11.881800 
+U83                       AOI222XL        slow            13.579200 
+U84                       OAI221XL        slow            11.881800 
+U85                       AOI222XL        slow            13.579200 
+U86                       OAI221XL        slow            11.881800 
+U87                       AOI222XL        slow            13.579200 
+U88                       OAI221XL        slow            11.881800 
+U89                       AOI222XL        slow            13.579200 
+U90                       OAI221XL        slow            11.881800 
+U91                       NAND2X1         slow            5.092200  
+U92                       AOI222XL        slow            13.579200 
+U93                       OAI211X1        slow            8.487000  
+U94                       NAND2X1         slow            5.092200  
+U95                       AOI222XL        slow            13.579200 
+U96                       OAI211X1        slow            8.487000  
+U97                       NAND2X1         slow            5.092200  
+U98                       AOI222XL        slow            13.579200 
+U99                       OAI211X1        slow            8.487000  
+U100                      NAND2X1         slow            5.092200  
+U101                      AOI222XL        slow            13.579200 
+U102                      OAI211X1        slow            8.487000  
+U103                      NAND2X1         slow            5.092200  
+U104                      AOI222XL        slow            13.579200 
+U105                      OAI211X1        slow            8.487000  
+U106                      NAND2X1         slow            5.092200  
+U107                      AOI222XL        slow            13.579200 
+U108                      OAI211X1        slow            8.487000  
+U109                      AOI222XL        slow            13.579200 
+U110                      OAI221XL        slow            11.881800 
+U111                      AOI222XL        slow            13.579200 
+U112                      OAI221XL        slow            11.881800 
+U113                      AOI222XL        slow            13.579200 
+U114                      OAI221XL        slow            11.881800 
+U115                      AOI222XL        slow            13.579200 
+U116                      OAI221XL        slow            11.881800 
+U117                      AOI222XL        slow            13.579200 
+U118                      OAI221XL        slow            11.881800 
+U119                      AOI222XL        slow            13.579200 
+U120                      OAI221XL        slow            11.881800 
+U121                      AOI222XL        slow            13.579200 
+U122                      OAI221XL        slow            11.881800 
+U123                      NAND2X1         slow            5.092200  
+U124                      AOI222XL        slow            13.579200 
+U125                      OAI211X1        slow            8.487000  
+U126                      NAND2X1         slow            5.092200  
+U127                      AOI222XL        slow            13.579200 
+U128                      OAI211X1        slow            8.487000  
+U129                      AOI222XL        slow            13.579200 
+U130                      OAI211X1        slow            8.487000  
+U131                      AOI222XL        slow            13.579200 
+U132                      OAI211X1        slow            8.487000  
+U133                      AOI222XL        slow            13.579200 
+U134                      OAI211X1        slow            8.487000  
+U135                      AOI222XL        slow            13.579200 
+U136                      OAI211X1        slow            8.487000  
+U137                      AOI222XL        slow            13.579200 
+U138                      OAI211X1        slow            8.487000  
+--------------------------------------------------------------------------------
+Total 146 cells                                           20087.031418
+1
