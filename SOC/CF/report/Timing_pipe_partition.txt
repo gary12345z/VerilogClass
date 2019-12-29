@@ -1,0 +1,72 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : SET
+Version: P-2019.03
+Date   : Sun Dec 29 15:17:24 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: addressGenerator/addr_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: judge/C2_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  addressGenerator/addr_reg[4]/CK (DFFRX4)                0.00       2.00 r
+  addressGenerator/addr_reg[4]/Q (DFFRX4)                 0.45       2.45 f
+  addressGenerator/addr[4] (addressGenerator)             0.00       2.45 f
+  judge/addressIn[4] (judge)                              0.00       2.45 f
+  judge/U114/Y (INVX3)                                    0.05       2.50 r
+  judge/U66/Y (OR2X2)                                     0.11       2.61 r
+  judge/U138/Y (NAND2X2)                                  0.07       2.68 f
+  judge/U122/Y (INVX3)                                    0.05       2.73 r
+  judge/U282/Y (OR2XL)                                    0.17       2.90 r
+  judge/U322/Y (CLKINVX1)                                 0.07       2.97 f
+  judge/U107/Y (OAI21XL)                                  0.32       3.29 r
+  judge/U132/Y (NAND2X2)                                  0.09       3.38 f
+  judge/U133/Y (NAND2X2)                                  0.09       3.47 r
+  judge/U4/Y (AOI2BB2X4)                                  0.09       3.55 f
+  judge/U3/Y (CLKMX2X2)                                   0.22       3.78 r
+  judge/U507/Y (XOR2X4)                                   0.11       3.89 f
+  judge/U337/Y (OR2X2)                                    0.23       4.12 f
+  judge/U212/Y (INVX1)                                    0.07       4.19 r
+  judge/U249/Y (MXI3X2)                                   0.23       4.42 f
+  judge/U332/Y (NAND2X2)                                  0.10       4.52 r
+  judge/U214/Y (OR2X4)                                    0.12       4.64 r
+  judge/U518/Y (AO22X4)                                   0.16       4.80 r
+  judge/U519/Y (AO22X4)                                   0.16       4.96 r
+  judge/U520/Y (AO22X4)                                   0.17       5.13 r
+  judge/U156/Y (OR2X6)                                    0.09       5.22 r
+  judge/U155/Y (NOR2X2)                                   0.04       5.26 f
+  judge/U521/Y (AO21X4)                                   0.16       5.42 f
+  judge/U294/Y (OAI33X1)                                  0.25       5.67 r
+  judge/U229/Y (AOI211X1)                                 0.11       5.77 f
+  judge/C2_reg/D (DFFQXL)                                 0.00       5.77 f
+  data arrival time                                                  5.77
+
+  clock clk (rise edge)                                   6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  judge/C2_reg/CK (DFFQXL)                                0.00       6.00 r
+  library setup time                                     -0.23       5.77
+  data required time                                                 5.77
+  --------------------------------------------------------------------------
+  data required time                                                 5.77
+  data arrival time                                                 -5.77
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
