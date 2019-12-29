@@ -55,7 +55,6 @@ TMP t(
 	.candidate 		(candidate));
 endmodule
 
-//////////////////////////////state//////////////////////////
 module stateGenerator(
 // special signal
 clk, 
@@ -68,6 +67,9 @@ en,
 busy, 
 valid
 );
+`define WAIT 2'd0
+`define CALCULATE 2'd1
+`define RESULT 2'd2
 input[5:0] addr;
 input clk, rst, en;
 output busy, valid;
@@ -81,58 +83,96 @@ always @ (*) begin
 		ns <= 2'd0;
 	else begin
 		case(cs) 
-		2'd0 : ns <= (en) ? 2'd1 : 2'd0;
-		2'd1 : ns <= (addr == 6'd63) ? 2'd2 : 2'd1;
-		2'd2 : ns <= 2'd0;
-		default : ns <= 2'd0;
+			`WAIT: 		ns <= (en) ? `CALCULATE : `WAIT;
+			`CALCULATE: ns <= (addr == 6'd63) ? `RESULT : `CALCULATE;
+			`RESULT: 	ns <= `WAIT;
+			default: 	ns <= `WAIT;
 		endcase
 	end
 end
 always @ (posedge clk) begin
 	cs <= ns;
-	busy <= (ns == 2'd1) ? 1'd1 : 1'd0;
-	valid <= (ns == 2'd2) ? 1'd1 : 1'd0;
+	busy  <= (ns == `CALCULATE) ? 1'd1 : 1'd0;
+	valid <= (ns == `RESULT) 	? 1'd1 : 1'd0;
 end
 endmodule 
 
-module MapGNT(
-addressIn, 
-OutX, 
-OutY
+module addressGenerator(
+clk, 
+rst, 
+en, 
+busy, 
+central,
+radius,
+mode,
+reg_central,
+reg_radius,
+reg_mode,
+addr
 );
-input  [5:0] addressIn;
-output[3:0] OutX;
-output[3:0] OutY;
-assign OutX = addressIn[5:3] + 3'd1;
-assign OutY = addressIn[2:0] + 3'd1;
+input[23:0] central;
+input[11:0] radius;
+input[1:0] mode;
+input rst, clk, en, busy;
+output[23:0] reg_central;
+output[11:0] reg_radius;
+output[5:0] addr;
+output[1:0] reg_mode;
+// Register
+reg[23:0] reg_central;
+reg[11:0] reg_radius;
+reg[5:0] addr;
+reg[1:0] reg_mode;
+// Wire
+wire addrEnd;
+assign addrEnd = (addr == 6'd63);
+always @ (posedge clk or posedge rst) begin
+	if(rst)
+		addr <= 6'd0;
+	else if(en) begin
+		addr <= 6'd0;
+		reg_central <= central;
+		reg_radius <= radius;
+		reg_mode <= mode;
+	end
+	else if(busy)
+		addr <= (addrEnd) ? addr : (addr + 6'd1);
+	else 
+		addr <= 6'd0;
+end
 endmodule
 
-//////////////////////////////////InCircleJudge////////////////////////////////////
-module ICJ(
-Xaddr, 
-XCentral, 
-Yaddr, 
-YCentral, 
-radius, 
-Circle
+module TMP(
+addressIn,
+reg_central,
+reg_radius,
+reg_mode,
+clk,
+rst,
+en,
+candidate
 );
-input[3:0] Xaddr, Yaddr;
-input[3:0] XCentral, YCentral;
-input[3:0] radius;
-output Circle;
-wire[7:0] XSquare, YSquare, RSquare;
-wire[8:0] SquareSum;
-wire[3:0] DisSum1, DisSum2;
-assign DisSum1 = (Xaddr > XCentral) ? (Xaddr - XCentral) : (XCentral - Xaddr);
-assign DisSum2 = (Yaddr > YCentral) ? (Yaddr - YCentral) : (YCentral - Yaddr);
-square sq1(.in(DisSum1), .out(XSquare));
-square sq2(.in(DisSum2), .out(YSquare));
-square sq3(.in(radius) , .out(RSquare));
-assign SquareSum = XSquare + YSquare;
-assign Circle = (SquareSum <= RSquare);
+input 	clk, rst;
+input 	en;
+input 	[23:0] reg_central;
+input 	[11:0] reg_radius;
+input	[5:0] addressIn;
+input 	[1:0] reg_mode;
+output 	[7:0] candidate;
+judge judge(
+	.addressIn 		(addressIn), 
+	.reg_central 	(reg_central), 
+	.reg_radius		(reg_radius), 
+	.reg_mode		(reg_mode), 
+	.DecideResult	(DecideResult));
+candicateCounter candiCal(
+	.clk 			(clk), 
+	.rst			(rst), 
+	.plus			(DecideResult), 
+	.en				(en), 
+	.candidate 		(candidate));
 endmodule
 
-///////////////////////////////ThreeICJ & Counter Addr/////////////////////////////////////
 module judge(
 addressIn, 
 reg_central, 
@@ -185,76 +225,42 @@ always @ (*) begin
 end
 endmodule
 
-/////////////////////candidate Counter/////////////////////////////////////////////
-module candicateCounter(
-clk, 
-rst, 
-plus, 
-en, 
-candidate
+module MapGNT(
+addressIn, 
+OutX, 
+OutY
 );
-input rst, clk, plus, en;
-output reg[7:0] candidate;
-
-always @ (posedge clk or posedge rst)begin
-	if(rst)
-		candidate <= 8'd0;
-	else if(en)
-		candidate <= 8'd0;
-	else if (plus)
-		candidate <= candidate + 8'd1 ;
-	else
-		candidate <= candidate;
-end
-endmodule
-/////////////////////Address Counter/////////////////////////////////////////////
-// add into controler
-module addressGenerator(
-clk, 
-rst, 
-en, 
-busy, 
-central,
-radius,
-mode,
-reg_central,
-reg_radius,
-reg_mode,
-addr
-);
-input[23:0] central;
-input[11:0] radius;
-input[1:0] mode;
-input rst, clk, en, busy;
-output[23:0] reg_central;
-output[11:0] reg_radius;
-output[5:0] addr;
-output[1:0] reg_mode;
-// Register
-reg[23:0] reg_central;
-reg[11:0] reg_radius;
-reg[5:0] addr;
-reg[1:0] reg_mode;
-// Wire
-wire addrEnd;
-assign addrEnd = (addr == 6'd63);
-always @ (posedge clk or posedge rst) begin
-	if(rst)
-		addr <= 6'd0;
-	else if(en) begin
-		addr <= 6'd0;
-		reg_central <= central;
-		reg_radius <= radius;
-		reg_mode <= mode;
-	end
-	else if(busy)
-		addr <= (addrEnd) ? addr : (addr + 6'd1);
-	else 
-		addr <= 6'd0;
-end
+input  [5:0] addressIn;
+output[3:0] OutX;
+output[3:0] OutY;
+assign OutX = addressIn[5:3] + 3'd1;
+assign OutY = addressIn[2:0] + 3'd1;
 endmodule
 
-////////////////////////////Square///////////////////////////////////////////
+module ICJ(
+Xaddr, 
+XCentral, 
+Yaddr, 
+YCentral, 
+radius, 
+Circle
+);
+input[3:0] Xaddr, Yaddr;
+input[3:0] XCentral, YCentral;
+input[3:0] radius;
+output Circle;
+wire[7:0] XSquare, YSquare, RSquare;
+wire[8:0] SquareSum;
+wire[3:0] DisSum1, DisSum2;
+assign DisSum1 = (Xaddr > XCentral) ? (Xaddr - XCentral) : (XCentral - Xaddr);
+assign DisSum2 = (Yaddr > YCentral) ? (Yaddr - YCentral) : (YCentral - Yaddr);
+square sq1(.in(DisSum1), .out(XSquare));
+square sq2(.in(DisSum2), .out(YSquare));
+square sq3(.in(radius) , .out(RSquare));
+assign SquareSum = XSquare + YSquare;
+assign Circle = (SquareSum <= RSquare);
+endmodule
+
 module square(
 in, 
 out
@@ -286,33 +292,23 @@ always@(*) begin
 end
 endmodule
 
-module TMP(
-addressIn,
-reg_central,
-reg_radius,
-reg_mode,
-clk,
-rst,
-en,
+module candicateCounter(
+clk, 
+rst, 
+plus, 
+en, 
 candidate
 );
-input 	clk, rst;
-input 	en;
-input 	[23:0] reg_central;
-input 	[11:0] reg_radius;
-input	[5:0] addressIn;
-input 	[1:0] reg_mode;
-output 	[7:0] candidate;
-judge judge(
-	.addressIn 		(addressIn), 
-	.reg_central 	(reg_central), 
-	.reg_radius		(reg_radius), 
-	.reg_mode		(reg_mode), 
-	.DecideResult	(DecideResult));
-candicateCounter candiCal(
-	.clk 			(clk), 
-	.rst			(rst), 
-	.plus			(DecideResult), 
-	.en				(en), 
-	.candidate 		(candidate));
+input rst, clk, plus, en;
+output reg[7:0] candidate;
+always @ (posedge clk or posedge rst)begin
+	if(rst)
+		candidate <= 8'd0;
+	else if(en)
+		candidate <= 8'd0;
+	else if (plus)
+		candidate <= candidate + 8'd1 ;
+	else
+		candidate <= candidate;
+end
 endmodule
