@@ -1,0 +1,109 @@
+ 
+****************************************
+Report : cell
+Design : SET
+Version: P-2019.03
+Date   : Sun Dec 29 13:37:44 2019
+****************************************
+
+Attributes:
+   BO - reference allows boundary optimization
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U1                        NAND2X6         slow            16.974001 
+U2                        CLKINVX2        slow            5.092200  
+U3                        INVX3           slow            5.092200  
+U4                        NOR3X1          slow            6.789600  
+U5                        NAND2X6         slow            16.974001 
+U6                        CLKAND2X6       slow            11.881800 
+U7                        NAND2BX4        slow            15.276600 
+U8                        CLKINVX2        slow            5.092200  
+U9                        NAND2X2         slow            8.487000  
+U10                       INVX4           slow            6.789600  
+U11                       XOR2X4          slow            30.553200 
+U12                       INVXL           slow            3.394800  
+U13                       NOR2X2          slow            8.487000  
+U14                       XNOR2X2         slow            20.368799 
+U15                       CLKINVX1        slow            3.394800  
+U16                       OR2X6           slow            15.276600 
+U17                       CLKINVX8        slow            10.184400 
+U18                       INVX1           slow            3.394800  
+U19                       CLKINVX1        slow            3.394800  
+U20                       NAND2X4         slow            11.881800 
+U21                       INVX3           slow            5.092200  
+U22                       INVXL           slow            3.394800  
+U23                       NOR3XL          slow            6.789600  
+U24                       INVX1           slow            3.394800  
+U25                       NAND2X2         slow            8.487000  
+U26                       INVX1           slow            3.394800  
+U27                       NAND2X1         slow            5.092200  
+U28                       NAND2XL         slow            5.092200  
+U29                       NAND2X1         slow            5.092200  
+U30                       NAND2X1         slow            5.092200  
+U31                       NAND2XL         slow            5.092200  
+U32                       NOR2BX4         slow            13.579200 
+U33                       INVX3           slow            5.092200  
+U34                       INVX3           slow            5.092200  
+U35                       INVX4           slow            6.789600  
+U36                       INVXL           slow            3.394800  
+U37                       NAND2X4         slow            11.881800 
+U38                       INVXL           slow            3.394800  
+U39                       NAND4XL         slow            8.487000  
+U40                       AND3XL          slow            8.487000  
+U41                       NOR4X1          slow            8.487000  
+U42                       NOR3X1          slow            6.789600  
+U43                       AOI22X1         slow            10.184400 
+U44                       CLKINVX1        slow            3.394800  
+U45                       CLKINVX1        slow            3.394800  
+U46                       NOR2X2          slow            8.487000  
+U47                       AO22XL          slow            10.184400 
+U48                       AO22XL          slow            10.184400 
+U49                       AO22XL          slow            10.184400 
+U50                       AO22XL          slow            10.184400 
+U51                       AO22XL          slow            10.184400 
+U52                       AO22XL          slow            10.184400 
+U53                       AO22XL          slow            10.184400 
+U54                       NOR2X2          slow            8.487000  
+U55                       MXI2X4          slow            25.461000 
+U56                       AOI21X4         slow            18.671400 
+U57                       OAI21X4         slow            18.671400 
+U58                       AOI21X4         slow            18.671400 
+addressGenerator          addressGenerator                1794.151840
+                                                                    h, n
+stateGenerator/busy_reg   DFFQX1          slow            25.461000 n
+stateGenerator/cs_reg[0]  DFFQX1          slow            25.461000 n
+stateGenerator/cs_reg[1]  DFFQX1          slow            25.461000 n
+stateGenerator/valid_reg  DFFQX1          slow            25.461000 n
+t/candiCal/add_205        candicateCounter_DW01_inc_0     127.305000
+                                                                    BO, h
+t/candiCal/candidate_reg[0]
+                          DFFRX2          slow            37.342800 n
+t/candiCal/candidate_reg[1]
+                          DFFRX2          slow            37.342800 n
+t/candiCal/candidate_reg[2]
+                          DFFRX1          slow            32.250599 n
+t/candiCal/candidate_reg[3]
+                          DFFRX2          slow            37.342800 n
+t/candiCal/candidate_reg[4]
+                          DFFRX2          slow            37.342800 n
+t/candiCal/candidate_reg[5]
+                          DFFRX2          slow            37.342800 n
+t/candiCal/candidate_reg[6]
+                          DFFRX2          slow            37.342800 n
+t/candiCal/candidate_reg[7]
+                          DFFRX2          slow            37.342800 n
+t/judge/icj1              ICJ_0                           2023.300784
+                                                                    h
+t/judge/icj2              ICJ_2                           2023.300795
+                                                                    h
+t/judge/icj3              ICJ_1                           1952.009991
+                                                                    h
+--------------------------------------------------------------------------------
+Total 75 cells                                            8848.546209
+1

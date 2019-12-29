@@ -1,0 +1,47 @@
+ 
+ ***********************************************************
+ *  NOTICE:  The following DRC violations were previously  *
+ *  encountered. The presence of these violations is an    *
+ *  indicator that it is possible that the ATPG patterns   *
+ *  created during this process may fail in simulation.    *
+ *                                                         *
+ *  Rules:  N23                                            *
+ ***********************************************************
+ ATPG performed for stuck fault model using internal pattern source.
+ ----------------------------------------------------------
+ #patterns     #faults     #ATPG faults  test      process
+ stored     detect/active  red/au/abort  coverage  CPU time
+ ---------  -------------  ------------  --------  --------
+ Begin deterministic ATPG: #uncollapsed_faults=4474, abort_limit=10...
+ 32           2802   1672        0/0/10    65.82%      0.23
+ 62            807    862        1/2/22    82.33%      0.33
+ 94            364    497        2/2/37    89.80%      0.40
+ 122           210    286        3/2/51    94.11%      0.44
+ 149           142    139        7/2/66    97.11%      0.47
+ Pattern merging terminated due to failure to achieve minimum merges per pass (10).
+ Local redundancy analysis results: #redundant_faults=4, CPU_time=0.00 sec
+ 179            64     70        8/2/77    98.52%      0.49
+ 185             7     63        8/2/82    98.67%      0.50
+ 
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       4814
+ Possibly detected                PT          0
+ Undetectable                     UD         13
+ ATPG untestable                  AU          2
+ Not detected                     ND         63
+ -----------------------------------------------
+ total faults                              4892
+ test coverage                            98.67%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                         185
+     #basic_scan patterns                   185
+ -----------------------------------------------
+            CPU Usage Summary Report
+ -----------------------------------------------
+ Total CPU time                            0.50
+ -----------------------------------------------

@@ -1,0 +1,88 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : SET
+Version: P-2019.03
+Date   : Sun Dec 29 13:37:30 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: addressGenerator/addr_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: candiCal/candidate_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  addressGenerator/addr_reg[4]/CK (DFFRX4)                0.00       2.00 r
+  addressGenerator/addr_reg[4]/Q (DFFRX4)                 0.47       2.47 f
+  addressGenerator/addr[4] (addressGenerator)             0.00       2.47 f
+  judge/addressIn[4] (judge)                              0.00       2.47 f
+  judge/MPGNT/addressIn[4] (MapGNT)                       0.00       2.47 f
+  judge/MPGNT/U7/Y (CLKINVX4)                             0.04       2.51 r
+  judge/MPGNT/U18/Y (NOR2X2)                              0.05       2.56 f
+  judge/MPGNT/U17/Y (XNOR2X4)                             0.11       2.68 r
+  judge/MPGNT/OutX[2] (MapGNT)                            0.00       2.68 r
+  judge/icj1/Xaddr[2] (ICJ_0)                             0.00       2.68 r
+  judge/icj1/U9/Y (NAND2BX2)                              0.14       2.82 r
+  judge/icj1/U78/Y (CLKINVX1)                             0.05       2.87 f
+  judge/icj1/U15/Y (OR2X1)                                0.23       3.10 f
+  judge/icj1/U16/Y (CLKINVX1)                             0.08       3.18 r
+  judge/icj1/U69/Y (NAND2X2)                              0.05       3.23 f
+  judge/icj1/U70/Y (NAND2X2)                              0.06       3.30 r
+  judge/icj1/U72/Y (AOI22X1)                              0.09       3.38 f
+  judge/icj1/U76/Y (OR3XL)                                0.35       3.73 f
+  judge/icj1/U10/Y (NAND2X2)                              0.07       3.81 r
+  judge/icj1/U79/Y (NOR2BX4)                              0.13       3.94 r
+  judge/icj1/sq1/in[3] (square_0)                         0.00       3.94 r
+  judge/icj1/sq1/U3/Y (INVX4)                             0.06       3.99 f
+  judge/icj1/sq1/U5/Y (AND3X6)                            0.17       4.16 f
+  judge/icj1/sq1/out[3] (square_0)                        0.00       4.16 f
+  judge/icj1/U80/Y (NOR2X2)                               0.10       4.26 r
+  judge/icj1/U49/Y (OAI2BB2X2)                            0.10       4.36 f
+  judge/icj1/U48/Y (INVX3)                                0.07       4.43 r
+  judge/icj1/U131/Y (OAI21X4)                             0.08       4.51 f
+  judge/icj1/U1/Y (NAND2X4)                               0.07       4.57 r
+  judge/icj1/U132/Y (OAI2BB1X4)                           0.06       4.63 f
+  judge/icj1/U127/Y (NOR3BX2)                             0.17       4.80 r
+  judge/icj1/U40/Y (OR2X8)                                0.13       4.93 r
+  judge/icj1/U22/Y (NAND3X2)                              0.05       4.98 f
+  judge/icj1/U57/Y (INVX1)                                0.08       5.07 r
+  judge/icj1/U36/Y (NAND2X2)                              0.06       5.13 f
+  judge/icj1/U38/Y (OAI2BB1X2)                            0.06       5.19 r
+  judge/icj1/Circle (ICJ_0)                               0.00       5.19 r
+  judge/U10/Y (NAND2X1)                                   0.07       5.26 f
+  judge/U13/Y (NAND2X2)                                   0.07       5.33 r
+  judge/U1/Y (CLKINVX4)                                   0.07       5.40 f
+  judge/DecideResult (judge)                              0.00       5.40 f
+  candiCal/plus (candicateCounter)                        0.00       5.40 f
+  candiCal/U3/Y (NOR2X6)                                  0.08       5.48 r
+  candiCal/U6/Y (NOR2X1)                                  0.07       5.55 f
+  candiCal/U14/Y (AO22XL)                                 0.24       5.79 f
+  candiCal/candidate_reg[0]/D (DFFRX1)                    0.00       5.79 f
+  data arrival time                                                  5.79
+
+  clock clk (rise edge)                                   6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  candiCal/candidate_reg[0]/CK (DFFRX1)                   0.00       6.00 r
+  library setup time                                     -0.21       5.79
+  data required time                                                 5.79
+  --------------------------------------------------------------------------
+  data required time                                                 5.79
+  data arrival time                                                 -5.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
