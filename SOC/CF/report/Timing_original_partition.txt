@@ -1,0 +1,76 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : SET
+Version: P-2019.03
+Date   : Tue Dec 31 10:40:00 2019
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: addressGenerator/addr_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: candiCal/candidate_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  addressGenerator/addr_reg[3]/CK (DFFRHQX4)              0.00       2.00 r
+  addressGenerator/addr_reg[3]/Q (DFFRHQX4)               0.21       2.21 f
+  addressGenerator/addr[3] (addressGenerator)             0.00       2.21 f
+  judge/addressIn[3] (judge)                              0.00       2.21 f
+  judge/U231/Y (INVX4)                                    0.05       2.26 r
+  judge/U232/Y (OR2X8)                                    0.10       2.36 r
+  judge/U337/Y (OAI2BB1X4)                                0.09       2.45 f
+  judge/U37/Y (NAND2X1)                                   0.12       2.56 r
+  judge/U257/Y (NAND3X2)                                  0.09       2.65 f
+  judge/U140/Y (AND3X8)                                   0.14       2.79 f
+  judge/U139/Y (NOR2X8)                                   0.07       2.86 r
+  judge/U183/Y (MX2X1)                                    0.30       3.17 r
+  judge/U91/Y (OR2X2)                                     0.15       3.32 r
+  judge/U173/Y (OA21X4)                                   0.13       3.44 r
+  judge/U174/Y (NAND2X2)                                  0.05       3.49 f
+  judge/U465/Y (OAI211X2)                                 0.10       3.59 r
+  judge/U62/Y (CLKINVX3)                                  0.11       3.70 f
+  judge/U332/Y (OR2X2)                                    0.20       3.89 f
+  judge/U193/Y (AOI21X1)                                  0.13       4.02 r
+  judge/U196/Y (XNOR2X1)                                  0.20       4.23 f
+  judge/U221/Y (OR2X4)                                    0.18       4.41 f
+  judge/U280/Y (OAI211X2)                                 0.17       4.57 r
+  judge/U40/Y (CLKINVX1)                                  0.13       4.70 f
+  judge/U24/Y (OAI222X1)                                  0.18       4.88 r
+  judge/U243/Y (NAND2BX2)                                 0.16       5.05 r
+  judge/U247/Y (NAND2X2)                                  0.04       5.09 f
+  judge/U64/Y (AOI21X1)                                   0.13       5.22 r
+  judge/U106/Y (MXI2X2)                                   0.13       5.35 f
+  judge/DecideResult (judge)                              0.00       5.35 f
+  candiCal/plus (candicateCounter)                        0.00       5.35 f
+  candiCal/U44/Y (NOR2X1)                                 0.19       5.54 r
+  candiCal/U29/Y (AO21X2)                                 0.15       5.69 r
+  candiCal/U37/Y (CLKMX2X2)                               0.15       5.84 r
+  candiCal/candidate_reg[1]/D (DFFRX4)                    0.00       5.84 r
+  data arrival time                                                  5.84
+
+  clock clk (rise edge)                                   6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  candiCal/candidate_reg[1]/CK (DFFRX4)                   0.00       6.00 r
+  library setup time                                     -0.16       5.84
+  data required time                                                 5.84
+  --------------------------------------------------------------------------
+  data required time                                                 5.84
+  data arrival time                                                 -5.84
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

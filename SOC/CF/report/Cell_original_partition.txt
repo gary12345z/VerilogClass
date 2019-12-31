@@ -1,0 +1,27 @@
+ 
+****************************************
+Report : cell
+Design : SET
+Version: P-2019.03
+Date   : Tue Dec 31 10:40:00 2019
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+addressGenerator          addressGenerator                502.430410
+                                                                    h, n
+candiCal                  candicateCounter                661.985992
+                                                                    h, n
+judge                     judge                           4562.611172
+                                                                    h
+stateGenerator            stateGenerator                  96.751800 h, n
+--------------------------------------------------------------------------------
+Total 4 cells                                             5823.779374
+1
