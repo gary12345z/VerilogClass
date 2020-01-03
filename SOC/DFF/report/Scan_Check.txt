@@ -1,0 +1,19 @@
+Information: Building the design 'DW01_add_8.blackbox.rpl'. (HDL-193)
+Warning: Cannot find the design 'DW01_add_8.blackbox.rpl' in the library 'WORK'. (LBR-1)
+Information: Building the design 'DW_mult_uns_8_1.blackbox.DW_mult_uns&apparch'. (HDL-193)
+Warning: Cannot find the design 'DW_mult_uns_8_1.blackbox.DW_mult_uns&apparch' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'DW01_add_8.blackbox.rpl' in 'Candidate_adder_test_1'. (LINK-5)
+Warning: Unable to resolve reference 'DW_mult_uns_8_1.blackbox.DW_mult_uns&apparch' in 'Candidate_adder_test_1'. (LINK-5)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : SET
+Version: P-2019.03
+Date   : Sat Jan  4 00:00:18 2020
+****************************************
+
+This design has no violated constraints.
+
+1

@@ -1,0 +1,80 @@
+ 
+ ***********************************************************
+ *  NOTICE:  The following DRC violations were previously  *
+ *  encountered. The presence of these violations is an    *
+ *  indicator that it is possible that the ATPG patterns   *
+ *  created during this process may fail in simulation.    *
+ *                                                         *
+ *  Rules:  N23                                            *
+ ***********************************************************
+ ATPG performed for stuck fault model using internal pattern source.
+ ----------------------------------------------------------
+ #patterns     #faults     #ATPG faults  test      process
+ stored     detect/active  red/au/abort  coverage  CPU time
+ ---------  -------------  ------------  --------  --------
+ Begin deterministic ATPG: #uncollapsed_faults=5060, abort_limit=10...
+ 32           4700    360         0/0/1    93.64%      0.11
+ 64            336     24         0/0/6    99.58%      0.14
+ 72             20      4         0/0/6    99.93%      0.14
+ 
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       5654
+ Possibly detected                PT          0
+ Undetectable                     UD          0
+ ATPG untestable                  AU          0
+ Not detected                     ND          4
+ -----------------------------------------------
+ total faults                              5658
+ test coverage                            99.93%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                          72
+     #basic_scan patterns                    72
+ -----------------------------------------------
+            CPU Usage Summary Report
+ -----------------------------------------------
+ Total CPU time                            0.14
+ -----------------------------------------------
+ ***********************************************************
+ *  NOTICE:  The following DRC violations were previously  *
+ *  encountered. The presence of these violations is an    *
+ *  indicator that it is possible that the ATPG patterns   *
+ *  created during this process may fail in simulation.    *
+ *                                                         *
+ *  Rules:  N23                                            *
+ ***********************************************************
+ ATPG performed for stuck fault model using internal pattern source.
+ 
+ ------------------------------------------------------------
+ Begin Full-Sequential ATPG for 4 uncollapsed faults ...
+  --- abort limit : 10 seconds, NO BACKTRACK LIMIT
+ ------------------------------------------------------------
+ #patterns  #faults        #ATPG faults  test       process  
+ stored     detect/active  red/au/abort  coverage   CPU time 
+ ---------  -------------  ------------  --------  ----------
+ 73                2      2         0/0/0     99.96%         0.01
+ 74                2      0         0/0/0    100.00%         0.01
+ 
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       5658
+ Possibly detected                PT          0
+ Undetectable                     UD          0
+ ATPG untestable                  AU          0
+ Not detected                     ND          0
+ -----------------------------------------------
+ total faults                              5658
+ test coverage                           100.00%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                          74
+     #basic_scan patterns                    72
+     #full_sequential patterns                2
+ -----------------------------------------------

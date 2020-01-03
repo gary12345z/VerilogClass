@@ -1,0 +1,29 @@
+Warning: Design 'SET' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : cell
+Design : SET
+Version: P-2019.03
+Date   : Sat Jan  4 00:00:18 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+Control_0                 Control_test_1                  3250.520879
+                                                                    h, n
+MapCell_Candidate_adder_0/Candidate_adder_0
+                          Candidate_adder_test_1          1836.586753
+                                                                    b, h, n
+MapCell_Candidate_adder_0/MapCell_0
+                          MapCell                         2870.303441
+                                                                    h
+--------------------------------------------------------------------------------
+Total 3 cells                                             7957.411073
+1

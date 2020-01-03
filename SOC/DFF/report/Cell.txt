@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : cell
+Design : SET
+Version: P-2019.03
+Date   : Sat Jan  4 00:46:45 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+Controler                 Control                         5114.266106
+                                                                    h, n
+MapCell_0                 MapCell_0                       899.622000
+                                                                    h
+MapCell_1                 MapCell_2                       899.622000
+                                                                    h
+MapCell_2                 MapCell_1                       899.622000
+                                                                    h
+U4                        CLKINVX1        slow            3.394800  
+tmp_0_reg                 DFFRX1          slow            32.250599 n
+tmp_1_reg                 DFFRX1          slow            32.250599 n
+tmp_2_reg                 DFFRX1          slow            32.250599 n
+--------------------------------------------------------------------------------
+Total 8 cells                                             7913.278702
+1

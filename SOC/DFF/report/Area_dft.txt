@@ -1,0 +1,33 @@
+Warning: Design 'SET' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : SET
+Version: P-2019.03
+Date   : Sat Jan  4 00:00:18 2020
+****************************************
+
+Library(s) Used:
+
+    slow (File: /usr/cad/CBDK/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db)
+
+Number of ports:                          169
+Number of nets:                           889
+Number of cells:                          570
+Number of combinational cells:            471
+Number of sequential cells:                95
+Number of macros/black boxes:               0
+Number of buf/inv:                         51
+Number of references:                       3
+
+Combinational area:               4644.086400
+Buf/Inv area:                      178.226997
+Noncombinational area:            3313.324673
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  7957.411073
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
