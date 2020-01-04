@@ -33,3 +33,5 @@ uplevel #0 { report_cell } > Cell_dft.txt
 write -hierarchy -format verilog -output SET_syn_dft.v
 write_sdf -version 2.1 SET_syn_dft.sdf
 write_test_protocol -output SET_syn_dft.spf
+write_scan_def -output SET_syn_dft.def
+write_sdc SET_syn_dft.sdc

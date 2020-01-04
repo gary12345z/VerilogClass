@@ -3,7 +3,7 @@
 # Author: Hu, Ren Bo
 
 # Read all Files
-read_file -format verilog {/home/SOC_06/Verilog/SOC/DFF/SET_v3.v /home/SOC_06/Verilog/SOC/DFF/Control_3.v /home/SOC_06/Verilog/SOC/DFF/MapCell_v2.v}
+read_file -format verilog {/home/SOC_06/Verilog/SOC/DFF/SET_v4.v /home/SOC_06/Verilog/SOC/DFF/Control_3_v2.v /home/SOC_06/Verilog/SOC/DFF/MapCell_v6.v /home/SOC_06/Verilog/SOC/DFF/GenerateAddress.v/home/SOC_06/Verilog/SOC/DFF/CandidateAdder.v}
 
 # current_design { /home/SOC_06/Verilog/SOC/DFF/Candidate_adder.db:Candidate_adder}
 # create_clock -name "clk" -period 10 -waveform { 5 10 }  { clk  }
