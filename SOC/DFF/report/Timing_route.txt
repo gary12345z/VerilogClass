@@ -1,0 +1,112 @@
+
+  Loading design 'SET'
+
+
+
+
+Information: Library Manufacturing Grid(GridResolution) : 5
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Information: Design Library and main library resistance units are matched - 1.000 kohm. 
+Information: Capacitance Unit from Milkyway design library: 'pf' 
+Information: Design Library and main library capacitance units are matched - 1.000 pf. 
+Warning: Inconsistent library data found for layer POLY1. (RCEX-018)
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is detail route TLU+. (RCEX-015)
+Information: Start mixed mode parasitic extraction. (RCEX-023)
+Information: Start rc extraction...
+Information: Parasitic source is LPE. (RCEX-040)
+Information: Parasitic mode is RealRC. (RCEX-041)
+Information: Using virtual shield extraction. (RCEX-081)
+Information: Extraction mode is MAX. (RCEX-042)
+Information: Extraction derate is 125/125/125. (RCEX-043)
+Information: Coupling capacitances are lumped to ground. (RCEX-044)
+Information: Start back annotation for parasitic extraction. (RCEX-023)
+Information: End back annotation for parasitic extraction. (RCEX-023)
+Information: Start timing update for parasitic extraction. (RCEX-023)
+Information: End timing update for parasitic extraction. (RCEX-023)
+Information: End parasitic extraction. (RCEX-023)
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SET
+Version: P-2019.03
+Date   : Sun Jan  5 00:09:07 2020
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: slow   Library: slow
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MAX
+	Extraction derating : 125/125/125
+
+Information: Percent of Arnoldi-based delays =  5.89%
+
+  Startpoint: Control_U/reg_mode_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: GenerateAddress_MapCell_U0/MapCell_U1_result_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   5.00       5.00
+  clock network delay (propagated)                        0.00       5.00
+  Control_U/reg_mode_reg[1]/CK (SDFFRXL)                  0.00       5.00 r
+  Control_U/reg_mode_reg[1]/Q (SDFFRXL)                   1.05       6.05 r
+  Control_U/reg_mode[1] (Control_test_1)                  0.00       6.05 r
+  GenerateAddress_MapCell_U0/reg_mode[1] (GenerateAddress_MapCell_test_1)
+                                                          0.00       6.05 r
+  GenerateAddress_MapCell_U0/U268/Y (CLKINVX1)            0.29 &     6.34 f
+  GenerateAddress_MapCell_U0/U3/Y (NOR2X1)                0.70 &     7.04 r
+  GenerateAddress_MapCell_U0/U139/Y (NOR2X1)              0.48 &     7.52 f
+  GenerateAddress_MapCell_U0/U136/Y (OAI22XL)             0.71 &     8.24 r
+  GenerateAddress_MapCell_U0/U217/Y (AND2X2)              0.22 &     8.46 r
+  GenerateAddress_MapCell_U0/U179/Y (OA22X1)              0.28 &     8.74 r
+  GenerateAddress_MapCell_U0/U132/Y (OAI21XL)             0.12 &     8.86 f
+  GenerateAddress_MapCell_U0/U131/Y (AOI22X1)             0.36 &     9.22 r
+  GenerateAddress_MapCell_U0/U101/Y (CLKINVX1)            0.19 &     9.41 f
+  GenerateAddress_MapCell_U0/U5/Y (OAI22XL)               0.48 &     9.89 r
+  GenerateAddress_MapCell_U0/U31/Y (NOR2X1)               0.18 &    10.07 f
+  GenerateAddress_MapCell_U0/U37/Y (AOI211X1)             0.21 &    10.28 r
+  GenerateAddress_MapCell_U0/MapCell_U1/add_65/U1_3/CO (ADDFXL)
+                                                          0.71 &    10.99 r
+  GenerateAddress_MapCell_U0/MapCell_U1/add_65/U1_4/CO (ADDFXL)
+                                                          0.36 &    11.35 r
+  GenerateAddress_MapCell_U0/MapCell_U1/add_65/U1_5/S (ADDFXL)
+                                                          0.42 &    11.77 r
+  GenerateAddress_MapCell_U0/U20/Y (CLKINVX1)             0.10 &    11.87 f
+  GenerateAddress_MapCell_U0/U50/Y (OAI22XL)              0.29 &    12.16 r
+  GenerateAddress_MapCell_U0/U49/Y (AND2X2)               0.19 &    12.35 r
+  GenerateAddress_MapCell_U0/U202/Y (OAI21XL)             0.10 &    12.45 f
+  GenerateAddress_MapCell_U0/U201/Y (NAND3BX1)            0.15 &    12.60 r
+  GenerateAddress_MapCell_U0/U200/Y (AOI211X1)            0.09 &    12.69 f
+  GenerateAddress_MapCell_U0/MapCell_U1_result_reg/D (SDFFRXL)
+                                                          0.00 &    12.69 f
+  data arrival time                                                 12.69
+
+  clock clk (rise edge)                                  15.00      15.00
+  clock network delay (propagated)                        0.00      15.00
+  GenerateAddress_MapCell_U0/MapCell_U1_result_reg/CK (SDFFRXL)
+                                                          0.00      15.00 r
+  library setup time                                     -0.39      14.61
+  data required time                                                14.61
+  --------------------------------------------------------------------------
+  data required time                                                14.61
+  data arrival time                                                -12.69
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.92
+
+
+1

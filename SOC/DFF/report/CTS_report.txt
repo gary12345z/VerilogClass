@@ -1,0 +1,1622 @@
+Information: linking reference library : /usr/cad/CBDK/CBDK_IC_Contest_v2.1/Astro/tsmc13gfsg_fram. (PSYN-878)
+Warning: Could not find a valid driver for the hierarchical Ground net 'VSS'. (MWDC-285)
+Warning: Could not find a valid driver for the hierarchical Power net 'VDD'. (MWDC-285)
+
+  Linking design 'SET'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (4 designs)               SET.CEL, etc
+  slow (library)              /usr/cad/CBDK/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db
+  fast (library)              /usr/cad/CBDK/CBDK_IC_Contest_v2.1/SynopsysDC/db/fast.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/icc/cur/libraries/syn/dw_foundation.sldb
+
+Information: The design has horizontal rows, and Y-symmetry has been used for sites. (MWDC-217)
+Floorplan loading succeeded.
+Information: Disabling timing checks inside check_ilm 
+Information: Disabling timing checks inside check_block_abstraction 
+checking tluplus...
+checking physical objects...
+checking database...
+Information: Disabling check_timing in check_physical_design
+checking HFN/ideal/dont_touch nets...
+Information: Disabling timing checks inside check_block_abstraction
+checking placement constraints...
+checking for unconnected tie pins...
+checking for too many Restricted cells...
+check bounds...
+check voltage area...
+checking scan chain...
+Number of Undocumented Errors: 0
+**************************************************
+Report : check_physical_design
+Stage  : pre_place_opt
+Design : SET
+Version: P-2019.03
+Date   : Sun Jan  5 00:08:51 2020
+**************************************************
+Total messages: 0 errors, 0 warnings
+dump check_physical_design result to file ./cpd_pre_place_opt_2020Jan05000850_6712/index.html
+1
+Information: Disabling timing checks inside check_ilm 
+Information: Disabling timing checks inside check_block_abstraction 
+checking tluplus...
+checking physical objects...
+checking database...
+Information: Disabling check_timing in check_physical_design
+checking HFN/ideal/dont_touch nets...
+Information: Disabling timing checks inside check_block_abstraction
+Information: Enabling timing checks inside check_block_abstraction
+checking placement constraints...
+checking for unconnected tie pins...
+checking for too many Restricted cells...
+checking clock trees...
+checking clock routing rules...
+Number of Undocumented Errors: 0
+**************************************************
+Report : check_physical_design
+Stage  : pre_clock_opt
+Design : SET
+Version: P-2019.03
+Date   : Sun Jan  5 00:08:51 2020
+**************************************************
+Total messages: 0 errors, 0 warnings
+dump check_physical_design result to file ./cpd_pre_clock_opt_2020Jan05000851_6712/index.html
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : SET
+Version: P-2019.03
+Date   : Sun Jan  5 00:08:51 2020
+****************************************
+
+This design has no violated constraints.
+
+1
+Warning: Starting from the 2011.09-SP4 release, clock_opt will NOT perform congestion-driven placement by default. (PSYN-1111)
+
+The options for clock_opt:
+--------------------------
+COPT:  Clock Tree Synthesis                 : Yes
+COPT:  Post CTS Optimization                : Yes
+COPT:  Concurrent Clock/Data Optimization   : No
+COPT:  Operation Condition                  : max
+COPT:  Balance Inter Clock Delay            : No
+COPT:  Route Clock Nets                     : No
+COPT:  Update Clock Latency                 : No
+COPT:  Optimize Hold for All Clocks         : Yes
+COPT:  Optimize Hold Timing Only            : No
+COPT:  Optimize DFT                         : Yes
+COPT:  Area Recovery                        : No
+COPT:  Size Only                            : No
+COPT:  In Place Size Only                   : No
+COPT:  Congestion removal                   : No
+COPT:  Optimize Power                       : No
+---------------------------------------------------
+
+Executing ICC clock_opt...
+medium
+*
+Building clock tree...
+Operating Condition is max
+Information: There is no scenario with cts_mode set to true, CTS will use old cts_scenario flow. (CTS-1115)
+CTS Operating Condition(s): MAX(Worst) 
+
+  Loading design 'SET'
+
+
+
+
+Information: Library Manufacturing Grid(GridResolution) : 5
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Information: Design Library and main library resistance units are matched - 1.000 kohm. 
+Information: Capacitance Unit from Milkyway design library: 'pf' 
+Information: Design Library and main library capacitance units are matched - 1.000 pf. 
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 8 routable metal layers
+    This is considered as a 8-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 29 horizontal rows
+    GRC ref loc X corrected
+    GRC ref loc Y corrected
+    8 pre-routes for placement blockage/checking
+    8 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+Setting the GR Options
+
+TLU+ File = /usr/cad/CBDK/CBDK_IC_Contest_v2.1/Astro/tluplus/t013s8mg_fsg_typical.tluplus
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer METAL1 : 0.00021 0.00021 (RCEX-011)
+Information: Library Derived Res for layer METAL1 : 0.00062 0.00062 (RCEX-011)
+Information: Library Derived Cap for layer METAL2 : 0.00025 0.00025 (RCEX-011)
+Information: Library Derived Res for layer METAL2 : 0.00033 0.00033 (RCEX-011)
+Information: Library Derived Cap for layer METAL3 : 0.00028 0.00028 (RCEX-011)
+Information: Library Derived Res for layer METAL3 : 0.00036 0.00036 (RCEX-011)
+Information: Library Derived Cap for layer METAL4 : 0.00025 0.00025 (RCEX-011)
+Information: Library Derived Res for layer METAL4 : 0.00033 0.00033 (RCEX-011)
+Information: Library Derived Cap for layer METAL5 : 0.00028 0.00028 (RCEX-011)
+Information: Library Derived Res for layer METAL5 : 0.00036 0.00036 (RCEX-011)
+Information: Library Derived Cap for layer METAL6 : 0.00025 0.00025 (RCEX-011)
+Information: Library Derived Res for layer METAL6 : 0.00033 0.00033 (RCEX-011)
+Information: Library Derived Cap for layer METAL7 : 0.00027 0.00027 (RCEX-011)
+Information: Library Derived Res for layer METAL7 : 0.00036 0.00036 (RCEX-011)
+Information: Library Derived Cap for layer METAL8 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL8 : 6.4e-05 6.4e-05 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Horizontal Res : 0.00042 0.00042 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.00025 0.00025 (RCEX-011)
+Information: Library Derived Vertical Res : 0.00027 0.00027 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 0.00078 0.00078 (RCEX-011)
+LR: Layer METAL3: Average tracks per gcell 9.0, utilization 0.00
+LR: Layer METAL4: Average tracks per gcell 8.0, utilization 0.00
+LR: Layer METAL5: Average tracks per gcell 9.0, utilization 0.00
+LR: Layer METAL6: Average tracks per gcell 8.0, utilization 0.00
+LR: Layer METAL7: Average tracks per gcell 9.0, utilization 0.00
+LR: Layer METAL8: Average tracks per gcell 3.6, utilization 0.00
+LR: Clock routing service standing by
+Using cts integrated global router
+CTS: Blockage Aware Algorithm
+Top-Level OCV Path Sharing not effective when timing derating is too low
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 8 routable metal layers
+    This is considered as a 8-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 29 horizontal rows
+    GRC ref loc X corrected
+    GRC ref loc Y corrected
+    8 pre-routes for placement blockage/checking
+    8 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+CTS: all inverters have too large rise/fall delay skew
+CTS: inverter CLKINVX16: rise/fall delay skew = 0.249563 (> 0.200000) 
+CTS: all inverters have too large rise/fall delay skew
+CTS: inverter CLKINVX16: rise/fall delay skew = 0.249563 (> 0.200000) 
+CTS: Region Aware Algorithm is automatically turned off when design has no region or only has one region.
+CTS: Prepare sources for clock domain clk
+CTS: Prepare sources for clock domain clk
+clean drc fixing cell first...
+In all, 0 drc fixing cell(s) are cleaned
+In all, 0 drc fixing cell(s) beyond exception pins are cleaned
+
+CTS: Prepare sources for clock domain clk
+CTS: Prepare sources for clock domain clk
+
+Pruning library cells (r/f, pwr)
+    Min drive = 0.325676.
+    Pruning DLY4X1 because drive of 0.128163 is less than 0.325676.
+    Pruning DLY3X1 because drive of 0.132085 is less than 0.325676.
+    Pruning DLY2X1 because drive of 0.134504 is less than 0.325676.
+    Pruning DLY1X1 because drive of 0.134612 is less than 0.325676.
+    Pruning CLKBUFX2 because drive of 0.242748 is less than 0.325676.
+    Pruning BUFX2 because drive of 0.303891 is less than 0.325676.
+    Pruning DLY4X4 because of a gain of 34.75.
+    Pruning BUFX3 because it is (w/ power-considered) inferior to DLY2X4.
+    Pruning DLY3X4 because of a gain of 29.16.
+    Pruning DLY2X4 because it is (w/ power-considered) inferior to CLKBUFX4.
+    Pruning DLY1X4 because it is inferior (w/ power-considered) to CLKBUFX4.
+    Pruning BUFX6 because it is inferior (w/ power-considered) to CLKBUFX8.
+    Pruning BUFX16 because it is (w/ power-considered) inferior to CLKBUFX12.
+    Final pruned buffer set (11 buffers):
+	CLKBUFX3
+	CLKBUFX4
+	BUFX4
+	CLKBUFX6
+	CLKBUFX8
+	BUFX8
+	BUFX12
+	CLKBUFX12
+	BUFX20
+	CLKBUFX16
+	CLKBUFX20
+
+Pruning library cells (r/f, pwr)
+    Min drive = 0.325676.
+    Pruning INVXL because drive of 0.0907169 is less than 0.325676.
+    Pruning INVX1 because drive of 0.16456 is less than 0.325676.
+    Pruning CLKINVX1 because drive of 0.184628 is less than 0.325676.
+    Pruning CLKINVX2 because drive of 0.276882 is less than 0.325676.
+    Pruning INVX2 because it is (w/ power-considered) inferior to CLKINVX3.
+    Pruning INVX3 because it is (w/ power-considered) inferior to CLKINVX4.
+    Pruning INVX6 because it is (w/ power-considered) inferior to CLKINVX8.
+    Pruning INVX16 because it is (w/ power-considered) inferior to CLKINVX12.
+    Final pruned buffer set (11 buffers):
+	CLKINVX3
+	CLKINVX4
+	INVX4
+	CLKINVX6
+	CLKINVX8
+	INVX8
+	INVX12
+	CLKINVX12
+	INVX20
+	CLKINVX16
+	CLKINVX20
+CTS: BA: Net 'clk'
+CTS: BA: Root net includes 1 sinks.
+CTS: BA: Max delay at toplevel pins = 0.000000
+CTS: BA: Max skew at toplevel pins = 0.000000
+
+CTS: Starting clock tree synthesis ...
+CTS:   Conditions       = worst(1)
+CTS: Global design rule constraints [rise fall]
+CTS:   max transition   = worst[0.500 0.500]     GUI = worst[0.500 0.500]     SDC = undefined/ignored
+CTS:   leaf max trans   = worst[0.500 0.500]     GUI = worst[0.500 0.500]     SDC = undefined/ignored
+CTS:   max capacitance  = worst[0.600 0.600]     GUI = worst[0.600 0.600]     SDC = undefined/ignored
+CTS:   max fanout       = 2000                   GUI = 2000                   SDC = undefined/ignored
+CTS: Global timing/clock tree constraints
+CTS:   clock skew       = worst[0.000]
+CTS:   insertion delay  = worst[0.000]
+CTS:   levels per net   = 400
+CTS: Design infomation
+CTS:  total gate levels = 1
+CTS: Root clock net clk
+CTS:  clock gate levels = 1
+CTS:    clock sink pins = 76
+CTS:    level  1: gates = 1
+CTS: Buffer/Inverter list for CTS for clock net clk:
+CTS:   CLKBUFX20
+CTS:   CLKINVX20
+CTS:   CLKBUFX16
+CTS:   CLKINVX16
+CTS:   BUFX20
+CTS:   INVX20
+CTS: Buffer/Inverter list for DelayInsertion for clock net clk:
+CTS:   CLKINVX20
+CTS:   CLKINVX16
+CTS:   INVX20
+CTS:   CLKINVX12
+CTS:   INVX16
+CTS:   CLKBUFX20
+CTS:   BUFX20
+CTS:   CLKBUFX16
+CTS:   INVX12
+CTS:   BUFX16
+CTS:   CLKBUFX12
+CTS:   BUFX12
+CTS:   INVX8
+CTS:   BUFX8
+CTS:   CLKINVX8
+CTS:   INVX6
+CTS:   BUFX6
+CTS:   CLKBUFX8
+CTS:   CLKINVX1
+CTS:   CLKINVX6
+CTS:   INVX4
+CTS:   INVX2
+CTS:   INVX3
+CTS:   CLKBUFX6
+CTS:   BUFX4
+CTS:   INVXL
+CTS:   BUFX3
+CTS:   CLKINVX2
+CTS:   INVX1
+CTS:   CLKINVX3
+CTS:   BUFX2
+CTS:   CLKINVX4
+CTS:   CLKBUFX4
+CTS:   CLKBUFX2
+CTS:   DLY1X1
+CTS:   CLKBUFX3
+CTS:   DLY1X4
+CTS:   DLY2X1
+CTS:   DLY3X1
+CTS:   DLY2X4
+CTS:   DLY4X1
+CTS:   DLY3X4
+CTS:   DLY4X4
+Information: Removing clock transition on clock clk ... (CTS-103)
+Information: Removing clock transition on clock clk ... (CTS-103)
+
+CTS: gate level 1 clock tree synthesis
+CTS:          clock net = clk
+CTS:        driving pin = clk
+CTS: gate level 1 design rule constraints [rise fall]
+CTS:   max transition   = worst[0.500 0.500]
+CTS:   leaf max transition = worst[0.500 0.500]
+CTS:   max capacitance  = worst[0.600 0.600]
+CTS:   max fanout       = 2000
+CTS: gate level 1 timing constraints
+CTS:   clock skew       = worst[0.000]
+CTS:   insertion delay  = worst[0.000]
+CTS:   levels per net   = 400
+
+CTS: Clock tree synthesis completed successfully
+CTS:   CPU time:     0 seconds
+CTS: Reporting clock tree violations ...
+CTS:   Global design rules:
+CTS:     maximum transition delay [rise,fall] = [0.5,0.5]
+CTS:     maximum capacitance = 0.6
+CTS:     maximum fanout = 2000
+CTS:     maximum buffer levels per net = 400
+CTS:  
+CTS: Summary of clock tree violations: 
+CTS:  Total number of transition violations  = 0 
+CTS:  Total number of capacitance violations = 0 
+CTS: ------------------------------------------------
+CTS: Clock Tree Synthesis Summary
+CTS: ------------------------------------------------
+CTS:       1 clock domain synthesized
+CTS:       1 gated clock nets synthesized
+CTS:       0 buffer trees inserted
+CTS:       0 buffers used (total size = 0)
+CTS:       1 clock nets total capacitance = worst[0.227 0.227]
+CTS: ------------------------------------------------
+CTS: Clock-by-Clock Summary
+CTS: ------------------------------------------------
+CTS: Root clock net clk
+CTS:       1 gated clock nets synthesized
+CTS:       0 buffer trees inserted
+CTS:       0 buffers used (total size = 0)
+CTS:       1 clock nets total capacitance = worst[0.227 0.227]
+
+CTS: ==================================================
+CTS:   Elapsed time: 0 seconds
+CTS:   CPU time:     0 seconds on Tiffany.localdomain
+CTS: ==================================================
+CTS: Reporting clock tree violations ...
+CTS:   Global design rules:
+CTS:     maximum transition delay [rise,fall] = [0.5,0.5]
+CTS:     maximum capacitance = 0.6
+CTS:     maximum fanout = 2000
+CTS:     maximum buffer levels per net = 400
+CTS:  
+CTS: Summary of clock tree violations: 
+CTS:  Total number of transition violations  = 0 
+CTS:  Total number of capacitance violations = 0 
+CTS: ==================================================
+CTS: Start DRC fixing beyond exceptions
+CTS: Blockage Aware Algorithm
+CTS: Top-Level OCV Path Sharing not effective when timing derating is too low
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 8 routable metal layers
+    This is considered as a 8-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 29 horizontal rows
+    GRC ref loc X corrected
+    GRC ref loc Y corrected
+    8 pre-routes for placement blockage/checking
+    8 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+CTS: all inverters have too large rise/fall delay skew
+CTS: inverter CLKINVX16: rise/fall delay skew = 0.249563 (> 0.200000) 
+CTS: Region Aware Algorithm is automatically turned off when design has no region or only has one region.
+CTS: Prepare sources for clock domain clk
+CTS: Prepare sources for clock domain clk
+
+Pruning library cells (r/f, pwr)
+    Min drive = 0.325676.
+    Pruning DLY4X1 because drive of 0.128163 is less than 0.325676.
+    Pruning DLY3X1 because drive of 0.132085 is less than 0.325676.
+    Pruning DLY2X1 because drive of 0.134504 is less than 0.325676.
+    Pruning DLY1X1 because drive of 0.134612 is less than 0.325676.
+    Pruning CLKBUFX2 because drive of 0.242748 is less than 0.325676.
+    Pruning BUFX2 because drive of 0.303891 is less than 0.325676.
+    Pruning DLY4X4 because of a gain of 34.75.
+    Pruning BUFX3 because it is (w/ power-considered) inferior to DLY2X4.
+    Pruning DLY3X4 because of a gain of 29.16.
+    Pruning DLY2X4 because it is (w/ power-considered) inferior to CLKBUFX4.
+    Pruning DLY1X4 because it is inferior (w/ power-considered) to CLKBUFX4.
+    Pruning BUFX6 because it is inferior (w/ power-considered) to CLKBUFX8.
+    Pruning BUFX16 because it is (w/ power-considered) inferior to CLKBUFX12.
+    Final pruned buffer set (11 buffers):
+	CLKBUFX3
+	CLKBUFX4
+	BUFX4
+	CLKBUFX6
+	CLKBUFX8
+	BUFX8
+	BUFX12
+	CLKBUFX12
+	BUFX20
+	CLKBUFX16
+	CLKBUFX20
+
+Pruning library cells (r/f, pwr)
+    Min drive = 0.325676.
+    Pruning INVXL because drive of 0.0907169 is less than 0.325676.
+    Pruning INVX1 because drive of 0.16456 is less than 0.325676.
+    Pruning CLKINVX1 because drive of 0.184628 is less than 0.325676.
+    Pruning CLKINVX2 because drive of 0.276882 is less than 0.325676.
+    Pruning INVX2 because it is (w/ power-considered) inferior to CLKINVX3.
+    Pruning INVX3 because it is (w/ power-considered) inferior to CLKINVX4.
+    Pruning INVX6 because it is (w/ power-considered) inferior to CLKINVX8.
+    Pruning INVX16 because it is (w/ power-considered) inferior to CLKINVX12.
+    Final pruned buffer set (11 buffers):
+	CLKINVX3
+	CLKINVX4
+	INVX4
+	CLKINVX6
+	CLKINVX8
+	INVX8
+	INVX12
+	CLKINVX12
+	INVX20
+	CLKINVX16
+	CLKINVX20
+CTS: Prepare sources for clock domain clk
+
+CTS: ==================================================
+CTS: DRC fixing beyond exceptions completed successfully
+CTS:   Elapsed time: 0 seconds
+CTS:   CPU time:     0 seconds on Tiffany.localdomain
+CTS: ==================================================
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer METAL1 : 0.00021 0.00021 (RCEX-011)
+Information: Library Derived Res for layer METAL1 : 0.00062 0.00062 (RCEX-011)
+Information: Library Derived Cap for layer METAL2 : 0.00025 0.00025 (RCEX-011)
+Information: Library Derived Res for layer METAL2 : 0.00033 0.00033 (RCEX-011)
+Information: Library Derived Cap for layer METAL3 : 0.00028 0.00028 (RCEX-011)
+Information: Library Derived Res for layer METAL3 : 0.00036 0.00036 (RCEX-011)
+Information: Library Derived Cap for layer METAL4 : 0.00025 0.00025 (RCEX-011)
+Information: Library Derived Res for layer METAL4 : 0.00033 0.00033 (RCEX-011)
+Information: Library Derived Cap for layer METAL5 : 0.00028 0.00028 (RCEX-011)
+Information: Library Derived Res for layer METAL5 : 0.00036 0.00036 (RCEX-011)
+Information: Library Derived Cap for layer METAL6 : 0.00025 0.00025 (RCEX-011)
+Information: Library Derived Res for layer METAL6 : 0.00033 0.00033 (RCEX-011)
+Information: Library Derived Cap for layer METAL7 : 0.00027 0.00027 (RCEX-011)
+Information: Library Derived Res for layer METAL7 : 0.00036 0.00036 (RCEX-011)
+Information: Library Derived Cap for layer METAL8 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL8 : 6.4e-05 6.4e-05 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Horizontal Res : 0.00042 0.00042 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.00025 0.00025 (RCEX-011)
+Information: Library Derived Vertical Res : 0.00027 0.00027 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 0.00078 0.00078 (RCEX-011)
+ CTS Successful 
+Optimizing clock tree...
+Operating Condition is max
+No valid clocks specified, all clocks will be optimized
+CTS: CTS Operating Condition(s): MAX(Worst) 
+Clock name : clk 
+enable delay detour in ctdn
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 8 routable metal layers
+    This is considered as a 8-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 29 horizontal rows
+    GRC ref loc X corrected
+    GRC ref loc Y corrected
+    8 pre-routes for placement blockage/checking
+    8 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+ Cannot find specified mesh net 
+CTS: Top-Level OCV Path Sharing not effective when timing derating is too low
+CTS: Top-Level OCV Path Sharing not effective when timing derating is too low
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 8 routable metal layers
+    This is considered as a 8-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 29 horizontal rows
+    GRC ref loc X corrected
+    GRC ref loc Y corrected
+    8 pre-routes for placement blockage/checking
+    8 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+CTS: all inverters have too large rise/fall delay skew
+CTS: inverter CLKINVX16: rise/fall delay skew = 0.249563 (> 0.200000) 
+CTS: Region Aware Algorithm is automatically turned off when design has no region or only has one region.
+CTS: Prepare sources for clock domain clk
+CTS: Prepare sources for clock domain clk
+
+Pruning library cells (r/f, pwr)
+    Min drive = 0.325676.
+    Pruning DLY4X1 because drive of 0.128163 is less than 0.325676.
+    Pruning DLY3X1 because drive of 0.132085 is less than 0.325676.
+    Pruning DLY2X1 because drive of 0.134504 is less than 0.325676.
+    Pruning DLY1X1 because drive of 0.134612 is less than 0.325676.
+    Pruning CLKBUFX2 because drive of 0.242748 is less than 0.325676.
+    Pruning BUFX2 because drive of 0.303891 is less than 0.325676.
+    Pruning DLY4X4 because of a gain of 34.75.
+    Pruning BUFX3 because it is (w/ power-considered) inferior to DLY2X4.
+    Pruning DLY3X4 because of a gain of 29.16.
+    Pruning DLY2X4 because it is (w/ power-considered) inferior to CLKBUFX4.
+    Pruning DLY1X4 because it is inferior (w/ power-considered) to CLKBUFX4.
+    Pruning BUFX6 because it is inferior (w/ power-considered) to CLKBUFX8.
+    Pruning BUFX16 because it is (w/ power-considered) inferior to CLKBUFX12.
+    Final pruned buffer set (11 buffers):
+	CLKBUFX3
+	CLKBUFX4
+	BUFX4
+	CLKBUFX6
+	CLKBUFX8
+	BUFX8
+	BUFX12
+	CLKBUFX12
+	BUFX20
+	CLKBUFX16
+	CLKBUFX20
+
+Pruning library cells (r/f, pwr)
+    Min drive = 0.325676.
+    Pruning INVXL because drive of 0.0907169 is less than 0.325676.
+    Pruning INVX1 because drive of 0.16456 is less than 0.325676.
+    Pruning CLKINVX1 because drive of 0.184628 is less than 0.325676.
+    Pruning CLKINVX2 because drive of 0.276882 is less than 0.325676.
+    Pruning INVX2 because it is (w/ power-considered) inferior to CLKINVX3.
+    Pruning INVX3 because it is (w/ power-considered) inferior to CLKINVX4.
+    Pruning INVX6 because it is (w/ power-considered) inferior to CLKINVX8.
+    Pruning INVX16 because it is (w/ power-considered) inferior to CLKINVX12.
+    Final pruned buffer set (11 buffers):
+	CLKINVX3
+	CLKINVX4
+	INVX4
+	CLKINVX6
+	CLKINVX8
+	INVX8
+	INVX12
+	CLKINVX12
+	INVX20
+	CLKINVX16
+	CLKINVX20
+CTO-ID:    
+Choosing the following cells for CTO Delay Insertion and ICDB: 
+CTO-  :     BUFX12, 
+CTO-  :     BUFX16, 
+CTO-  :     BUFX2, 
+CTO-  :     BUFX20, 
+CTO-  :     BUFX3, 
+CTO-  :     BUFX4, 
+CTO-  :     BUFX6, 
+CTO-  :     BUFX8, 
+CTO-  :     CLKBUFX12, 
+CTO-  :     CLKBUFX16, 
+CTO-  :     CLKBUFX2, 
+CTO-  :     CLKBUFX20, 
+CTO-  :     CLKBUFX3, 
+CTO-  :     CLKBUFX4, 
+CTO-  :     CLKBUFX6, 
+CTO-  :     CLKBUFX8, 
+CTO-  :     CLKINVX1, 
+CTO-  :     CLKINVX12, 
+CTO-  :     CLKINVX16, 
+CTO-  :     CLKINVX2, 
+CTO-  :     CLKINVX20, 
+CTO-  :     CLKINVX3, 
+CTO-  :     CLKINVX4, 
+CTO-  :     CLKINVX6, 
+CTO-  :     CLKINVX8, 
+CTO-  :     DLY1X1, 
+CTO-  :     DLY1X4, 
+CTO-  :     DLY2X1, 
+CTO-  :     DLY2X4, 
+CTO-  :     DLY3X1, 
+CTO-  :     DLY3X4, 
+CTO-  :     DLY4X1, 
+CTO-  :     DLY4X4, 
+CTO-  :     INVX1, 
+CTO-  :     INVX12, 
+CTO-  :     INVX16, 
+CTO-  :     INVX2, 
+CTO-  :     INVX20, 
+CTO-  :     INVX3, 
+CTO-  :     INVX4, 
+CTO-  :     INVX6, 
+CTO-  :     INVX8, 
+CTO-  :     INVXL, 
+CTO-  :     
+
+Initializing multicorner optimizer...
+Using primary buffers equivalent to 'BUFX2'.
+Using primary inverters equivalent to 'CLKINVX1'.
+Technology-based gate delay scale factors (normalized to the highest):
+  Corner 'max': 1.000
+Technology-based wire delay scale factors (normalized to the highest):
+  Corner 'max': 1.000
+Information: Float pin scale factor for the 'max' operating condition of scenario 'default' is set to 1.000 (CTS-375)
+Information: Float pin scale factor for the 'min' operating condition of scenario 'default' is set to 1.000 (CTS-375)
+Using the following scale factors for float pins:
+  Corner 'max': 1.000
+Worst clock corner:  max
+Worst RC delay corner:  max
+Using normal effort optimization
+Using pre-route mode
+Using non-mv_mode
+Target max transition = 0.189865
+Using the CTS integrated router
+
+Selecting library cells for optimization
+    Pruning weak driver DLY4X1.
+    Pruning weak driver DLY3X1.
+    Pruning weak driver DLY2X1.
+    Pruning weak driver DLY1X1.
+    Pruning weak driver CLKBUFX2.
+    Pruning weak driver BUFX2.
+    Pruning slow or multistage gate DLY4X4.
+    Pruning slow or multistage gate DLY3X4.
+    Final pruned buffer set (16 buffers):
+	CLKBUFX3
+	BUFX3
+	DLY2X4
+	CLKBUFX4
+	DLY1X4
+	BUFX4
+	CLKBUFX6
+	CLKBUFX8
+	BUFX6
+	BUFX8
+	BUFX12
+	BUFX16
+	CLKBUFX12
+	BUFX20
+	CLKBUFX16
+	CLKBUFX20
+
+    Pruning weak driver INVXL.
+    Pruning weak driver INVX1.
+    Pruning weak driver CLKINVX1.
+    Pruning weak driver CLKINVX2.
+    Final pruned inverter set (15 inverters):
+	INVX2
+	CLKINVX3
+	INVX3
+	CLKINVX4
+	INVX4
+	CLKINVX6
+	INVX6
+	CLKINVX8
+	INVX8
+	INVX12
+	INVX16
+	CLKINVX12
+	INVX20
+	CLKINVX16
+	CLKINVX20
+
+
+Initializing parameters for clock clk:
+Root pin: clk
+Using max_transition: 0.500 ns
+Using leaf_max_transition for clock clk: 0.500 ns
+Using the following target skews for global optimization:
+  Corner 'max': 0.079 ns
+Using the following target skews for incremental optimization:
+  Corner 'max': 0.000 ns
+Using the following optimization options:
+  gate sizing                   :  on
+  gate relocation               :  on
+  preserve levels               :  off
+  area recovery                 :  on
+  relax insertion delay         :  off
+  balance rc                    :  off
+Information: The -balance_rc option is set to false by default, because there are single CTS corner(s). (CTS-1121)
+Using max_transition 0.500 ns
+Using leaf_max_transition for clock clk : 0.500 ns
+
+
+Starting optimization for clock clk.
+Using max_transition 0.500 ns
+Using leaf_max_transition for clock clk : 0.500 ns
+
+****************************************
+* Preoptimization report (clock 'clk') *
+****************************************
+  Corner 'max'
+    Estimated Skew (r/f/b) = (0.004 0.000 0.004)
+    Estimated Insertion Delay (r/f/b) = (0.004  -inf 0.004)
+  Corner 'RC-ONLY'
+    Estimated Skew (r/f/b) = (0.004 0.000 0.004)
+    Estimated Insertion Delay (r/f/b) = (0.004  -inf 0.004)
+  Wire capacitance =  0.1 pf
+  Total capacitance = 0.2 pf
+  Max transition = 0.007 ns
+  Cells = 1 (area=0.000000)
+
+Report DRC violations for clock clk (initial)
+Total 0 DRC violations for clock clk (initial)
+ Start (0.000, 0.005), End (0.000, 0.005) 
+
+RC optimization for clock 'clk'
+100%   
+100%   
+Coarse optimization for clock 'clk'
+100%   
+100%   
+100%   
+100%   
+ No back-to-back buffer chains found
+ Start (0.000, 0.005), End (0.000, 0.005) 
+
+Detailed optimization for clock 'clk'
+100%   
+Using max_transition 0.500 ns
+Using leaf_max_transition for clock clk : 0.500 ns
+Starting optimization pass for clock clk:
+Start path based optimization 
+ Start (0.000, 0.004), End (0.000, 0.004) 
+
+ Start (0.000, 0.004), End (0.000, 0.004) 
+
+100%   
+ Start (0.000, 0.004), End (0.000, 0.004) 
+
+ Start (0.000, 0.004), End (0.000, 0.004) 
+
+ Start (0.000, 0.004), End (0.000, 0.004) 
+
+ Start (0.000, 0.004), End (0.000, 0.004) 
+
+ Start (0.000, 0.004), End (0.000, 0.004) 
+
+ Start (0.000, 0.004), End (0.000, 0.004) 
+
+Start area recovery: (0.000000, 0.003684)
+Using max_transition 0.500 ns
+Using leaf_max_transition for clock clk : 0.500 ns
+Switch to low metal layer for clock 'clk':
+
+ Total 1 out of 1 nets switched to low metal layer for clock 'clk' with largest cap change 0.00 percent
+Switch metal layer for area recovery: (0.000000, 0.003684)
+ Start (0.000, 0.004), End (0.000, 0.004) 
+
+Buffer removal for area recovery: (0.000000, 0.003684)
+Area recovery optimization for clock 'clk':
+100%   
+Sizing for area recovery: (0.000000, 0.003684)
+
+ Total 0 buffers removed (all paths) for clock 'clk'
+Path buffer removal for area recovery: (0.000000, 0.003684)
+Buffer pair removal for area recovery: (0.000000, 0.003684)
+End area recovery: (0.000000, 0.003684)
+
+*************************************************
+* Multicorner optimization report (clock 'clk') *
+*************************************************
+  Corner 'max'
+    Estimated Skew (r/f/b) = (0.004 0.000 0.004)
+    Estimated Insertion Delay (r/f/b) = (0.004  -inf 0.004)
+  Corner 'RC-ONLY'
+    Estimated Skew (r/f/b) = (0.004 0.000 0.004)
+    Estimated Insertion Delay (r/f/b) = (0.004  -inf 0.004)
+  Wire capacitance =  0.1 pf
+  Total capacitance = 0.2 pf
+  Max transition = 0.007 ns
+  Cells = 1 (area=0.000000)
+
+
+++ Longest path for clock clk in corner 'max':
+ object                               fan cap  trn inc  arr r location
+ clk (port)                                     24   0    0 r (   0   53) 
+ clk (port)                                      0   0    0 r (   0   53) 
+ clk (net)                             76 230                 
+ Control_U/circle_C_reg[0]/CK (SDFFRXL)          7   4    4 r ( 102   16) 
+
+
+++ Shortest path for clock clk in corner 'max':
+ object                               fan cap  trn inc  arr r location
+ clk (port)                                     24   0    0 r (   0   53) 
+ clk (port)                                      0   0    0 r (   0   53) 
+ clk (net)                             76 230                 
+ CandidateAdder_U/candidate_reg[7]/CK (SDFFRXL)
+                                                 0   0    0 r (   3   53) 
+
+
+++ Longest path for clock clk in corner 'RC-ONLY':
+ object                               fan cap  trn inc  arr r location
+ clk (port)                                     24   0    0 r (   0   53) 
+ clk (port)                                      0   0    0 r (   0   53) 
+ clk (net)                             76 230                 
+ Control_U/circle_C_reg[0]/CK (SDFFRXL)          9   4    4 r ( 102   16) 
+
+
+++ Shortest path for clock clk in corner 'RC-ONLY':
+ object                               fan cap  trn inc  arr r location
+ clk (port)                                     24   0    0 r (   0   53) 
+ clk (port)                                      0   0    0 r (   0   53) 
+ clk (net)                             76 230                 
+ CandidateAdder_U/candidate_reg[7]/CK (SDFFRXL)
+                                                 0   0    0 r (   3   53) 
+
+Report DRC violations for clock clk (final)
+Total 0 DRC violations for clock clk (final)
+
+  Legalizing Placement
+  --------------------
+
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 8 routable metal layers
+    This is considered as a 8-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 29 horizontal rows
+    GRC ref loc X corrected
+    GRC ref loc Y corrected
+    8 pre-routes for placement blockage/checking
+    8 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+ 
+****************************************
+  Report : Chip Summary
+  Design : SET
+  Version: P-2019.03
+  Date   : Sun Jan  5 00:08:52 2020
+****************************************
+Std cell utilization: 72.40%  (5039/(6960-0))
+(Non-fixed + Fixed)
+Std cell utilization: 72.40%  (5039/(6960-0))
+(Non-fixed only)
+Chip area:            6960     sites, bbox (0.00 0.00 110.40 107.01) um
+Std cell area:        5039     sites, (non-fixed:5039   fixed:0)
+                      692      cells, (non-fixed:692    fixed:0)
+Macro cell area:      0        sites
+                      0        cells
+Placement blockages:  0        sites, (excluding fixed std cells)
+                      0        sites, (include fixed std cells & chimney area)
+                      0        sites, (complete p/g net blockages)
+Routing blockages:    0        sites, (partial p/g net blockages)
+                      0        sites, (routing blockages and signal pre-route)
+Lib cell count:       45 
+Avg. std cell width:  2.83 um 
+Site array:           unit     (width: 0.46 um, height: 3.69 um, rows: 29)
+Physical DB scale:    1000 db_unit = 1 um 
+
+ 
+****************************************
+  Report : pnet options
+  Design : SET
+  Version: P-2019.03
+  Date   : Sun Jan  5 00:08:52 2020
+****************************************
+
+
+--------------------------------------------------------------------
+Layer      Blockage   Min_width   Min_height   Via_additive     Density
+--------------------------------------------------------------------
+METAL1     none          ---         ---       via additive      ---
+METAL2     none          ---         ---       via additive      ---
+METAL3     none          ---         ---       via additive      ---
+METAL4     none          ---         ---       via additive      ---
+METAL5     none          ---         ---       via additive      ---
+METAL6     none          ---         ---       via additive      ---
+METAL7     none          ---         ---       via additive      ---
+METAL8     none          ---         ---       via additive      ---
+ 
+****************************************
+  Report : Legalize Displacement
+  Design : SET
+  Version: P-2019.03
+  Date   : Sun Jan  5 00:08:52 2020
+****************************************
+
+No cell displacement.
+
+
+  Placement Legalization Complete
+  -------------------------------
+
+Information: Updating database...
+Unsetting the GR Options
+LR: 0 out of 1 clock nets rerouted
+LR: Clock routing service terminated
+Invalidate design extracted status
+Optimize clock tree Successful...
+
+  Loading design 'SET'
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+
+
+
+Information: Library Manufacturing Grid(GridResolution) : 5
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Information: Design Library and main library resistance units are matched - 1.000 kohm. 
+Information: Capacitance Unit from Milkyway design library: 'pf' 
+Information: Design Library and main library capacitance units are matched - 1.000 pf. 
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer METAL1 : 0.00022 0.00022 (RCEX-011)
+Information: Library Derived Res for layer METAL1 : 0.00065 0.00065 (RCEX-011)
+Information: Library Derived Cap for layer METAL2 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL2 : 0.00035 0.00035 (RCEX-011)
+Information: Library Derived Cap for layer METAL3 : 0.00029 0.00029 (RCEX-011)
+Information: Library Derived Res for layer METAL3 : 0.00038 0.00038 (RCEX-011)
+Information: Library Derived Cap for layer METAL4 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL4 : 0.00035 0.00035 (RCEX-011)
+Information: Library Derived Cap for layer METAL5 : 0.00029 0.00029 (RCEX-011)
+Information: Library Derived Res for layer METAL5 : 0.00038 0.00038 (RCEX-011)
+Information: Library Derived Cap for layer METAL6 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL6 : 0.00035 0.00035 (RCEX-011)
+Information: Library Derived Cap for layer METAL7 : 0.00029 0.00029 (RCEX-011)
+Information: Library Derived Res for layer METAL7 : 0.00038 0.00038 (RCEX-011)
+Information: Library Derived Cap for layer METAL8 : 0.00027 0.00027 (RCEX-011)
+Information: Library Derived Res for layer METAL8 : 6.7e-05 6.7e-05 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.00027 0.00027 (RCEX-011)
+Information: Library Derived Horizontal Res : 0.00044 0.00044 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Vertical Res : 0.00028 0.00028 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 0.00078 0.00078 (RCEX-011)
+
+ Start Scan Chain Re-Ordering
+  number of valid scan chains :  1
+  number of failed scan chains:  0
+
+  Wire Length Before Timing Scan Cell Ordering = 2605
+  Wire Length After Timing Scan Cell Ordering  = 1367
+
+  Number of Clock Buffer Crossing Before Timing Ordering = 0
+  Number of Clock Buffer Crossing After Timing Ordering  = 0
+
+  Routing Scan Chains
+ Complete Scan Chain Re-Ordering.
+Information: Updating database...
+
+  Loading design 'SET'
+
+
+
+
+Information: Library Manufacturing Grid(GridResolution) : 5
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Information: Design Library and main library resistance units are matched - 1.000 kohm. 
+Information: Capacitance Unit from Milkyway design library: 'pf' 
+Information: Design Library and main library capacitance units are matched - 1.000 pf. 
+Warning: Inconsistent library data found for layer POLY1. (RCEX-018)
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is detail route TLU+. (RCEX-015)
+Information: Start mixed mode parasitic extraction. (RCEX-023)
+Information: Start rc extraction...
+Warning: Not enough nets are routed (1/839 < 0.66667); will do extraction by using placement congestion map as background. (RCEX-047)
+Information: Parasitic source is LPE. (RCEX-040)
+Information: Parasitic mode is RealRVirtualC. (RCEX-041)
+Information: Using virtual shield extraction. (RCEX-081)
+Information: Extraction mode is MAX. (RCEX-042)
+Information: Extraction derate is 125/125/125. (RCEX-043)
+Information: Start back annotation for parasitic extraction. (RCEX-023)
+Information: End back annotation for parasitic extraction. (RCEX-023)
+Information: Start timing update for parasitic extraction. (RCEX-023)
+Information: End timing update for parasitic extraction. (RCEX-023)
+Information: End parasitic extraction. (RCEX-023)
+Information: Start rc update...
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer METAL1 : 0.00022 0.00022 (RCEX-011)
+Information: Library Derived Res for layer METAL1 : 0.00065 0.00065 (RCEX-011)
+Information: Library Derived Cap for layer METAL2 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL2 : 0.00035 0.00035 (RCEX-011)
+Information: Library Derived Cap for layer METAL3 : 0.00029 0.00029 (RCEX-011)
+Information: Library Derived Res for layer METAL3 : 0.00038 0.00038 (RCEX-011)
+Information: Library Derived Cap for layer METAL4 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL4 : 0.00035 0.00035 (RCEX-011)
+Information: Library Derived Cap for layer METAL5 : 0.00029 0.00029 (RCEX-011)
+Information: Library Derived Res for layer METAL5 : 0.00038 0.00038 (RCEX-011)
+Information: Library Derived Cap for layer METAL6 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL6 : 0.00035 0.00035 (RCEX-011)
+Information: Library Derived Cap for layer METAL7 : 0.00029 0.00029 (RCEX-011)
+Information: Library Derived Res for layer METAL7 : 0.00038 0.00038 (RCEX-011)
+Information: Library Derived Cap for layer METAL8 : 0.00027 0.00027 (RCEX-011)
+Information: Library Derived Res for layer METAL8 : 6.7e-05 6.7e-05 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.00027 0.00027 (RCEX-011)
+Information: Library Derived Horizontal Res : 0.00044 0.00044 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Vertical Res : 0.00028 0.00028 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 0.00078 0.00078 (RCEX-011)
+Information: End rc update.
+Information: The mixed mode parasitic extraction has been performed. (RCEX-202)
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+ 
+****************************************
+Report : qor
+Design : SET
+Version: P-2019.03
+Date   : Sun Jan  5 00:08:54 2020
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              21.00
+  Critical Path Length:          7.26
+  Critical Path Slack:           2.35
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          3
+  Hierarchical Port Count:        205
+  Leaf Cell Count:                692
+  Buf/Inv Cell Count:              87
+  Buf Cell Count:                   1
+  Inv Cell Count:                  86
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:       616
+  Sequential Cell Count:           76
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     5457.140967
+  Noncombinational Area:  3096.057480
+  Buf/Inv Area:            300.439795
+  Total Buffer Area:             6.79
+  Total Inverter Area:         293.65
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  Net XLength        :       10270.49
+  Net YLength        :        9051.79
+  -----------------------------------
+  Cell Area:              8553.198447
+  Design Area:            8553.198447
+  Net Length        :        19322.27
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:           841
+  Nets With Violations:             5
+  Max Trans Violations:             4
+  Max Cap Violations:               1
+  -----------------------------------
+
+
+  Hostname: Tiffany.localdomain
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.00
+  Mapping Optimization:                0.00
+  -----------------------------------------
+  Overall Compile Time:                0.00
+  Overall Compile Wall Clock Time:     0.00
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+Setting hold fix requirement...
+Performing optimization...
+
+  Loading design 'SET'
+
+
+
+
+Information: Library Manufacturing Grid(GridResolution) : 5
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Information: Design Library and main library resistance units are matched - 1.000 kohm. 
+Information: Capacitance Unit from Milkyway design library: 'pf' 
+Information: Design Library and main library capacitance units are matched - 1.000 pf. 
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer METAL1 : 0.00022 0.00022 (RCEX-011)
+Information: Library Derived Res for layer METAL1 : 0.00065 0.00065 (RCEX-011)
+Information: Library Derived Cap for layer METAL2 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL2 : 0.00035 0.00035 (RCEX-011)
+Information: Library Derived Cap for layer METAL3 : 0.00029 0.00029 (RCEX-011)
+Information: Library Derived Res for layer METAL3 : 0.00038 0.00038 (RCEX-011)
+Information: Library Derived Cap for layer METAL4 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL4 : 0.00035 0.00035 (RCEX-011)
+Information: Library Derived Cap for layer METAL5 : 0.00029 0.00029 (RCEX-011)
+Information: Library Derived Res for layer METAL5 : 0.00038 0.00038 (RCEX-011)
+Information: Library Derived Cap for layer METAL6 : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Res for layer METAL6 : 0.00035 0.00035 (RCEX-011)
+Information: Library Derived Cap for layer METAL7 : 0.00029 0.00029 (RCEX-011)
+Information: Library Derived Res for layer METAL7 : 0.00038 0.00038 (RCEX-011)
+Information: Library Derived Cap for layer METAL8 : 0.00027 0.00027 (RCEX-011)
+Information: Library Derived Res for layer METAL8 : 6.7e-05 6.7e-05 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.00027 0.00027 (RCEX-011)
+Information: Library Derived Horizontal Res : 0.00044 0.00044 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.00026 0.00026 (RCEX-011)
+Information: Library Derived Vertical Res : 0.00028 0.00028 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 0.00078 0.00078 (RCEX-011)
+
+                  Incremental high fanout optimization starts
+================================================================
+
+ Estimating Design ...... 
+ Done
+
+ Updating Timing ........ 
+ Done
+
+
+ Beginning Buffering Optimizations
+ ---------------------------------
+
+ Collecting Buffer Trees ... Found 2
+
+ Processing Buffer Trees ... 
+
+Warning: New port 'Control_U/IN0' is generated to sub_module 'Control_U' as an additional of original port 'Control_U/test_se'. (PSYN-850)
+    [1]  10% ...
+    [2]  20% ...
+    [2] 100% Done ...
+
+
+Information: Automatic high-fanout synthesis deletes 0 cells. (HFS-802)
+Information: Automatic high-fanout synthesis adds 4 new cells. (PSYN-864)
+
+ Estimating Design ...... 
+ Done
+
+
+                  Incremental high fanout optimization completes
+================================================================
+
+
+  Design  WNS: 0.0000  TNS: 0.0000  Number of Violating Paths: 0
+
+  Nets with DRC Violations: 5
+  Total moveable cell area: 8600.7
+  Total fixed cell area: 0.0
+  Total physical cell area: 8600.7
+  Core area: (0 0 110400 107010)
+
+
+
+  Design (Hold)  WNS: 0.0000  TNS: 0.0000  Number of Violating Paths: 0
+
+  Timing and DRC Optimization (Stage 1)
+  --------------------------------------
+
+
+
+  Beginning Timing Optimizations
+  ------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:00    8600.7      0.00       0.0       0.6                                0.00  
+    0:00:00    8602.4      0.00       0.0       0.6                                0.00  
+
+
+  Beginning Phase 1 Design Rule Fixing  (max_transition)
+  ------------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:00    8602.4      0.00       0.0       0.6                                0.00  
+Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
+Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
+    0:00:00    8590.5      0.00       0.0       0.0                                0.00  
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+
+  Placement Optimization (Stage 1)
+  -----------------------------------------------------
+
+Information: Running stand-alone coarse placer in a separate process using temp directory '/tmp'. (PSYN-605)
+20%...40%...60%...80%...100% done.
+
+Information: Analyzing channel congestion ... 
+Information: Channel congestion analysis found no blockages
+
+
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 8 routable metal layers
+    This is considered as a 8-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 29 horizontal rows
+    GRC ref loc X corrected
+    GRC ref loc Y corrected
+    8 pre-routes for placement blockage/checking
+    8 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+ 
+****************************************
+  Report : Chip Summary
+  Design : SET
+  Version: P-2019.03
+  Date   : Sun Jan  5 00:08:56 2020
+****************************************
+Std cell utilization: 72.72%  (5061/(6960-0))
+(Non-fixed + Fixed)
+Std cell utilization: 72.72%  (5061/(6960-0))
+(Non-fixed only)
+Chip area:            6960     sites, bbox (0.00 0.00 110.40 107.01) um
+Std cell area:        5061     sites, (non-fixed:5061   fixed:0)
+                      696      cells, (non-fixed:696    fixed:0)
+Macro cell area:      0        sites
+                      0        cells
+Placement blockages:  0        sites, (excluding fixed std cells)
+                      0        sites, (include fixed std cells & chimney area)
+                      0        sites, (complete p/g net blockages)
+Routing blockages:    0        sites, (partial p/g net blockages)
+                      0        sites, (routing blockages and signal pre-route)
+Lib cell count:       50 
+Avg. std cell width:  2.97 um 
+Site array:           unit     (width: 0.46 um, height: 3.69 um, rows: 29)
+Physical DB scale:    1000 db_unit = 1 um 
+
+ 
+****************************************
+  Report : pnet options
+  Design : SET
+  Version: P-2019.03
+  Date   : Sun Jan  5 00:08:56 2020
+****************************************
+
+
+--------------------------------------------------------------------
+Layer      Blockage   Min_width   Min_height   Via_additive     Density
+--------------------------------------------------------------------
+METAL1     none          ---         ---       via additive      ---
+METAL2     none          ---         ---       via additive      ---
+METAL3     none          ---         ---       via additive      ---
+METAL4     none          ---         ---       via additive      ---
+METAL5     none          ---         ---       via additive      ---
+METAL6     none          ---         ---       via additive      ---
+METAL7     none          ---         ---       via additive      ---
+METAL8     none          ---         ---       via additive      ---
+Legalizing 687 illegal cells...
+Starting legalizer.
+Initial legalization:  100% (0 sec)
+Optimizations pass 1: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (0.0 sec)
+Optimizations pass 2: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (0.0 sec)
+Optimizations pass 3: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (0.0 sec)
+Legalization complete (0 total sec)
+ 
+****************************************
+  Report : Legalize Displacement
+  Design : SET
+  Version: P-2019.03
+  Date   : Sun Jan  5 00:08:56 2020
+****************************************
+
+avg cell displacement:    0.832 um ( 0.23 row height)
+max cell displacement:    2.359 um ( 0.64 row height)
+std deviation:            0.533 um ( 0.14 row height)
+number of cell moved:       620 cells (out of 696 cells)
+
+Total 0 cells has large displacement (e.g. > 11.070 um or 3 row height)
+
+
+  Placement Optimization Complete
+  -------------------------------
+
+
+  Design  WNS: 0.0000  TNS: 0.0000  Number of Violating Paths: 0
+
+  Nets with DRC Violations: 0
+  Total moveable cell area: 8590.5
+  Total fixed cell area: 0.0
+  Total physical cell area: 8590.5
+  Core area: (0 0 110400 107010)
+
+
+
+  Design (Hold)  WNS: 0.0000  TNS: 0.0000  Number of Violating Paths: 0
+
+  Timing and DRC Optimization (Stage 2)
+  --------------------------------------
+
+
+
+  Beginning Timing Optimizations
+  ------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
+Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
+Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+
+  Placement Optimization (Stage 2)
+  -----------------------------------------------------
+
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 8 routable metal layers
+    This is considered as a 8-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 29 horizontal rows
+    GRC ref loc X corrected
+    GRC ref loc Y corrected
+    8 pre-routes for placement blockage/checking
+    8 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+ 
+****************************************
+  Report : Chip Summary
+  Design : SET
+  Version: P-2019.03
+  Date   : Sun Jan  5 00:08:56 2020
+****************************************
+Std cell utilization: 72.72%  (5061/(6960-0))
+(Non-fixed + Fixed)
+Std cell utilization: 72.72%  (5061/(6960-0))
+(Non-fixed only)
+Chip area:            6960     sites, bbox (0.00 0.00 110.40 107.01) um
+Std cell area:        5061     sites, (non-fixed:5061   fixed:0)
+                      696      cells, (non-fixed:696    fixed:0)
+Macro cell area:      0        sites
+                      0        cells
+Placement blockages:  0        sites, (excluding fixed std cells)
+                      0        sites, (include fixed std cells & chimney area)
+                      0        sites, (complete p/g net blockages)
+Routing blockages:    0        sites, (partial p/g net blockages)
+                      0        sites, (routing blockages and signal pre-route)
+Lib cell count:       50 
+Avg. std cell width:  2.97 um 
+Site array:           unit     (width: 0.46 um, height: 3.69 um, rows: 29)
+Physical DB scale:    1000 db_unit = 1 um 
+
+ 
+****************************************
+  Report : pnet options
+  Design : SET
+  Version: P-2019.03
+  Date   : Sun Jan  5 00:08:56 2020
+****************************************
+
+
+--------------------------------------------------------------------
+Layer      Blockage   Min_width   Min_height   Via_additive     Density
+--------------------------------------------------------------------
+METAL1     none          ---         ---       via additive      ---
+METAL2     none          ---         ---       via additive      ---
+METAL3     none          ---         ---       via additive      ---
+METAL4     none          ---         ---       via additive      ---
+METAL5     none          ---         ---       via additive      ---
+METAL6     none          ---         ---       via additive      ---
+METAL7     none          ---         ---       via additive      ---
+METAL8     none          ---         ---       via additive      ---
+ 
+****************************************
+  Report : Legalize Displacement
+  Design : SET
+  Version: P-2019.03
+  Date   : Sun Jan  5 00:08:56 2020
+****************************************
+
+No cell displacement.
+
+
+  Placement Optimization Complete
+  -------------------------------
+
+
+  Design  WNS: 0.0000  TNS: 0.0000  Number of Violating Paths: 0
+
+  Nets with DRC Violations: 0
+  Total moveable cell area: 8590.5
+  Total fixed cell area: 0.0
+  Total physical cell area: 8590.5
+  Core area: (0 0 110400 107010)
+
+
+
+  Design (Hold)  WNS: 0.0000  TNS: 0.0000  Number of Violating Paths: 0
+[begin initializing data for legality checker]
+
+Initializing Data Structure ...
+INFO: legalizer_via_spacing_check_mode 0
+  Reading technology information ...
+    Technology table contains 8 routable metal layers
+    This is considered as a 8-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 29 horizontal rows
+    GRC ref loc X corrected
+    GRC ref loc Y corrected
+    8 pre-routes for placement blockage/checking
+    8 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+... design style 0
+... number of base array 1 0
+INFO:... use original rows...
+[end initializing data for legality checker]
+
+**************************************************** 
+Check_legality: Report for Fixed Placement Cells
+Information: Use the -verbose option to get details about the legality violations. (PSYN-054)
+**************************************************** 
+(fixed placement) Cells Not on Row            : 0
+(fixed placement) Cell Overlaps               : 0
+(fixed placement) Cells overlapping blockages : 0
+(fixed placement) Orientation Violations      : 0
+(fixed placement) Site Violations             : 0
+(fixed placement) Power Strap Violations      : 0
+****************************************************** 
+
+****************************************************** 
+Check_legality: Report for Non-fixed Placement Cells
+Information: Use the -verbose option to get details about the legality violations. (PSYN-054)
+****************************************************** 
+Number of Cells Not on Row            : 0
+Number of Cell Overlaps               : 0
+Number of Cells overlapping blockages : 0
+Number of Orientation Violations      : 0
+Number of Site Violations             : 0
+Number of Power Strap Violations      : 0
+******************************************** 
+Information: Updating database...
+Unsetting hold fix requirement...
+Information: Removing attribute 'fix_hold' from clock 'clk'. (MWUI-032)
+clock_opt completed Successfully
+1

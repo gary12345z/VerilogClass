@@ -12,32 +12,32 @@
  #patterns     #faults     #ATPG faults  test      process
  stored     detect/active  red/au/abort  coverage  CPU time
  ---------  -------------  ------------  --------  --------
- Begin deterministic ATPG: #uncollapsed_faults=5172, abort_limit=10...
- 32           4752    420         0/0/5    92.76%      0.12
- 64            386     34         0/0/6    99.41%      0.16
- 81             30      4         0/0/7    99.93%      0.16
+ Begin deterministic ATPG: #uncollapsed_faults=5164, abort_limit=10...
+ 32           4755    409         0/0/1    92.93%      0.12
+ 64            377     32         0/0/3    99.45%      0.15
+ 80             29      3         0/0/5    99.95%      0.15
  
      Uncollapsed Stuck Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT       5800
+ Detected                         DT       5785
  Possibly detected                PT          0
  Undetectable                     UD          0
  ATPG untestable                  AU          0
- Not detected                     ND          4
+ Not detected                     ND          3
  -----------------------------------------------
- total faults                              5804
- test coverage                            99.93%
+ total faults                              5788
+ test coverage                            99.95%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                          81
-     #basic_scan patterns                    81
+ #internal patterns                          80
+     #basic_scan patterns                    80
  -----------------------------------------------
             CPU Usage Summary Report
  -----------------------------------------------
- Total CPU time                            0.16
+ Total CPU time                            0.15
  -----------------------------------------------
  ***********************************************************
  *  NOTICE:  The following DRC violations were previously  *
@@ -50,32 +50,31 @@
  ATPG performed for stuck fault model using internal pattern source.
  
  ------------------------------------------------------------
- Begin Full-Sequential ATPG for 4 uncollapsed faults ...
+ Begin Full-Sequential ATPG for 3 uncollapsed faults ...
   --- abort limit : 10 seconds, NO BACKTRACK LIMIT
  ------------------------------------------------------------
  #patterns  #faults        #ATPG faults  test       process  
  stored     detect/active  red/au/abort  coverage   CPU time 
  ---------  -------------  ------------  --------  ----------
- 82                1      3         0/0/0     99.95%         0.01
- 83                1      2         0/0/0     99.97%         0.02
- 84                2      0         0/0/0    100.00%         0.04
+ 81                1      2         0/0/0     99.97%         0.01
+ 82                2      0         0/0/0    100.00%         0.02
  
      Uncollapsed Stuck Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT       5804
+ Detected                         DT       5788
  Possibly detected                PT          0
  Undetectable                     UD          0
  ATPG untestable                  AU          0
  Not detected                     ND          0
  -----------------------------------------------
- total faults                              5804
+ total faults                              5788
  test coverage                           100.00%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                          84
-     #basic_scan patterns                    81
-     #full_sequential patterns                3
+ #internal patterns                          82
+     #basic_scan patterns                    80
+     #full_sequential patterns                2
  -----------------------------------------------
