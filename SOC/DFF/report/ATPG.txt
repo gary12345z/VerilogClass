@@ -12,32 +12,32 @@
  #patterns     #faults     #ATPG faults  test      process
  stored     detect/active  red/au/abort  coverage  CPU time
  ---------  -------------  ------------  --------  --------
- Begin deterministic ATPG: #uncollapsed_faults=5060, abort_limit=10...
- 32           4700    360         0/0/1    93.64%      0.11
- 64            336     24         0/0/6    99.58%      0.14
- 72             20      4         0/0/6    99.93%      0.14
+ Begin deterministic ATPG: #uncollapsed_faults=5172, abort_limit=10...
+ 32           4752    420         0/0/5    92.76%      0.12
+ 64            386     34         0/0/6    99.41%      0.16
+ 81             30      4         0/0/7    99.93%      0.16
  
      Uncollapsed Stuck Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT       5654
+ Detected                         DT       5800
  Possibly detected                PT          0
  Undetectable                     UD          0
  ATPG untestable                  AU          0
  Not detected                     ND          4
  -----------------------------------------------
- total faults                              5658
+ total faults                              5804
  test coverage                            99.93%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                          72
-     #basic_scan patterns                    72
+ #internal patterns                          81
+     #basic_scan patterns                    81
  -----------------------------------------------
             CPU Usage Summary Report
  -----------------------------------------------
- Total CPU time                            0.14
+ Total CPU time                            0.16
  -----------------------------------------------
  ***********************************************************
  *  NOTICE:  The following DRC violations were previously  *
@@ -56,25 +56,26 @@
  #patterns  #faults        #ATPG faults  test       process  
  stored     detect/active  red/au/abort  coverage   CPU time 
  ---------  -------------  ------------  --------  ----------
- 73                2      2         0/0/0     99.96%         0.01
- 74                2      0         0/0/0    100.00%         0.01
+ 82                1      3         0/0/0     99.95%         0.01
+ 83                1      2         0/0/0     99.97%         0.02
+ 84                2      0         0/0/0    100.00%         0.04
  
      Uncollapsed Stuck Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT       5658
+ Detected                         DT       5804
  Possibly detected                PT          0
  Undetectable                     UD          0
  ATPG untestable                  AU          0
  Not detected                     ND          0
  -----------------------------------------------
- total faults                              5658
+ total faults                              5804
  test coverage                           100.00%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                          74
-     #basic_scan patterns                    72
-     #full_sequential patterns                2
+ #internal patterns                          84
+     #basic_scan patterns                    81
+     #full_sequential patterns                3
  -----------------------------------------------

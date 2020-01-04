@@ -1,0 +1,27 @@
+ 
+****************************************
+Report : cell
+Design : SET
+Version: P-2019.03
+Date   : Sat Jan  4 15:29:26 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+CandidateAdder_U          CandidateAdder                  1558.213189
+                                                                    h, n
+Control_U                 Control                         3372.733708
+                                                                    h, n
+GenerateAddress_MapCell_U0
+                          GenerateAddress_MapCell         2975.542187
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 3 cells                                             7906.489084
+1

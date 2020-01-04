@@ -1,0 +1,73 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : SET
+Version: P-2019.03
+Date   : Sat Jan  4 15:29:26 2020
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: Control_U/reg_mode_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: GenerateAddress_MapCell_U0/MapCell_U1/result_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  Control_U/reg_mode_reg[0]/CK (DFFRX1)                   0.00       5.00 r
+  Control_U/reg_mode_reg[0]/Q (DFFRX1)                    0.57       5.57 r
+  Control_U/reg_mode[0] (Control)                         0.00       5.57 r
+  GenerateAddress_MapCell_U0/reg_mode[0] (GenerateAddress_MapCell)
+                                                          0.00       5.57 r
+  GenerateAddress_MapCell_U0/U274/Y (CLKINVX1)            0.12       5.70 f
+  GenerateAddress_MapCell_U0/U3/Y (NOR2X1)                0.46       6.15 r
+  GenerateAddress_MapCell_U0/U139/Y (NOR2X1)              0.28       6.44 f
+  GenerateAddress_MapCell_U0/U156/Y (OA22X1)              0.48       6.91 f
+  GenerateAddress_MapCell_U0/U143/Y (OAI21XL)             0.35       7.26 r
+  GenerateAddress_MapCell_U0/U132/Y (OAI21XL)             0.15       7.41 f
+  GenerateAddress_MapCell_U0/U131/Y (AOI22X1)             0.27       7.68 r
+  GenerateAddress_MapCell_U0/U101/Y (CLKINVX1)            0.13       7.81 f
+  GenerateAddress_MapCell_U0/U5/Y (OAI22XL)               0.39       8.20 r
+  GenerateAddress_MapCell_U0/U31/Y (NOR2X1)               0.13       8.33 f
+  GenerateAddress_MapCell_U0/U37/Y (AOI211X1)             0.14       8.47 r
+  GenerateAddress_MapCell_U0/MapCell_U1/add_65/U1_3/CO (ADDFXL)
+                                                          0.66       9.13 r
+  GenerateAddress_MapCell_U0/MapCell_U1/add_65/U1_4/CO (ADDFXL)
+                                                          0.31       9.45 r
+  GenerateAddress_MapCell_U0/MapCell_U1/add_65/U1_5/S (ADDFXL)
+                                                          0.40       9.85 r
+  GenerateAddress_MapCell_U0/U20/Y (CLKINVX1)             0.08       9.92 f
+  GenerateAddress_MapCell_U0/U50/Y (OAI22XL)              0.25      10.17 r
+  GenerateAddress_MapCell_U0/U49/Y (AND2X2)               0.18      10.35 r
+  GenerateAddress_MapCell_U0/U202/Y (OAI21XL)             0.08      10.43 f
+  GenerateAddress_MapCell_U0/U201/Y (NAND3BX1)            0.13      10.56 r
+  GenerateAddress_MapCell_U0/U200/Y (AOI211X1)            0.06      10.63 f
+  GenerateAddress_MapCell_U0/MapCell_U1/result_reg/D (DFFRX1)
+                                                          0.00      10.63 f
+  data arrival time                                                 10.63
+
+  clock clk (rise edge)                                  15.00      15.00
+  clock network delay (ideal)                             0.00      15.00
+  GenerateAddress_MapCell_U0/MapCell_U1/result_reg/CK (DFFRX1)
+                                                          0.00      15.00 r
+  library setup time                                     -0.21      14.79
+  data required time                                                14.79
+  --------------------------------------------------------------------------
+  data required time                                                14.79
+  data arrival time                                                -10.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.16
+
+
+1
