@@ -80,9 +80,9 @@ SCANCHAINS 1 ;
            Control_U/state_reg[0] ( IN SI ) ( OUT Q )
            Control_U/state_reg[1] ( IN SI ) ( OUT Q )
            Control_U/state_reg[2] ( IN SI ) ( OUT Q )
-           GenerateAddress_MapCell_U0/MapCell_U0/result_reg ( IN SI ) ( OUT Q )
-           GenerateAddress_MapCell_U0/MapCell_U1/result_reg ( IN SI ) ( OUT Q )
-           GenerateAddress_MapCell_U0/MapCell_U2/result_reg ( IN SI ) ( OUT Q )
+           GenerateAddress_MapCell_U0/MapCell_U0_result_reg ( IN SI ) ( OUT Q )
+           GenerateAddress_MapCell_U0/MapCell_U1_result_reg ( IN SI ) ( OUT Q )
+           GenerateAddress_MapCell_U0/MapCell_U2_result_reg ( IN SI ) ( OUT Q )
 + PARTITION clk_45_45
 + STOP Control_U/valid_reg SI ;
 

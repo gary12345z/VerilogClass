@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys Design Compiler(R)
 // Version   : P-2019.03
-// Date      : Sat Jan  4 15:49:42 2020
+// Date      : Sat Jan  4 23:09:41 2020
 /////////////////////////////////////////////////////////////
 
 
@@ -799,11 +799,11 @@ module GenerateAddress_MapCell_test_1 ( circle_A, circle_B, circle_C, now_0,
   CLKINVX1 U335 ( .A(circle_B[3]), .Y(n272) );
   CLKINVX1 U336 ( .A(MapCell_en), .Y(n284) );
   CLKINVX1 U337 ( .A(rst), .Y(n283) );
-  SDFFRXL \MapCell_U0/result_reg  ( .D(n533), .SI(test_si), .SE(test_se), .CK(
+  SDFFRXL \MapCell_U0_result_reg  ( .D(n533), .SI(test_si), .SE(test_se), .CK(
         clk), .RN(n283), .Q(result_0) );
-  SDFFRXL \MapCell_U1/result_reg  ( .D(n534), .SI(result_0), .SE(test_se), 
+  SDFFRXL \MapCell_U1_result_reg  ( .D(n534), .SI(result_0), .SE(test_se), 
         .CK(clk), .RN(n283), .Q(result_1) );
-  SDFFRXL \MapCell_U2/result_reg  ( .D(n535), .SI(result_1), .SE(test_se), 
+  SDFFRXL \MapCell_U2_result_reg  ( .D(n535), .SI(result_1), .SE(test_se), 
         .CK(clk), .RN(n283), .Q(result_2) );
 endmodule
 

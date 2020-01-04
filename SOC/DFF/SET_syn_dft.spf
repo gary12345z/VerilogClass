@@ -3,7 +3,7 @@ STIL 1.0 {
 }
 Header {
     Title "Minimal STIL for design `SET'";
-    Date "Sat Jan  4 15:49:37 2020";
+    Date "Sat Jan  4 23:09:38 2020";
     Source "DFT Compiler P-2019.03";
 }
 Signals {
