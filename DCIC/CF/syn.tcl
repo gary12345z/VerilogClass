@@ -1,6 +1,6 @@
 # read_file -format verilog {/home/SOC_06/Verilog/DCIC/EP/Sort.v}
-read_file -format verilog {/home/SOC_06/Verilog/DCIC/CF/huffman.v}
-current_design { /home/SOC_06/Verilog/DCIC/CF/huffman.db:huffman}
+read_file -format verilog {/home/SOC_06/Verilog/DCIC/CF/Ver.2_Fixed/huffman.v}
+current_design { /home/SOC_06/Verilog/DCIC/CF/Ver.2_Fixed/huffman.db:huffman}
 # Set clock
 create_clock -name "clk" -period 10 -waveform { 5 10 }  { clk  }
 # SYN
