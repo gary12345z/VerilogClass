@@ -1,27 +1,3 @@
-Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
-	the parameters "INITIAL=15'h0041,count=1,pe=3,finish=5". (HDL-193)
-Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
-Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
-	the parameters "INITIAL=15'h0042,count=1,pe=3,finish=5". (HDL-193)
-Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
-Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
-	the parameters "INITIAL=15'h0044,count=1,pe=3,finish=5". (HDL-193)
-Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
-Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
-	the parameters "INITIAL=15'h0048,count=1,pe=3,finish=5". (HDL-193)
-Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
-Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
-	the parameters "INITIAL=15'h0050,count=1,pe=3,finish=5". (HDL-193)
-Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
-Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
-	the parameters "INITIAL=15'h0060,count=1,pe=3,finish=5". (HDL-193)
-Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
-Information: Building the design 'EncodeCell' instantiated from design 'encoder' with
-	the parameters "3'h4,3'h5". (HDL-193)
-Warning: Cannot find the design 'EncodeCell' in the library 'WORK'. (LBR-1)
-Warning: Unable to resolve reference 'CNTCell' in 'CNTcounter'. (LINK-5)
-Warning: Unable to resolve reference 'EncodeCell' in 'encoder'. (LINK-5)
-Warning: Design 'huffman' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
 Information: Updating design information... (UID-85)
  
 ****************************************
@@ -32,46 +8,92 @@ Report : timing
         -sort_by group
 Design : huffman
 Version: P-2019.03
-Date   : Sun Jan  5 15:28:37 2020
+Date   : Sun Jan  5 17:03:41 2020
 ****************************************
 
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: U3/counter_reg[2]
+  Startpoint: CNTcounter_u/CNT_3/CNT_reg[10]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: U5/MIN1_reg[0][0]
+  Endpoint: CNTcounter_u/CNT_6/CNT_reg[14]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
 
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                    5.00       5.00
-  clock network delay (ideal)              0.00       5.00
-  U3/counter_reg[2]/CK (DFFRX1)            0.00       5.00 r
-  U3/counter_reg[2]/Q (DFFRX1)             0.61       5.61 f
-  U3/counter[2] (CU)                       0.00       5.61 f
-  U5/addr[2] (MINmem)                      0.00       5.61 f
-  U5/U63/Y (CLKINVX1)                      0.23       5.85 r
-  U5/U23/Y (NAND3X1)                       0.29       6.14 f
-  U5/U28/Y (NOR2X1)                        0.14       6.28 r
-  U5/U27/Y (CLKBUFX3)                      0.20       6.47 r
-  U5/U18/Y (CLKINVX1)                      0.18       6.66 f
-  U5/U38/Y (OAI22XL)                       0.15       6.81 r
-  U5/MIN1_reg[0][0]/D (DFFRX1)             0.00       6.81 r
-  data arrival time                                   6.81
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  CNTcounter_u/CNT_3/CNT_reg[10]/CK (DFFSRX1)             0.00       5.00 r
+  CNTcounter_u/CNT_3/CNT_reg[10]/Q (DFFSRX1)              0.55       5.55 f
+  CNTcounter_u/CNT_3/CNT[10] (CNTCell_3)                  0.00       5.55 f
+  PE_U/U0/Cin[10] (CMP3_0)                                0.00       5.55 f
+  PE_U/U0/U47/Y (INVXL)                                   0.26       5.81 r
+  PE_U/U0/U229/Y (AOI32X1)                                0.18       5.99 f
+  PE_U/U0/U233/Y (AO22X1)                                 0.36       6.35 f
+  PE_U/U0/U25/Y (OAI22X1)                                 0.19       6.54 r
+  PE_U/U0/U101/Y (CLKINVX1)                               0.07       6.61 f
+  PE_U/U0/U104/Y (OAI31XL)                                0.09       6.70 r
+  PE_U/U0/U103/Y (OAI21XL)                                0.11       6.82 f
+  PE_U/U0/U102/Y (CLKBUFX3)                               0.16       6.97 f
+  PE_U/U0/U2/Y (CLKBUFX2)                                 0.33       7.30 f
+  PE_U/U0/U12/Y (CLKINVX1)                                0.24       7.54 r
+  PE_U/U0/U137/Y (OAI22XL)                                0.14       7.67 f
+  PE_U/U0/U193/Y (OA22X1)                                 0.38       8.05 f
+  PE_U/U0/U194/Y (OAI221XL)                               0.12       8.17 r
+  PE_U/U0/Cout[10] (CMP3_0)                               0.00       8.17 r
+  PE_U/U2/Ain[10] (CMP2)                                  0.00       8.17 r
+  PE_U/U2/U10/Y (CLKINVX1)                                0.15       8.32 f
+  PE_U/U2/U2/Y (AOI32XL)                                  0.27       8.58 r
+  PE_U/U2/U87/Y (AO22X1)                                  0.22       8.80 r
+  PE_U/U2/U7/Y (OAI22XL)                                  0.13       8.93 f
+  PE_U/U2/U84/Y (CLKINVX1)                                0.06       8.99 r
+  PE_U/U2/U83/Y (OAI31XL)                                 0.07       9.07 f
+  PE_U/U2/U9/Y (OA21XL)                                   0.21       9.28 f
+  PE_U/U2/U62/Y (CLKBUFX3)                                0.17       9.45 f
+  PE_U/U2/U8/Y (CLKBUFX3)                                 0.17       9.62 f
+  PE_U/U2/U6/Y (INVX4)                                    0.09       9.71 r
+  PE_U/U2/U11/Y (OAI22XL)                                 0.11       9.82 f
+  PE_U/U2/Aout[10] (CMP2)                                 0.00       9.82 f
+  PE_U/U3/Cin[10] (CMP3_1)                                0.00       9.82 f
+  PE_U/U3/U36/Y (INVXL)                                   0.27      10.10 r
+  PE_U/U3/U237/Y (AOI32X1)                                0.23      10.32 f
+  PE_U/U3/U26/Y (AO22X4)                                  0.28      10.60 f
+  PE_U/U3/U4/Y (OAI22XL)                                  0.29      10.90 r
+  PE_U/U3/U20/Y (CLKINVX1)                                0.09      10.98 f
+  PE_U/U3/U7/Y (OAI31XL)                                  0.10      11.08 r
+  PE_U/U3/U5/Y (OAI21XL)                                  0.14      11.22 f
+  PE_U/U3/U67/Y (CLKBUFX3)                                0.30      11.52 f
+  PE_U/U3/U134/Y (OAI22XL)                                0.31      11.84 r
+  PE_U/U3/U193/Y (OA22X1)                                 0.26      12.10 r
+  PE_U/U3/U23/Y (NAND3X1)                                 0.12      12.21 f
+  PE_U/U3/Cout[8] (CMP3_1)                                0.00      12.21 f
+  PE_U/add_61/A[1] (PE_DW01_add_0)                        0.00      12.21 f
+  PE_U/add_61/U1_1/CO (ADDFHX2)                           0.35      12.57 f
+  PE_U/add_61/U1_2/CO (ADDFXL)                            0.35      12.92 f
+  PE_U/add_61/U1_3/CO (ADDFXL)                            0.37      13.28 f
+  PE_U/add_61/U1_4/CO (ADDFHX1)                           0.25      13.53 f
+  PE_U/add_61/U1_5/CO (ADDFXL)                            0.36      13.89 f
+  PE_U/add_61/U1_6/CO (ADDFXL)                            0.38      14.27 f
+  PE_U/add_61/U1_7/Y (XOR3X1)                             0.21      14.49 f
+  PE_U/add_61/SUM[7] (PE_DW01_add_0)                      0.00      14.49 f
+  CNTcounter_u/CNT_6/CNT_n[14] (CNTCell_0)                0.00      14.49 f
+  CNTcounter_u/CNT_6/U29/Y (AOI222XL)                     0.30      14.79 r
+  CNTcounter_u/CNT_6/U4/Y (INVXL)                         0.06      14.85 f
+  CNTcounter_u/CNT_6/CNT_reg[14]/D (DFFSRX1)              0.00      14.85 f
+  data arrival time                                                 14.85
 
-  clock clk (rise edge)                   15.00      15.00
-  clock network delay (ideal)              0.00      15.00
-  U5/MIN1_reg[0][0]/CK (DFFRX1)            0.00      15.00 r
-  library setup time                      -0.26      14.74
-  data required time                                 14.74
-  -----------------------------------------------------------
-  data required time                                 14.74
-  data arrival time                                  -6.81
-  -----------------------------------------------------------
-  slack (MET)                                         7.93
+  clock clk (rise edge)                                  15.00      15.00
+  clock network delay (ideal)                             0.00      15.00
+  CNTcounter_u/CNT_6/CNT_reg[14]/CK (DFFSRX1)             0.00      15.00 r
+  library setup time                                     -0.14      14.86
+  data required time                                                14.86
+  --------------------------------------------------------------------------
+  data required time                                                14.86
+  data arrival time                                                -14.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
 
 
 1
