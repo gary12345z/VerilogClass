@@ -1,0 +1,77 @@
+Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
+	the parameters "INITIAL=15'h0041,count=1,pe=3,finish=5". (HDL-193)
+Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
+Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
+	the parameters "INITIAL=15'h0042,count=1,pe=3,finish=5". (HDL-193)
+Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
+Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
+	the parameters "INITIAL=15'h0044,count=1,pe=3,finish=5". (HDL-193)
+Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
+Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
+	the parameters "INITIAL=15'h0048,count=1,pe=3,finish=5". (HDL-193)
+Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
+Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
+	the parameters "INITIAL=15'h0050,count=1,pe=3,finish=5". (HDL-193)
+Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
+Information: Building the design 'CNTCell' instantiated from design 'CNTcounter' with
+	the parameters "INITIAL=15'h0060,count=1,pe=3,finish=5". (HDL-193)
+Warning: Cannot find the design 'CNTCell' in the library 'WORK'. (LBR-1)
+Information: Building the design 'EncodeCell' instantiated from design 'encoder' with
+	the parameters "3'h4,3'h5". (HDL-193)
+Warning: Cannot find the design 'EncodeCell' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'CNTCell' in 'CNTcounter'. (LINK-5)
+Warning: Unable to resolve reference 'EncodeCell' in 'encoder'. (LINK-5)
+Warning: Design 'huffman' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : huffman
+Version: P-2019.03
+Date   : Sun Jan  5 15:28:37 2020
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: U3/counter_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: U5/MIN1_reg[0][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  U3/counter_reg[2]/CK (DFFRX1)            0.00       5.00 r
+  U3/counter_reg[2]/Q (DFFRX1)             0.61       5.61 f
+  U3/counter[2] (CU)                       0.00       5.61 f
+  U5/addr[2] (MINmem)                      0.00       5.61 f
+  U5/U63/Y (CLKINVX1)                      0.23       5.85 r
+  U5/U23/Y (NAND3X1)                       0.29       6.14 f
+  U5/U28/Y (NOR2X1)                        0.14       6.28 r
+  U5/U27/Y (CLKBUFX3)                      0.20       6.47 r
+  U5/U18/Y (CLKINVX1)                      0.18       6.66 f
+  U5/U38/Y (OAI22XL)                       0.15       6.81 r
+  U5/MIN1_reg[0][0]/D (DFFRX1)             0.00       6.81 r
+  data arrival time                                   6.81
+
+  clock clk (rise edge)                   15.00      15.00
+  clock network delay (ideal)              0.00      15.00
+  U5/MIN1_reg[0][0]/CK (DFFRX1)            0.00      15.00 r
+  library setup time                      -0.26      14.74
+  data required time                                 14.74
+  -----------------------------------------------------------
+  data required time                                 14.74
+  data arrival time                                  -6.81
+  -----------------------------------------------------------
+  slack (MET)                                         7.93
+
+
+1

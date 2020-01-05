@@ -1,0 +1,46 @@
+Warning: Design 'huffman' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : cell
+Design : huffman
+Version: P-2019.03
+Date   : Sun Jan  5 15:28:37 2020
+****************************************
+
+Attributes:
+   BO - reference allows boundary optimization
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+   so - sizing only
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U1                        CNTcounter                      371.730594
+                                                                    b, h, n
+U2                        OR2X1           slow            6.789600  so
+U2/U0                     CMP3_0                          2145.513583
+                                                                    h
+U2/U1                     CMP3_2                          2142.118783
+                                                                    h
+U2/U2                     CMP2                            687.447011
+                                                                    h
+U2/U3                     CMP3_1                          2133.631783
+                                                                    h
+U2/add_61                 PE_DW01_add_0                   271.584015
+                                                                    BO, h
+U3                        CU                              427.744791
+                                                                    h, n
+U4                        OR2X1           slow            6.789600  so
+U5                        MINmem                          3024.766722
+                                                                    h, n
+U6                        encoder                         0.000000  b, h
+U7                        OR2X1           slow            6.789600  so
+U8                        OR2X1           slow            6.789600  so
+U9                        OR2X1           slow            6.789600  so
+U10                       OR2X1           slow            6.789600  so
+--------------------------------------------------------------------------------
+Total 15 cells                                            11245.274881
+1
