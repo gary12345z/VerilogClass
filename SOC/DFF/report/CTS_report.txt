@@ -32,10 +32,10 @@ Report : check_physical_design
 Stage  : pre_place_opt
 Design : SET
 Version: P-2019.03
-Date   : Sun Jan  5 00:08:51 2020
+Date   : Mon Jan  6 18:16:52 2020
 **************************************************
 Total messages: 0 errors, 0 warnings
-dump check_physical_design result to file ./cpd_pre_place_opt_2020Jan05000850_6712/index.html
+dump check_physical_design result to file ./cpd_pre_place_opt_2020Jan06181651_25172/index.html
 1
 Information: Disabling timing checks inside check_ilm 
 Information: Disabling timing checks inside check_block_abstraction 
@@ -57,10 +57,10 @@ Report : check_physical_design
 Stage  : pre_clock_opt
 Design : SET
 Version: P-2019.03
-Date   : Sun Jan  5 00:08:51 2020
+Date   : Mon Jan  6 18:16:52 2020
 **************************************************
 Total messages: 0 errors, 0 warnings
-dump check_physical_design result to file ./cpd_pre_clock_opt_2020Jan05000851_6712/index.html
+dump check_physical_design result to file ./cpd_pre_clock_opt_2020Jan06181652_25172/index.html
 1
  
 ****************************************
@@ -68,7 +68,7 @@ Report : constraint
         -all_violators
 Design : SET
 Version: P-2019.03
-Date   : Sun Jan  5 00:08:51 2020
+Date   : Mon Jan  6 18:16:52 2020
 ****************************************
 
 This design has no violated constraints.
@@ -124,7 +124,7 @@ INFO: legalizer_via_spacing_check_mode 0
     This is considered as a 8-metal-layer design
     Reading library information from DB ...
   Reading misc information ...
-    array <unit> has 0 vertical and 29 horizontal rows
+    array <unit> has 0 vertical and 32 horizontal rows
     GRC ref loc X corrected
     GRC ref loc Y corrected
     8 pre-routes for placement blockage/checking
@@ -179,11 +179,11 @@ Information: Using derived R and C coefficients. (RCEX-008)
 Information: Using region-based R and C coefficients. (RCEX-013)
 Information: Library Derived Via Res : 0.00078 0.00078 (RCEX-011)
 LR: Layer METAL3: Average tracks per gcell 9.0, utilization 0.00
-LR: Layer METAL4: Average tracks per gcell 8.0, utilization 0.00
+LR: Layer METAL4: Average tracks per gcell 8.1, utilization 0.00
 LR: Layer METAL5: Average tracks per gcell 9.0, utilization 0.00
-LR: Layer METAL6: Average tracks per gcell 8.0, utilization 0.00
+LR: Layer METAL6: Average tracks per gcell 8.1, utilization 0.00
 LR: Layer METAL7: Average tracks per gcell 9.0, utilization 0.00
-LR: Layer METAL8: Average tracks per gcell 3.6, utilization 0.00
+LR: Layer METAL8: Average tracks per gcell 3.7, utilization 0.00
 LR: Clock routing service standing by
 Using cts integrated global router
 CTS: Blockage Aware Algorithm
@@ -197,7 +197,7 @@ INFO: legalizer_via_spacing_check_mode 0
     This is considered as a 8-metal-layer design
     Reading library information from DB ...
   Reading misc information ...
-    array <unit> has 0 vertical and 29 horizontal rows
+    array <unit> has 0 vertical and 32 horizontal rows
     GRC ref loc X corrected
     GRC ref loc Y corrected
     8 pre-routes for placement blockage/checking
@@ -226,13 +226,13 @@ CTS: Prepare sources for clock domain clk
 CTS: Prepare sources for clock domain clk
 
 Pruning library cells (r/f, pwr)
-    Min drive = 0.325676.
-    Pruning DLY4X1 because drive of 0.128163 is less than 0.325676.
-    Pruning DLY3X1 because drive of 0.132085 is less than 0.325676.
-    Pruning DLY2X1 because drive of 0.134504 is less than 0.325676.
-    Pruning DLY1X1 because drive of 0.134612 is less than 0.325676.
-    Pruning CLKBUFX2 because drive of 0.242748 is less than 0.325676.
-    Pruning BUFX2 because drive of 0.303891 is less than 0.325676.
+    Min drive = 0.316437.
+    Pruning DLY4X1 because drive of 0.128163 is less than 0.316437.
+    Pruning DLY3X1 because drive of 0.132085 is less than 0.316437.
+    Pruning DLY2X1 because drive of 0.134504 is less than 0.316437.
+    Pruning DLY1X1 because drive of 0.134612 is less than 0.316437.
+    Pruning CLKBUFX2 because drive of 0.242748 is less than 0.316437.
+    Pruning BUFX2 because drive of 0.303891 is less than 0.316437.
     Pruning DLY4X4 because of a gain of 34.75.
     Pruning BUFX3 because it is (w/ power-considered) inferior to DLY2X4.
     Pruning DLY3X4 because of a gain of 29.16.
@@ -254,11 +254,11 @@ Pruning library cells (r/f, pwr)
 	CLKBUFX20
 
 Pruning library cells (r/f, pwr)
-    Min drive = 0.325676.
-    Pruning INVXL because drive of 0.0907169 is less than 0.325676.
-    Pruning INVX1 because drive of 0.16456 is less than 0.325676.
-    Pruning CLKINVX1 because drive of 0.184628 is less than 0.325676.
-    Pruning CLKINVX2 because drive of 0.276882 is less than 0.325676.
+    Min drive = 0.316437.
+    Pruning INVXL because drive of 0.0907169 is less than 0.316437.
+    Pruning INVX1 because drive of 0.16456 is less than 0.316437.
+    Pruning CLKINVX1 because drive of 0.184628 is less than 0.316437.
+    Pruning CLKINVX2 because drive of 0.276882 is less than 0.316437.
     Pruning INVX2 because it is (w/ power-considered) inferior to CLKINVX3.
     Pruning INVX3 because it is (w/ power-considered) inferior to CLKINVX4.
     Pruning INVX6 because it is (w/ power-considered) inferior to CLKINVX8.
@@ -383,7 +383,7 @@ CTS:       1 clock domain synthesized
 CTS:       1 gated clock nets synthesized
 CTS:       0 buffer trees inserted
 CTS:       0 buffers used (total size = 0)
-CTS:       1 clock nets total capacitance = worst[0.227 0.227]
+CTS:       1 clock nets total capacitance = worst[0.239 0.239]
 CTS: ------------------------------------------------
 CTS: Clock-by-Clock Summary
 CTS: ------------------------------------------------
@@ -391,7 +391,7 @@ CTS: Root clock net clk
 CTS:       1 gated clock nets synthesized
 CTS:       0 buffer trees inserted
 CTS:       0 buffers used (total size = 0)
-CTS:       1 clock nets total capacitance = worst[0.227 0.227]
+CTS:       1 clock nets total capacitance = worst[0.239 0.239]
 
 CTS: ==================================================
 CTS:   Elapsed time: 0 seconds
@@ -420,7 +420,7 @@ INFO: legalizer_via_spacing_check_mode 0
     This is considered as a 8-metal-layer design
     Reading library information from DB ...
   Reading misc information ...
-    array <unit> has 0 vertical and 29 horizontal rows
+    array <unit> has 0 vertical and 32 horizontal rows
     GRC ref loc X corrected
     GRC ref loc Y corrected
     8 pre-routes for placement blockage/checking
@@ -441,13 +441,13 @@ CTS: Prepare sources for clock domain clk
 CTS: Prepare sources for clock domain clk
 
 Pruning library cells (r/f, pwr)
-    Min drive = 0.325676.
-    Pruning DLY4X1 because drive of 0.128163 is less than 0.325676.
-    Pruning DLY3X1 because drive of 0.132085 is less than 0.325676.
-    Pruning DLY2X1 because drive of 0.134504 is less than 0.325676.
-    Pruning DLY1X1 because drive of 0.134612 is less than 0.325676.
-    Pruning CLKBUFX2 because drive of 0.242748 is less than 0.325676.
-    Pruning BUFX2 because drive of 0.303891 is less than 0.325676.
+    Min drive = 0.316437.
+    Pruning DLY4X1 because drive of 0.128163 is less than 0.316437.
+    Pruning DLY3X1 because drive of 0.132085 is less than 0.316437.
+    Pruning DLY2X1 because drive of 0.134504 is less than 0.316437.
+    Pruning DLY1X1 because drive of 0.134612 is less than 0.316437.
+    Pruning CLKBUFX2 because drive of 0.242748 is less than 0.316437.
+    Pruning BUFX2 because drive of 0.303891 is less than 0.316437.
     Pruning DLY4X4 because of a gain of 34.75.
     Pruning BUFX3 because it is (w/ power-considered) inferior to DLY2X4.
     Pruning DLY3X4 because of a gain of 29.16.
@@ -469,11 +469,11 @@ Pruning library cells (r/f, pwr)
 	CLKBUFX20
 
 Pruning library cells (r/f, pwr)
-    Min drive = 0.325676.
-    Pruning INVXL because drive of 0.0907169 is less than 0.325676.
-    Pruning INVX1 because drive of 0.16456 is less than 0.325676.
-    Pruning CLKINVX1 because drive of 0.184628 is less than 0.325676.
-    Pruning CLKINVX2 because drive of 0.276882 is less than 0.325676.
+    Min drive = 0.316437.
+    Pruning INVXL because drive of 0.0907169 is less than 0.316437.
+    Pruning INVX1 because drive of 0.16456 is less than 0.316437.
+    Pruning CLKINVX1 because drive of 0.184628 is less than 0.316437.
+    Pruning CLKINVX2 because drive of 0.276882 is less than 0.316437.
     Pruning INVX2 because it is (w/ power-considered) inferior to CLKINVX3.
     Pruning INVX3 because it is (w/ power-considered) inferior to CLKINVX4.
     Pruning INVX6 because it is (w/ power-considered) inferior to CLKINVX8.
@@ -541,7 +541,7 @@ INFO: legalizer_via_spacing_check_mode 0
     This is considered as a 8-metal-layer design
     Reading library information from DB ...
   Reading misc information ...
-    array <unit> has 0 vertical and 29 horizontal rows
+    array <unit> has 0 vertical and 32 horizontal rows
     GRC ref loc X corrected
     GRC ref loc Y corrected
     8 pre-routes for placement blockage/checking
@@ -567,7 +567,7 @@ INFO: legalizer_via_spacing_check_mode 0
     This is considered as a 8-metal-layer design
     Reading library information from DB ...
   Reading misc information ...
-    array <unit> has 0 vertical and 29 horizontal rows
+    array <unit> has 0 vertical and 32 horizontal rows
     GRC ref loc X corrected
     GRC ref loc Y corrected
     8 pre-routes for placement blockage/checking
@@ -588,13 +588,13 @@ CTS: Prepare sources for clock domain clk
 CTS: Prepare sources for clock domain clk
 
 Pruning library cells (r/f, pwr)
-    Min drive = 0.325676.
-    Pruning DLY4X1 because drive of 0.128163 is less than 0.325676.
-    Pruning DLY3X1 because drive of 0.132085 is less than 0.325676.
-    Pruning DLY2X1 because drive of 0.134504 is less than 0.325676.
-    Pruning DLY1X1 because drive of 0.134612 is less than 0.325676.
-    Pruning CLKBUFX2 because drive of 0.242748 is less than 0.325676.
-    Pruning BUFX2 because drive of 0.303891 is less than 0.325676.
+    Min drive = 0.316437.
+    Pruning DLY4X1 because drive of 0.128163 is less than 0.316437.
+    Pruning DLY3X1 because drive of 0.132085 is less than 0.316437.
+    Pruning DLY2X1 because drive of 0.134504 is less than 0.316437.
+    Pruning DLY1X1 because drive of 0.134612 is less than 0.316437.
+    Pruning CLKBUFX2 because drive of 0.242748 is less than 0.316437.
+    Pruning BUFX2 because drive of 0.303891 is less than 0.316437.
     Pruning DLY4X4 because of a gain of 34.75.
     Pruning BUFX3 because it is (w/ power-considered) inferior to DLY2X4.
     Pruning DLY3X4 because of a gain of 29.16.
@@ -616,11 +616,11 @@ Pruning library cells (r/f, pwr)
 	CLKBUFX20
 
 Pruning library cells (r/f, pwr)
-    Min drive = 0.325676.
-    Pruning INVXL because drive of 0.0907169 is less than 0.325676.
-    Pruning INVX1 because drive of 0.16456 is less than 0.325676.
-    Pruning CLKINVX1 because drive of 0.184628 is less than 0.325676.
-    Pruning CLKINVX2 because drive of 0.276882 is less than 0.325676.
+    Min drive = 0.316437.
+    Pruning INVXL because drive of 0.0907169 is less than 0.316437.
+    Pruning INVX1 because drive of 0.16456 is less than 0.316437.
+    Pruning CLKINVX1 because drive of 0.184628 is less than 0.316437.
+    Pruning CLKINVX2 because drive of 0.276882 is less than 0.316437.
     Pruning INVX2 because it is (w/ power-considered) inferior to CLKINVX3.
     Pruning INVX3 because it is (w/ power-considered) inferior to CLKINVX4.
     Pruning INVX6 because it is (w/ power-considered) inferior to CLKINVX8.
@@ -787,12 +787,12 @@ Using leaf_max_transition for clock clk : 0.500 ns
     Estimated Insertion Delay (r/f/b) = (0.004  -inf 0.004)
   Wire capacitance =  0.1 pf
   Total capacitance = 0.2 pf
-  Max transition = 0.007 ns
+  Max transition = 0.009 ns
   Cells = 1 (area=0.000000)
 
 Report DRC violations for clock clk (initial)
 Total 0 DRC violations for clock clk (initial)
- Start (0.000, 0.005), End (0.000, 0.005) 
+ Start (0.001, 0.006), End (0.001, 0.006) 
 
 RC optimization for clock 'clk'
 100%   
@@ -803,7 +803,7 @@ Coarse optimization for clock 'clk'
 100%   
 100%   
  No back-to-back buffer chains found
- Start (0.000, 0.005), End (0.000, 0.005) 
+ Start (0.001, 0.006), End (0.001, 0.006) 
 
 Detailed optimization for clock 'clk'
 100%   
@@ -828,24 +828,24 @@ Start path based optimization
 
  Start (0.000, 0.004), End (0.000, 0.004) 
 
-Start area recovery: (0.000000, 0.003684)
+Start area recovery: (0.000042, 0.004224)
 Using max_transition 0.500 ns
 Using leaf_max_transition for clock clk : 0.500 ns
 Switch to low metal layer for clock 'clk':
 
  Total 1 out of 1 nets switched to low metal layer for clock 'clk' with largest cap change 0.00 percent
-Switch metal layer for area recovery: (0.000000, 0.003684)
+Switch metal layer for area recovery: (0.000042, 0.004224)
  Start (0.000, 0.004), End (0.000, 0.004) 
 
-Buffer removal for area recovery: (0.000000, 0.003684)
+Buffer removal for area recovery: (0.000042, 0.004224)
 Area recovery optimization for clock 'clk':
 100%   
-Sizing for area recovery: (0.000000, 0.003684)
+Sizing for area recovery: (0.000042, 0.004224)
 
  Total 0 buffers removed (all paths) for clock 'clk'
-Path buffer removal for area recovery: (0.000000, 0.003684)
-Buffer pair removal for area recovery: (0.000000, 0.003684)
-End area recovery: (0.000000, 0.003684)
+Path buffer removal for area recovery: (0.000042, 0.004224)
+Buffer pair removal for area recovery: (0.000042, 0.004224)
+End area recovery: (0.000042, 0.004224)
 
 *************************************************
 * Multicorner optimization report (clock 'clk') *
@@ -858,42 +858,42 @@ End area recovery: (0.000000, 0.003684)
     Estimated Insertion Delay (r/f/b) = (0.004  -inf 0.004)
   Wire capacitance =  0.1 pf
   Total capacitance = 0.2 pf
-  Max transition = 0.007 ns
+  Max transition = 0.009 ns
   Cells = 1 (area=0.000000)
 
 
 ++ Longest path for clock clk in corner 'max':
  object                               fan cap  trn inc  arr r location
- clk (port)                                     24   0    0 r (   0   53) 
- clk (port)                                      0   0    0 r (   0   53) 
- clk (net)                             76 230                 
- Control_U/circle_C_reg[0]/CK (SDFFRXL)          7   4    4 r ( 102   16) 
+ clk (port)                                     24   0    0 r (   0   58) 
+ clk (port)                                      0   0    0 r (   0   58) 
+ clk (net)                             76 240                 
+ Control_U/circle_B_reg[10]/CK (SDFFRXL)         9   4    4 r ( 110  112) 
 
 
 ++ Shortest path for clock clk in corner 'max':
  object                               fan cap  trn inc  arr r location
- clk (port)                                     24   0    0 r (   0   53) 
- clk (port)                                      0   0    0 r (   0   53) 
- clk (net)                             76 230                 
+ clk (port)                                     24   0    0 r (   0   58) 
+ clk (port)                                      0   0    0 r (   0   58) 
+ clk (net)                             76 240                 
  CandidateAdder_U/candidate_reg[7]/CK (SDFFRXL)
-                                                 0   0    0 r (   3   53) 
+                                                 0   0    0 r (   4   56) 
 
 
 ++ Longest path for clock clk in corner 'RC-ONLY':
  object                               fan cap  trn inc  arr r location
- clk (port)                                     24   0    0 r (   0   53) 
- clk (port)                                      0   0    0 r (   0   53) 
- clk (net)                             76 230                 
- Control_U/circle_C_reg[0]/CK (SDFFRXL)          9   4    4 r ( 102   16) 
+ clk (port)                                     24   0    0 r (   0   58) 
+ clk (port)                                      0   0    0 r (   0   58) 
+ clk (net)                             76 240                 
+ Control_U/circle_B_reg[10]/CK (SDFFRXL)        10   4    4 r ( 110  112) 
 
 
 ++ Shortest path for clock clk in corner 'RC-ONLY':
  object                               fan cap  trn inc  arr r location
- clk (port)                                     24   0    0 r (   0   53) 
- clk (port)                                      0   0    0 r (   0   53) 
- clk (net)                             76 230                 
+ clk (port)                                     24   0    0 r (   0   58) 
+ clk (port)                                      0   0    0 r (   0   58) 
+ clk (net)                             76 240                 
  CandidateAdder_U/candidate_reg[7]/CK (SDFFRXL)
-                                                 0   0    0 r (   3   53) 
+                                                 1   0    0 r (   4   56) 
 
 Report DRC violations for clock clk (final)
 Total 0 DRC violations for clock clk (final)
@@ -910,7 +910,7 @@ INFO: legalizer_via_spacing_check_mode 0
     This is considered as a 8-metal-layer design
     Reading library information from DB ...
   Reading misc information ...
-    array <unit> has 0 vertical and 29 horizontal rows
+    array <unit> has 0 vertical and 32 horizontal rows
     GRC ref loc X corrected
     GRC ref loc Y corrected
     8 pre-routes for placement blockage/checking
@@ -929,13 +929,13 @@ INFO:... use original rows...
   Report : Chip Summary
   Design : SET
   Version: P-2019.03
-  Date   : Sun Jan  5 00:08:52 2020
+  Date   : Mon Jan  6 18:16:54 2020
 ****************************************
-Std cell utilization: 72.40%  (5039/(6960-0))
+Std cell utilization: 60.80%  (5039/(8288-0))
 (Non-fixed + Fixed)
-Std cell utilization: 72.40%  (5039/(6960-0))
+Std cell utilization: 60.80%  (5039/(8288-0))
 (Non-fixed only)
-Chip area:            6960     sites, bbox (0.00 0.00 110.40 107.01) um
+Chip area:            8288     sites, bbox (0.00 0.00 119.14 118.08) um
 Std cell area:        5039     sites, (non-fixed:5039   fixed:0)
                       692      cells, (non-fixed:692    fixed:0)
 Macro cell area:      0        sites
@@ -947,7 +947,7 @@ Routing blockages:    0        sites, (partial p/g net blockages)
                       0        sites, (routing blockages and signal pre-route)
 Lib cell count:       45 
 Avg. std cell width:  2.83 um 
-Site array:           unit     (width: 0.46 um, height: 3.69 um, rows: 29)
+Site array:           unit     (width: 0.46 um, height: 3.69 um, rows: 32)
 Physical DB scale:    1000 db_unit = 1 um 
 
  
@@ -955,7 +955,7 @@ Physical DB scale:    1000 db_unit = 1 um
   Report : pnet options
   Design : SET
   Version: P-2019.03
-  Date   : Sun Jan  5 00:08:52 2020
+  Date   : Mon Jan  6 18:16:54 2020
 ****************************************
 
 
@@ -975,7 +975,7 @@ METAL8     none          ---         ---       via additive      ---
   Report : Legalize Displacement
   Design : SET
   Version: P-2019.03
-  Date   : Sun Jan  5 00:08:52 2020
+  Date   : Mon Jan  6 18:16:54 2020
 ****************************************
 
 No cell displacement.
@@ -1038,8 +1038,8 @@ Information: Library Derived Via Res : 0.00078 0.00078 (RCEX-011)
   number of valid scan chains :  1
   number of failed scan chains:  0
 
-  Wire Length Before Timing Scan Cell Ordering = 2605
-  Wire Length After Timing Scan Cell Ordering  = 1367
+  Wire Length Before Timing Scan Cell Ordering = 2847
+  Wire Length After Timing Scan Cell Ordering  = 1303
 
   Number of Clock Buffer Crossing Before Timing Ordering = 0
   Number of Clock Buffer Crossing After Timing Ordering  = 0
@@ -1116,15 +1116,15 @@ Information: Input delay ('fall') on clock port 'clk' will be added to the clock
 Report : qor
 Design : SET
 Version: P-2019.03
-Date   : Sun Jan  5 00:08:54 2020
+Date   : Mon Jan  6 18:16:55 2020
 ****************************************
 
 
   Timing Path Group 'clk'
   -----------------------------------
   Levels of Logic:              21.00
-  Critical Path Length:          7.26
-  Critical Path Slack:           2.35
+  Critical Path Length:          7.40
+  Critical Path Slack:           2.20
   Critical Path Clk Period:     10.00
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
@@ -1137,7 +1137,7 @@ Date   : Sun Jan  5 00:08:54 2020
   Cell Count
   -----------------------------------
   Hierarchical Cell Count:          3
-  Hierarchical Port Count:        205
+  Hierarchical Port Count:        206
   Leaf Cell Count:                692
   Buf/Inv Cell Count:              87
   Buf Cell Count:                   1
@@ -1158,20 +1158,20 @@ Date   : Sun Jan  5 00:08:54 2020
   Total Inverter Area:         293.65
   Macro/Black Box Area:      0.000000
   Net Area:                  0.000000
-  Net XLength        :       10270.49
-  Net YLength        :        9051.79
+  Net XLength        :       11003.89
+  Net YLength        :       10165.61
   -----------------------------------
   Cell Area:              8553.198447
   Design Area:            8553.198447
-  Net Length        :        19322.27
+  Net Length        :        21169.50
 
 
   Design Rules
   -----------------------------------
   Total Number of Nets:           841
-  Nets With Violations:             5
+  Nets With Violations:             6
   Max Trans Violations:             4
-  Max Cap Violations:               1
+  Max Cap Violations:               2
   -----------------------------------
 
 
@@ -1278,11 +1278,11 @@ Information: Automatic high-fanout synthesis adds 4 new cells. (PSYN-864)
 
   Design  WNS: 0.0000  TNS: 0.0000  Number of Violating Paths: 0
 
-  Nets with DRC Violations: 5
+  Nets with DRC Violations: 6
   Total moveable cell area: 8600.7
   Total fixed cell area: 0.0
   Total physical cell area: 8600.7
-  Core area: (0 0 110400 107010)
+  Core area: (0 0 119140 118080)
 
 
 
@@ -1300,8 +1300,8 @@ Information: Automatic high-fanout synthesis adds 4 new cells. (PSYN-864)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:00    8600.7      0.00       0.0       0.6                                0.00  
-    0:00:00    8602.4      0.00       0.0       0.6                                0.00  
+    0:00:01    8600.7      0.00       0.0       1.0                                0.00  
+    0:00:01    8602.4      0.00       0.0       1.0                                0.00  
 
 
   Beginning Phase 1 Design Rule Fixing  (max_transition)
@@ -1311,10 +1311,10 @@ Information: Automatic high-fanout synthesis adds 4 new cells. (PSYN-864)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:00    8602.4      0.00       0.0       0.6                                0.00  
+    0:00:01    8602.4      0.00       0.0       1.0                                0.00  
 Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
 Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
-    0:00:00    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:01    8590.5      0.00       0.0       0.0                                0.00  
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -1342,7 +1342,7 @@ INFO: legalizer_via_spacing_check_mode 0
     This is considered as a 8-metal-layer design
     Reading library information from DB ...
   Reading misc information ...
-    array <unit> has 0 vertical and 29 horizontal rows
+    array <unit> has 0 vertical and 32 horizontal rows
     GRC ref loc X corrected
     GRC ref loc Y corrected
     8 pre-routes for placement blockage/checking
@@ -1361,13 +1361,13 @@ INFO:... use original rows...
   Report : Chip Summary
   Design : SET
   Version: P-2019.03
-  Date   : Sun Jan  5 00:08:56 2020
+  Date   : Mon Jan  6 18:16:58 2020
 ****************************************
-Std cell utilization: 72.72%  (5061/(6960-0))
+Std cell utilization: 61.06%  (5061/(8288-0))
 (Non-fixed + Fixed)
-Std cell utilization: 72.72%  (5061/(6960-0))
+Std cell utilization: 61.06%  (5061/(8288-0))
 (Non-fixed only)
-Chip area:            6960     sites, bbox (0.00 0.00 110.40 107.01) um
+Chip area:            8288     sites, bbox (0.00 0.00 119.14 118.08) um
 Std cell area:        5061     sites, (non-fixed:5061   fixed:0)
                       696      cells, (non-fixed:696    fixed:0)
 Macro cell area:      0        sites
@@ -1379,7 +1379,7 @@ Routing blockages:    0        sites, (partial p/g net blockages)
                       0        sites, (routing blockages and signal pre-route)
 Lib cell count:       50 
 Avg. std cell width:  2.97 um 
-Site array:           unit     (width: 0.46 um, height: 3.69 um, rows: 29)
+Site array:           unit     (width: 0.46 um, height: 3.69 um, rows: 32)
 Physical DB scale:    1000 db_unit = 1 um 
 
  
@@ -1387,7 +1387,7 @@ Physical DB scale:    1000 db_unit = 1 um
   Report : pnet options
   Design : SET
   Version: P-2019.03
-  Date   : Sun Jan  5 00:08:56 2020
+  Date   : Mon Jan  6 18:16:58 2020
 ****************************************
 
 
@@ -1402,7 +1402,7 @@ METAL5     none          ---         ---       via additive      ---
 METAL6     none          ---         ---       via additive      ---
 METAL7     none          ---         ---       via additive      ---
 METAL8     none          ---         ---       via additive      ---
-Legalizing 687 illegal cells...
+Legalizing 678 illegal cells...
 Starting legalizer.
 Initial legalization:  100% (0 sec)
 Optimizations pass 1: 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (0.0 sec)
@@ -1414,12 +1414,12 @@ Legalization complete (0 total sec)
   Report : Legalize Displacement
   Design : SET
   Version: P-2019.03
-  Date   : Sun Jan  5 00:08:56 2020
+  Date   : Mon Jan  6 18:16:58 2020
 ****************************************
 
-avg cell displacement:    0.832 um ( 0.23 row height)
-max cell displacement:    2.359 um ( 0.64 row height)
-std deviation:            0.533 um ( 0.14 row height)
+avg cell displacement:    0.951 um ( 0.26 row height)
+max cell displacement:    2.237 um ( 0.61 row height)
+std deviation:            0.542 um ( 0.15 row height)
 number of cell moved:       620 cells (out of 696 cells)
 
 Total 0 cells has large displacement (e.g. > 11.070 um or 3 row height)
@@ -1435,7 +1435,7 @@ Total 0 cells has large displacement (e.g. > 11.070 um or 3 row height)
   Total moveable cell area: 8590.5
   Total fixed cell area: 0.0
   Total physical cell area: 8590.5
-  Core area: (0 0 110400 107010)
+  Core area: (0 0 119140 118080)
 
 
 
@@ -1453,13 +1453,13 @@ Total 0 cells has large displacement (e.g. > 11.070 um or 3 row height)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
-    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
-    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
-    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
-    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
-    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
-    0:00:02    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:03    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:03    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:03    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:03    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:03    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:03    8590.5      0.00       0.0       0.0                                0.00  
+    0:00:03    8590.5      0.00       0.0       0.0                                0.00  
 Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
 Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
 
@@ -1482,7 +1482,7 @@ INFO: legalizer_via_spacing_check_mode 0
     This is considered as a 8-metal-layer design
     Reading library information from DB ...
   Reading misc information ...
-    array <unit> has 0 vertical and 29 horizontal rows
+    array <unit> has 0 vertical and 32 horizontal rows
     GRC ref loc X corrected
     GRC ref loc Y corrected
     8 pre-routes for placement blockage/checking
@@ -1501,13 +1501,13 @@ INFO:... use original rows...
   Report : Chip Summary
   Design : SET
   Version: P-2019.03
-  Date   : Sun Jan  5 00:08:56 2020
+  Date   : Mon Jan  6 18:16:58 2020
 ****************************************
-Std cell utilization: 72.72%  (5061/(6960-0))
+Std cell utilization: 61.06%  (5061/(8288-0))
 (Non-fixed + Fixed)
-Std cell utilization: 72.72%  (5061/(6960-0))
+Std cell utilization: 61.06%  (5061/(8288-0))
 (Non-fixed only)
-Chip area:            6960     sites, bbox (0.00 0.00 110.40 107.01) um
+Chip area:            8288     sites, bbox (0.00 0.00 119.14 118.08) um
 Std cell area:        5061     sites, (non-fixed:5061   fixed:0)
                       696      cells, (non-fixed:696    fixed:0)
 Macro cell area:      0        sites
@@ -1519,7 +1519,7 @@ Routing blockages:    0        sites, (partial p/g net blockages)
                       0        sites, (routing blockages and signal pre-route)
 Lib cell count:       50 
 Avg. std cell width:  2.97 um 
-Site array:           unit     (width: 0.46 um, height: 3.69 um, rows: 29)
+Site array:           unit     (width: 0.46 um, height: 3.69 um, rows: 32)
 Physical DB scale:    1000 db_unit = 1 um 
 
  
@@ -1527,7 +1527,7 @@ Physical DB scale:    1000 db_unit = 1 um
   Report : pnet options
   Design : SET
   Version: P-2019.03
-  Date   : Sun Jan  5 00:08:56 2020
+  Date   : Mon Jan  6 18:16:58 2020
 ****************************************
 
 
@@ -1547,7 +1547,7 @@ METAL8     none          ---         ---       via additive      ---
   Report : Legalize Displacement
   Design : SET
   Version: P-2019.03
-  Date   : Sun Jan  5 00:08:56 2020
+  Date   : Mon Jan  6 18:16:58 2020
 ****************************************
 
 No cell displacement.
@@ -1563,7 +1563,7 @@ No cell displacement.
   Total moveable cell area: 8590.5
   Total fixed cell area: 0.0
   Total physical cell area: 8590.5
-  Core area: (0 0 110400 107010)
+  Core area: (0 0 119140 118080)
 
 
 
@@ -1577,7 +1577,7 @@ INFO: legalizer_via_spacing_check_mode 0
     This is considered as a 8-metal-layer design
     Reading library information from DB ...
   Reading misc information ...
-    array <unit> has 0 vertical and 29 horizontal rows
+    array <unit> has 0 vertical and 32 horizontal rows
     GRC ref loc X corrected
     GRC ref loc Y corrected
     8 pre-routes for placement blockage/checking

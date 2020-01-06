@@ -39,7 +39,7 @@ Report : timing
         -max_paths 1
 Design : SET
 Version: P-2019.03
-Date   : Sun Jan  5 00:09:07 2020
+Date   : Mon Jan  6 18:17:13 2020
 ****************************************
 
  * Some/all delay information is back-annotated.
@@ -50,7 +50,7 @@ Operating Conditions: slow   Library: slow
 	Extraction mode     : MAX
 	Extraction derating : 125/125/125
 
-Information: Percent of Arnoldi-based delays =  5.89%
+Information: Percent of Arnoldi-based delays =  7.44%
 
   Startpoint: Control_U/reg_mode_reg[1]
               (rising edge-triggered flip-flop clocked by clk)
@@ -64,37 +64,37 @@ Information: Percent of Arnoldi-based delays =  5.89%
   clock clk (rise edge)                                   5.00       5.00
   clock network delay (propagated)                        0.00       5.00
   Control_U/reg_mode_reg[1]/CK (SDFFRXL)                  0.00       5.00 r
-  Control_U/reg_mode_reg[1]/Q (SDFFRXL)                   1.05       6.05 r
-  Control_U/reg_mode[1] (Control_test_1)                  0.00       6.05 r
+  Control_U/reg_mode_reg[1]/Q (SDFFRXL)                   1.06       6.06 r
+  Control_U/reg_mode[1] (Control_test_1)                  0.00       6.06 r
   GenerateAddress_MapCell_U0/reg_mode[1] (GenerateAddress_MapCell_test_1)
-                                                          0.00       6.05 r
-  GenerateAddress_MapCell_U0/U268/Y (CLKINVX1)            0.29 &     6.34 f
-  GenerateAddress_MapCell_U0/U3/Y (NOR2X1)                0.70 &     7.04 r
-  GenerateAddress_MapCell_U0/U139/Y (NOR2X1)              0.48 &     7.52 f
-  GenerateAddress_MapCell_U0/U136/Y (OAI22XL)             0.71 &     8.24 r
-  GenerateAddress_MapCell_U0/U217/Y (AND2X2)              0.22 &     8.46 r
-  GenerateAddress_MapCell_U0/U179/Y (OA22X1)              0.28 &     8.74 r
-  GenerateAddress_MapCell_U0/U132/Y (OAI21XL)             0.12 &     8.86 f
-  GenerateAddress_MapCell_U0/U131/Y (AOI22X1)             0.36 &     9.22 r
-  GenerateAddress_MapCell_U0/U101/Y (CLKINVX1)            0.19 &     9.41 f
-  GenerateAddress_MapCell_U0/U5/Y (OAI22XL)               0.48 &     9.89 r
-  GenerateAddress_MapCell_U0/U31/Y (NOR2X1)               0.18 &    10.07 f
-  GenerateAddress_MapCell_U0/U37/Y (AOI211X1)             0.21 &    10.28 r
+                                                          0.00       6.06 r
+  GenerateAddress_MapCell_U0/U268/Y (CLKINVX1)            0.32 &     6.38 f
+  GenerateAddress_MapCell_U0/U3/Y (NOR2X1)                0.69 &     7.07 r
+  GenerateAddress_MapCell_U0/U139/Y (NOR2X1)              0.44 &     7.52 f
+  GenerateAddress_MapCell_U0/U136/Y (OAI22XL)             0.72 &     8.24 r
+  GenerateAddress_MapCell_U0/U217/Y (AND2X2)              0.22 &     8.45 r
+  GenerateAddress_MapCell_U0/U179/Y (OA22X1)              0.26 &     8.71 r
+  GenerateAddress_MapCell_U0/U132/Y (OAI21XL)             0.12 &     8.83 f
+  GenerateAddress_MapCell_U0/U131/Y (AOI22X1)             0.34 &     9.17 r
+  GenerateAddress_MapCell_U0/U101/Y (CLKINVX1)            0.17 &     9.34 f
+  GenerateAddress_MapCell_U0/U5/Y (OAI22XL)               0.48 &     9.82 r
+  GenerateAddress_MapCell_U0/U31/Y (NOR2X1)               0.17 &    10.00 f
+  GenerateAddress_MapCell_U0/U37/Y (AOI211X1)             0.18 &    10.18 r
   GenerateAddress_MapCell_U0/MapCell_U1/add_65/U1_3/CO (ADDFXL)
-                                                          0.71 &    10.99 r
+                                                          0.71 &    10.89 r
   GenerateAddress_MapCell_U0/MapCell_U1/add_65/U1_4/CO (ADDFXL)
-                                                          0.36 &    11.35 r
+                                                          0.35 &    11.24 r
   GenerateAddress_MapCell_U0/MapCell_U1/add_65/U1_5/S (ADDFXL)
-                                                          0.42 &    11.77 r
-  GenerateAddress_MapCell_U0/U20/Y (CLKINVX1)             0.10 &    11.87 f
-  GenerateAddress_MapCell_U0/U50/Y (OAI22XL)              0.29 &    12.16 r
-  GenerateAddress_MapCell_U0/U49/Y (AND2X2)               0.19 &    12.35 r
-  GenerateAddress_MapCell_U0/U202/Y (OAI21XL)             0.10 &    12.45 f
-  GenerateAddress_MapCell_U0/U201/Y (NAND3BX1)            0.15 &    12.60 r
-  GenerateAddress_MapCell_U0/U200/Y (AOI211X1)            0.09 &    12.69 f
+                                                          0.42 &    11.66 r
+  GenerateAddress_MapCell_U0/U20/Y (CLKINVX1)             0.09 &    11.76 f
+  GenerateAddress_MapCell_U0/U50/Y (OAI22XL)              0.29 &    12.05 r
+  GenerateAddress_MapCell_U0/U49/Y (AND2X2)               0.19 &    12.24 r
+  GenerateAddress_MapCell_U0/U202/Y (OAI21XL)             0.10 &    12.34 f
+  GenerateAddress_MapCell_U0/U201/Y (NAND3BX1)            0.16 &    12.50 r
+  GenerateAddress_MapCell_U0/U200/Y (AOI211X1)            0.11 &    12.61 f
   GenerateAddress_MapCell_U0/MapCell_U1_result_reg/D (SDFFRXL)
-                                                          0.00 &    12.69 f
-  data arrival time                                                 12.69
+                                                          0.00 &    12.61 f
+  data arrival time                                                 12.61
 
   clock clk (rise edge)                                  15.00      15.00
   clock network delay (propagated)                        0.00      15.00
@@ -104,9 +104,9 @@ Information: Percent of Arnoldi-based delays =  5.89%
   data required time                                                14.61
   --------------------------------------------------------------------------
   data required time                                                14.61
-  data arrival time                                                -12.69
+  data arrival time                                                -12.61
   --------------------------------------------------------------------------
-  slack (MET)                                                        1.92
+  slack (MET)                                                        2.00
 
 
 1
