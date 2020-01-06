@@ -1,0 +1,149 @@
+ 
+****************************************
+Report : cell
+Design : huffman
+Version: P-2019.03
+Date   : Mon Jan  6 17:53:37 2020
+****************************************
+
+Attributes:
+   BO - reference allows boundary optimization
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+CNTcounter_u/CNT_1        CNTCell_1                       1166.113791
+                                                                    h, n
+CNTcounter_u/CNT_2        CNTCell_2                       1166.113791
+                                                                    h, n
+CNTcounter_u/CNT_3        CNTCell_3                       1166.113791
+                                                                    h, n
+CNTcounter_u/CNT_4        CNTCell_4                       1181.390391
+                                                                    h, n
+CNTcounter_u/CNT_5        CNTCell_5                       1172.903391
+                                                                    h, n
+CNTcounter_u/CNT_6        CNTCell_0                       1196.666990
+                                                                    h, n
+CNTcounter_u/gray_data_g_reg[0]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[1]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[2]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[3]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[4]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[5]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[6]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[7]
+                          DFFRX1          slow            32.250599 n
+CU_U/CNT_valid_reg        DFFRX1          slow            32.250599 n
+CU_U/code_valid_reg       DFFRX1          slow            32.250599 n
+CU_U/counter_reg[0]       DFFSX1          slow            30.553200 n
+CU_U/counter_reg[1]       DFFRX1          slow            32.250599 n
+CU_U/counter_reg[2]       DFFRX1          slow            32.250599 n
+CU_U/state_reg[0]         DFFRX1          slow            32.250599 n
+CU_U/state_reg[1]         DFFRX1          slow            32.250599 n
+CU_U/state_reg[2]         DFFRX1          slow            32.250599 n
+MINmem_U/MINO1_reg[0]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO1_reg[1]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO1_reg[2]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO1_reg[3]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO1_reg[4]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO1_reg[5]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO2_reg[0]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO2_reg[1]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO2_reg[2]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO2_reg[3]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO2_reg[4]     DFFRX1          slow            32.250599 n
+MINmem_U/MINO2_reg[5]     DFFRX1          slow            32.250599 n
+PE_U/U0                   CMP3_0                          2177.764182
+                                                                    h
+PE_U/U1                   CMP3_1                          2208.317379
+                                                                    h
+PE_U/U2                   CMP2_0                          706.118409
+                                                                    h
+PE_U/U3                   CMP2_2                          728.184606
+                                                                    h
+PE_U/U4                   CMP2_1                          768.922208
+                                                                    h
+PE_U/add_69               PE_DW01_add_0                   290.255402
+                                                                    BO, h
+U1                        CLKINVX1        slow            3.394800  
+U2                        CLKINVX1        slow            3.394800  
+U3                        CLKINVX1        slow            3.394800  
+U4                        NOR2BX1         slow            6.789600  
+U5                        CLKINVX1        slow            3.394800  
+U6                        CLKINVX1        slow            3.394800  
+U7                        OAI33X1         slow            13.579200 
+U8                        NOR2BX1         slow            6.789600  
+U9                        NAND2BX1        slow            6.789600  
+U10                       NAND2X1         slow            5.092200  
+U11                       NOR2X1          slow            5.092200  
+U12                       NAND2BX1        slow            6.789600  
+U13                       OAI211X1        slow            8.487000  
+U14                       NOR2X1          slow            5.092200  
+U15                       OR2X1           slow            6.789600  
+U16                       OR2X1           slow            6.789600  
+U17                       OR2X1           slow            6.789600  
+U18                       OR2X1           slow            6.789600  
+U19                       AO22X1          slow            10.184400 
+U20                       AO22X1          slow            10.184400 
+U21                       AO22X1          slow            10.184400 
+U22                       AO22X1          slow            10.184400 
+U23                       AO22X1          slow            10.184400 
+U24                       AO22X1          slow            10.184400 
+U25                       OR2X1           slow            6.789600  
+U26                       OR2X1           slow            6.789600  
+U27                       AO22X1          slow            10.184400 
+U28                       AO22X1          slow            10.184400 
+U29                       AO22X1          slow            10.184400 
+U30                       AO22X1          slow            10.184400 
+U31                       AO22X1          slow            10.184400 
+U32                       AO22X1          slow            10.184400 
+U33                       XNOR2X1         slow            11.881800 
+U34                       NAND4X1         slow            8.487000  
+U35                       NOR3X1          slow            6.789600  
+U36                       NAND3BX1        slow            8.487000  
+U37                       NAND4BX1        slow            10.184400 
+U38                       NOR2X1          slow            5.092200  
+U39                       NAND3BX1        slow            8.487000  
+U40                       AOI21X1         slow            8.487000  
+U41                       OAI21XL         slow            6.789600  
+U42                       NOR2X1          slow            5.092200  
+U43                       OAI211X1        slow            8.487000  
+U44                       NAND3X1         slow            6.789600  
+U45                       NAND4X1         slow            8.487000  
+U46                       NOR3X1          slow            6.789600  
+U47                       NAND2X1         slow            5.092200  
+U48                       NOR4X1          slow            8.487000  
+U49                       NOR3X1          slow            6.789600  
+U50                       NOR2X1          slow            5.092200  
+U51                       NOR3X1          slow            6.789600  
+U52                       NOR2X1          slow            5.092200  
+U53                       NAND2X1         slow            5.092200  
+U54                       NOR2X1          slow            5.092200  
+U55                       XOR2X1          slow            11.881800 
+U56                       CLKINVX1        slow            3.394800  
+encoder_U/Cell[1]         EncodeCell_0                    801.172788
+                                                                    h, n
+encoder_U/Cell[2]         EncodeCell_1                    801.172788
+                                                                    h, n
+encoder_U/Cell[3]         EncodeCell_2                    801.172788
+                                                                    h, n
+encoder_U/Cell[4]         EncodeCell_3                    801.172788
+                                                                    h, n
+encoder_U/Cell[5]         EncodeCell_4                    801.172788
+                                                                    h, n
+encoder_U/Cell[6]         EncodeCell_5                    801.172788
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 102 cells                                           20054.780824
+1

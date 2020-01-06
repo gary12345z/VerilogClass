@@ -1,0 +1,49 @@
+ 
+ ***********************************************************
+ *  NOTICE:  The following DRC violations were previously  *
+ *  encountered. The presence of these violations is an    *
+ *  indicator that it is possible that the ATPG patterns   *
+ *  created during this process may fail in simulation.    *
+ *                                                         *
+ *  Rules:  N23                                            *
+ ***********************************************************
+ ATPG performed for stuck fault model using internal pattern source.
+ ----------------------------------------------------------
+ #patterns     #faults     #ATPG faults  test      process
+ stored     detect/active  red/au/abort  coverage  CPU time
+ ---------  -------------  ------------  --------  --------
+ Begin deterministic ATPG: #uncollapsed_faults=13542, abort_limit=10...
+ 32          10994   2544         2/2/0    84.07%      0.26
+ Local redundancy analysis results: #redundant_faults=12, CPU_time=0.00 sec
+ 64            876   1647         4/5/6    89.75%      0.43
+ 96            537   1106        5/8/11    93.17%      0.56
+ 128           268    806      13/32/24    94.92%      0.69
+ 160           210    561      17/63/68    96.27%      0.86
+ 192           158    382      21/80/89    97.29%      0.94
+ 224           114    267     22/80/108    98.03%      1.03
+ 254            73    191     25/80/124    98.51%      1.09
+ Pattern merging terminated due to failure to achieve minimum merges per pass (10).
+ 271            29    162     25/80/125    98.70%      1.10
+ 
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT      15427
+ Possibly detected                PT         76
+ Undetectable                     UD        515
+ ATPG untestable                  AU          4
+ Not detected                     ND        162
+ -----------------------------------------------
+ total faults                             16184
+ test coverage                            98.70%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                         271
+     #basic_scan patterns                   271
+ -----------------------------------------------
+            CPU Usage Summary Report
+ -----------------------------------------------
+ Total CPU time                            1.10
+ -----------------------------------------------

@@ -1,3 +1,4 @@
+Loading db file '/usr/cad/CBDK/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db'
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: Design has unannotated primary inputs. (PWR-414)
 Warning: Design has unannotated sequential cell outputs. (PWR-415)
@@ -7,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : huffman
 Version: P-2019.03
-Date   : Sun Jan  5 17:08:16 2020
+Date   : Sun Jan  5 17:35:14 2020
 ****************************************
 
 

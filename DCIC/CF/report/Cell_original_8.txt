@@ -3,7 +3,7 @@
 Report : cell
 Design : huffman
 Version: P-2019.03
-Date   : Sun Jan  5 17:35:14 2020
+Date   : Sun Jan  5 17:33:52 2020
 ****************************************
 
 Attributes:
@@ -15,20 +15,20 @@ Attributes:
 
 Cell                      Reference       Library             Area  Attributes
 --------------------------------------------------------------------------------
-U1                        CNTcounter                      5912.044168
+U1                        CNTcounter                      6270.195625
                                                                     h, n
-U2                        PE                              13545.251863
+U2                        PE                              15738.292675
                                                                     h
 U3                        CU                              427.744791
                                                                     h, n
-U4                        CNTmem                          25097.755843
+U4                        CNTmem                          25895.533941
                                                                     h, n
-U5                        MINmem                          7677.339996
+U5                        MINmem                          7962.503185
                                                                     h, n
 U6                        encoder                         3849.703187
                                                                     h
 U7                        encodemem                       4296.119254
                                                                     h, n
 --------------------------------------------------------------------------------
-Total 7 cells                                             60805.959102
+Total 7 cells                                             64440.092658
 1

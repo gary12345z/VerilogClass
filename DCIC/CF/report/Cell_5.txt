@@ -1,0 +1,95 @@
+ 
+****************************************
+Report : cell
+Design : huffman
+Version: P-2019.03
+Date   : Sun Jan  5 17:35:58 2020
+****************************************
+
+Attributes:
+   BO - reference allows boundary optimization
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+CNTcounter_u/CNT_1        CNTCell_1                       1417.329014
+                                                                    h, n
+CNTcounter_u/CNT_2        CNTCell_2                       1425.816015
+                                                                    h, n
+CNTcounter_u/CNT_3        CNTCell_3                       1424.118617
+                                                                    h, n
+CNTcounter_u/CNT_4        CNTCell_4                       1385.078420
+                                                                    h, n
+CNTcounter_u/CNT_5        CNTCell_5                       1405.447215
+                                                                    h, n
+CNTcounter_u/CNT_6        CNTCell_0                       1436.000411
+                                                                    h, n
+CNTcounter_u/gray_data_g_reg[0]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[1]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[2]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[3]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[4]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[5]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[6]
+                          DFFRX1          slow            32.250599 n
+CNTcounter_u/gray_data_g_reg[7]
+                          DFFRX1          slow            32.250599 n
+CU_U                      CU                              427.744791
+                                                                    h, n
+MINmem_U                  MINmem                          3111.334118
+                                                                    h, n
+PE_U/U0                   CMP3_0                          2559.679180
+                                                                    h
+PE_U/U1                   CMP3_2                          2561.376581
+                                                                    h
+PE_U/U2                   CMP2                            1138.955386
+                                                                    h
+PE_U/U3                   CMP3_1                          2627.575177
+                                                                    h
+PE_U/add_61               huffman_DW01_add_0              427.744795
+                                                                    BO, h
+U1                        OR2XL           slow            6.789600  
+U2                        OR2XL           slow            6.789600  
+U3                        OR2XL           slow            6.789600  
+U4                        OR2XL           slow            6.789600  
+U5                        OR2XL           slow            6.789600  
+U6                        OR2XL           slow            6.789600  
+U7                        CLKBUFX3        slow            6.789600  
+U8                        CLKBUFX3        slow            6.789600  
+U9                        NAND4X1         slow            8.487000  
+U10                       NOR3X1          slow            6.789600  
+U11                       NAND3BX1        slow            8.487000  
+U12                       NAND4BX1        slow            10.184400 
+U13                       NOR2X1          slow            5.092200  
+U14                       NOR3X1          slow            6.789600  
+U15                       NOR2X1          slow            5.092200  
+U16                       NOR4X1          slow            8.487000  
+U17                       NOR2X1          slow            5.092200  
+U18                       NOR3X1          slow            6.789600  
+U19                       NOR3X1          slow            6.789600  
+U20                       CLKINVX1        slow            3.394800  
+encoder_U/Cell[1]         EncodeCell_0                    724.789778
+                                                                    h, n
+encoder_U/Cell[2]         EncodeCell_1                    724.789778
+                                                                    h, n
+encoder_U/Cell[3]         EncodeCell_2                    724.789778
+                                                                    h, n
+encoder_U/Cell[4]         EncodeCell_3                    724.789778
+                                                                    h, n
+encoder_U/Cell[5]         EncodeCell_4                    724.789778
+                                                                    h, n
+encoder_U/Cell[6]         EncodeCell_5                    724.789778
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 47 cells                                            26090.735180
+1

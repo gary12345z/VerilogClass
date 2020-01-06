@@ -3,7 +3,7 @@
 Report : cell
 Design : huffman
 Version: P-2019.03
-Date   : Sun Jan  5 17:40:36 2020
+Date   : Sun Jan  5 17:36:35 2020
 ****************************************
 
 Attributes:
@@ -26,7 +26,7 @@ CNTcounter_u/CNT_4        CNTCell_4                       1147.442392
                                                                     h, n
 CNTcounter_u/CNT_5        CNTCell_5                       1147.442392
                                                                     h, n
-CNTcounter_u/CNT_6        CNTCell_0                       1147.442392
+CNTcounter_u/CNT_6        CNTCell_0                       1188.179991
                                                                     h, n
 CNTcounter_u/gray_data_g_reg[0]
                           DFFRX1          slow            32.250599 n
@@ -48,15 +48,15 @@ CU_U                      CU                              427.744791
                                                                     h, n
 MINmem_U                  MINmem                          3024.766722
                                                                     h, n
-PE_U/U0                   CMP3_0                          2143.816182
+PE_U/U0                   CMP3_0                          2257.541978
                                                                     h
-PE_U/U1                   CMP3_2                          2167.579782
+PE_U/U1                   CMP3_2                          2243.962782
                                                                     h
-PE_U/U2                   CMP2                            699.328809
+PE_U/U2                   CMP2                            738.369008
                                                                     h
-PE_U/U3                   CMP3_1                          2172.671982
+PE_U/U3                   CMP3_1                          2238.870582
                                                                     h
-PE_U/add_61               PE_DW01_add_0                   281.768406
+PE_U/add_61               PE_DW01_add_0                   308.926800
                                                                     BO, h
 U1                        CLKINVX1        slow            3.394800  
 U2                        CLKINVX1        slow            3.394800  
@@ -69,11 +69,11 @@ U8                        OR2X1           slow            6.789600
 U9                        OR2X1           slow            6.789600  
 U10                       OR2X1           slow            6.789600  
 U11                       CLKBUFX3        slow            6.789600  
-U12                       NAND3BX1        slow            8.487000  
-U13                       NAND4BX1        slow            10.184400 
-U14                       NOR2X1          slow            5.092200  
-U15                       NAND4X1         slow            8.487000  
-U16                       NOR3X1          slow            6.789600  
+U12                       NAND4X1         slow            8.487000  
+U13                       NOR3X1          slow            6.789600  
+U14                       NAND3BX1        slow            8.487000  
+U15                       NAND4BX1        slow            10.184400 
+U16                       NOR2X1          slow            5.092200  
 U17                       CLKBUFX3        slow            6.789600  
 U18                       NOR3X1          slow            6.789600  
 U19                       NOR4X1          slow            8.487000  
@@ -95,5 +95,5 @@ encoder_U/Cell[5]         EncodeCell_4                    734.974178
 encoder_U/Cell[6]         EncodeCell_5                    731.579378
                                                                     h, n
 --------------------------------------------------------------------------------
-Total 51 cells                                            22622.946884
+Total 51 cells                                            22986.190471
 1

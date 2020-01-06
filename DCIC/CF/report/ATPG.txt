@@ -1,0 +1,38 @@
+ ***********************************************************
+ *  NOTICE:  The following DRC violations were previously  *
+ *  encountered. The presence of these violations is an    *
+ *  indicator that it is possible that the ATPG patterns   *
+ *  created during this process may fail in simulation.    *
+ *                                                         *
+ *  Rules:  N23                                            *
+ ***********************************************************
+ ATPG performed for stuck fault model using internal pattern source.
+ 
+ ------------------------------------------------------------
+ Begin Full-Sequential ATPG for 242 uncollapsed faults ...
+  --- abort limit : 10 seconds, NO BACKTRACK LIMIT
+ ------------------------------------------------------------
+ #patterns  #faults        #ATPG faults  test       process  
+ stored     detect/active  red/au/abort  coverage   CPU time 
+ ---------  -------------  ------------  --------  ----------
+ 271               0    242         0/0/2     98.70%        33.12
+ Error: User interrupt issued, Sequential Test Generation process is terminated. (M10)
+ 
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT      15427
+ Possibly detected                PT         76
+ Undetectable                     UD        515
+ ATPG untestable                  AU          0
+ Not detected                     ND        166
+ -----------------------------------------------
+ total faults                             16184
+ test coverage                            98.70%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                         271
+     #basic_scan patterns                   271
+ -----------------------------------------------

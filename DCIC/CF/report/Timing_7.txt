@@ -1,0 +1,103 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : huffman
+Version: P-2019.03
+Date   : Sun Jan  5 17:36:19 2020
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: CNTcounter_u/CNT_4/CNT_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: CNTcounter_u/CNT_6/CNT_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  CNTcounter_u/CNT_4/CNT_reg[2]/CK (DFFSRX1)              0.00       3.50 r
+  CNTcounter_u/CNT_4/CNT_reg[2]/Q (DFFSRX1)               0.52       4.02 f
+  CNTcounter_u/CNT_4/CNT[2] (CNTCell_4)                   0.00       4.02 f
+  PE_U/U1/Ain[2] (CMP3_2)                                 0.00       4.02 f
+  PE_U/U1/U28/Y (CLKINVX1)                                0.12       4.14 r
+  PE_U/U1/U72/Y (NAND2XL)                                 0.07       4.21 f
+  PE_U/U1/U240/Y (AND2X1)                                 0.19       4.40 f
+  PE_U/U1/U71/Y (NOR2XL)                                  0.14       4.53 r
+  PE_U/U1/U109/Y (NOR3BX1)                                0.09       4.63 f
+  PE_U/U1/U17/Y (NAND2X1)                                 0.09       4.72 r
+  PE_U/U1/U16/Y (NAND3X1)                                 0.08       4.79 f
+  PE_U/U1/U111/Y (NAND2BX1)                               0.08       4.88 r
+  PE_U/U1/U187/Y (AND2X2)                                 0.12       5.00 r
+  PE_U/U1/U186/Y (OR2X1)                                  0.14       5.13 r
+  PE_U/U1/U73/Y (AND3X4)                                  0.16       5.30 r
+  PE_U/U1/U32/Y (INVX3)                                   0.05       5.34 f
+  PE_U/U1/U81/Y (NOR2X2)                                  0.17       5.51 r
+  PE_U/U1/U8/Y (AOI21X2)                                  0.13       5.65 f
+  PE_U/U1/U238/Y (OAI222X1)                               0.29       5.94 r
+  PE_U/U1/Cout[2] (CMP3_2)                                0.00       5.94 r
+  PE_U/U2/Bin[2] (CMP2)                                   0.00       5.94 r
+  PE_U/U2/U99/Y (INVX1)                                   0.09       6.02 f
+  PE_U/U2/U36/Y (OAI32X1)                                 0.22       6.24 r
+  PE_U/U2/U35/Y (INVX1)                                   0.08       6.32 f
+  PE_U/U2/U75/Y (AOI21X1)                                 0.14       6.47 r
+  PE_U/U2/U73/Y (NAND3X1)                                 0.09       6.55 f
+  PE_U/U2/U46/Y (NAND3X1)                                 0.10       6.65 r
+  PE_U/U2/U45/Y (NAND3X1)                                 0.09       6.75 f
+  PE_U/U2/U82/Y (NAND3X1)                                 0.09       6.84 r
+  PE_U/U2/U79/Y (NAND4X1)                                 0.09       6.93 f
+  PE_U/U2/U15/Y (NAND2X1)                                 0.14       7.07 r
+  PE_U/U2/U24/Y (NOR2X1)                                  0.09       7.17 f
+  PE_U/U2/U5/Y (CLKMX2X2)                                 0.22       7.39 f
+  PE_U/U2/Aout[3] (CMP2)                                  0.00       7.39 f
+  PE_U/U3/Cin[3] (CMP3_1)                                 0.00       7.39 f
+  PE_U/U3/U2/Y (AND2X2)                                   0.17       7.56 f
+  PE_U/U3/U1/Y (OAI32X1)                                  0.19       7.74 r
+  PE_U/U3/U26/Y (INVXL)                                   0.07       7.82 f
+  PE_U/U3/U169/Y (OAI2BB2X1)                              0.21       8.02 f
+  PE_U/U3/U244/Y (OAI33X1)                                0.15       8.18 r
+  PE_U/U3/U242/Y (AO21X4)                                 0.17       8.35 r
+  PE_U/U3/U243/Y (AOI32X2)                                0.06       8.41 f
+  PE_U/U3/U246/Y (OA21X4)                                 0.18       8.60 f
+  PE_U/U3/U29/Y (NOR2X2)                                  0.10       8.69 r
+  PE_U/U3/U74/Y (AOI211X2)                                0.11       8.81 f
+  PE_U/U3/U6/Y (OAI2BB1X2)                                0.25       9.06 f
+  PE_U/U3/U5/Y (INVX4)                                    0.08       9.15 r
+  PE_U/U3/U97/Y (OR2XL)                                   0.14       9.29 r
+  PE_U/U3/U13/Y (NAND3X1)                                 0.11       9.40 f
+  PE_U/U3/Cout[10] (CMP3_1)                               0.00       9.40 f
+  PE_U/add_61/A[3] (huffman_DW01_add_1)                   0.00       9.40 f
+  PE_U/add_61/U94/Y (NOR2X1)                              0.16       9.56 r
+  PE_U/add_61/U62/Y (NOR2X1)                              0.09       9.64 f
+  PE_U/add_61/U97/Y (AOI21X1)                             0.24       9.88 r
+  PE_U/add_61/U75/Y (OAI21X1)                             0.10       9.98 f
+  PE_U/add_61/U102/Y (XNOR2X1)                            0.11      10.10 r
+  PE_U/add_61/SUM[7] (huffman_DW01_add_1)                 0.00      10.10 r
+  CNTcounter_u/CNT_6/CNT_n[14] (CNTCell_0)                0.00      10.10 r
+  CNTcounter_u/CNT_6/U32/Y (NAND2X1)                      0.08      10.17 f
+  CNTcounter_u/CNT_6/U29/Y (NAND3X1)                      0.12      10.29 r
+  CNTcounter_u/CNT_6/CNT_reg[14]/D (DFFSRX1)              0.00      10.29 r
+  data arrival time                                                 10.29
+
+  clock clk (rise edge)                                  10.50      10.50
+  clock network delay (ideal)                             0.00      10.50
+  CNTcounter_u/CNT_6/CNT_reg[14]/CK (DFFSRX1)             0.00      10.50 r
+  library setup time                                     -0.21      10.29
+  data required time                                                10.29
+  --------------------------------------------------------------------------
+  data required time                                                10.29
+  data arrival time                                                -10.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

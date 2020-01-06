@@ -8,7 +8,7 @@ Report : timing
         -sort_by group
 Design : huffman
 Version: P-2019.03
-Date   : Sun Jan  5 17:08:16 2020
+Date   : Sun Jan  5 17:35:13 2020
 ****************************************
 
 Operating Conditions: slow   Library: slow
