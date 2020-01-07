@@ -12,38 +12,36 @@
  #patterns     #faults     #ATPG faults  test      process
  stored     detect/active  red/au/abort  coverage  CPU time
  ---------  -------------  ------------  --------  --------
- Begin deterministic ATPG: #uncollapsed_faults=13542, abort_limit=10...
- 32          10994   2544         2/2/0    84.07%      0.26
- Local redundancy analysis results: #redundant_faults=12, CPU_time=0.00 sec
- 64            876   1647         4/5/6    89.75%      0.43
- 96            537   1106        5/8/11    93.17%      0.56
- 128           268    806      13/32/24    94.92%      0.69
- 160           210    561      17/63/68    96.27%      0.86
- 192           158    382      21/80/89    97.29%      0.94
- 224           114    267     22/80/108    98.03%      1.03
- 254            73    191     25/80/124    98.51%      1.09
- Pattern merging terminated due to failure to achieve minimum merges per pass (10).
- 271            29    162     25/80/125    98.70%      1.10
+ Begin deterministic ATPG: #uncollapsed_faults=12850, abort_limit=10...
+ 32          10478   2370         0/2/0    84.49%      0.22
+ 64           1154   1214         0/4/5    92.18%      0.35
+ 96            376    834         2/6/7    94.69%      0.45
+ 128           210    600       9/23/12    96.13%      0.54
+ Local redundancy analysis results: #redundant_faults=4, CPU_time=0.00 sec
+ 160           223    350      13/42/19    97.66%      0.60
+ 192           127    199      19/60/24    98.54%      0.66
+ 224            88     87      24/79/33    99.15%      0.70
+ 250            46     40      25/79/43    99.46%      0.73
  
      Uncollapsed Stuck Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT      15427
+ Detected                         DT      14862
  Possibly detected                PT         76
- Undetectable                     UD        515
- ATPG untestable                  AU          4
- Not detected                     ND        162
+ Undetectable                     UD        503
+ ATPG untestable                  AU          3
+ Not detected                     ND         40
  -----------------------------------------------
- total faults                             16184
- test coverage                            98.70%
+ total faults                             15484
+ test coverage                            99.46%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                         271
-     #basic_scan patterns                   271
+ #internal patterns                         250
+     #basic_scan patterns                   250
  -----------------------------------------------
             CPU Usage Summary Report
  -----------------------------------------------
- Total CPU time                            1.10
+ Total CPU time                            0.73
  -----------------------------------------------

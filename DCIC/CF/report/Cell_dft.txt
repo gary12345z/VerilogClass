@@ -3,7 +3,7 @@
 Report : cell
 Design : huffman
 Version: P-2019.03
-Date   : Mon Jan  6 12:41:14 2020
+Date   : Mon Jan  6 21:44:21 2020
 ****************************************
 
 Attributes:
@@ -21,11 +21,11 @@ CNTcounter_u/CNT_2        CNTCell_2_test_1                1267.957797
                                                                     h, n
 CNTcounter_u/CNT_3        CNTCell_3_test_1                1267.957797
                                                                     h, n
-CNTcounter_u/CNT_4        CNTCell_4_test_1                1271.352597
+CNTcounter_u/CNT_4        CNTCell_4_test_1                1286.629194
                                                                     h, n
 CNTcounter_u/CNT_5        CNTCell_5_test_1                1274.747397
                                                                     h, n
-CNTcounter_u/CNT_6        CNTCell_0_test_1                1269.655197
+CNTcounter_u/CNT_6        CNTCell_0_test_1                1298.510996
                                                                     h, n
 CNTcounter_u/gray_data_g_reg[0]
                           SDFFRXL         slow            40.737598 n
@@ -50,7 +50,7 @@ CU_U/counter_reg[1]       SDFFRXL         slow            40.737598 n
 CU_U/counter_reg[2]       SDFFRXL         slow            40.737598 n
 CU_U/state_reg[0]         SDFFRXL         slow            40.737598 n
 CU_U/state_reg[1]         SDFFRXL         slow            40.737598 n
-CU_U/state_reg[2]         SDFFRXL         slow            40.737598 n
+CU_U/state_reg[2]         SDFFRX1         slow            40.737598 n
 MINmem_U/MINO1_reg[0]     SDFFRXL         slow            40.737598 n
 MINmem_U/MINO1_reg[1]     SDFFRXL         slow            40.737598 n
 MINmem_U/MINO1_reg[2]     SDFFRXL         slow            40.737598 n
@@ -63,15 +63,17 @@ MINmem_U/MINO2_reg[2]     SDFFRXL         slow            40.737598 n
 MINmem_U/MINO2_reg[3]     SDFFRXL         slow            40.737598 n
 MINmem_U/MINO2_reg[4]     SDFFRXL         slow            40.737598 n
 MINmem_U/MINO2_reg[5]     SDFFRXL         slow            40.737598 n
-PE_U/U0                   CMP3_0                          2191.343380
+PE_U/U0                   CMP3_0                          2177.764182
                                                                     h
-PE_U/U1                   CMP3_2                          2186.251182
+PE_U/U1                   CMP3_1                          2208.317379
                                                                     h
-PE_U/U2                   CMP2                            738.369001
+PE_U/U2                   CMP2_0                          706.118409
                                                                     h
-PE_U/U3                   CMP3_1                          2204.922581
+PE_U/U3                   CMP2_2                          728.184606
                                                                     h
-PE_U/add_61               PE_DW01_add_0                   293.650200
+PE_U/U4                   CMP2_1                          768.922208
+                                                                    h
+PE_U/add_69               PE_DW01_add_0                   290.255402
                                                                     h
 U1                        CLKINVX1        slow            3.394800  
 U2                        CLKINVX1        slow            3.394800  
@@ -88,15 +90,15 @@ U12                       NAND2BX1        slow            6.789600
 U13                       OAI211X1        slow            8.487000  
 U14                       NOR2X1          slow            5.092200  
 U15                       OR2X1           slow            6.789600  
-U16                       AO22X1          slow            10.184400 
-U17                       AO22X1          slow            10.184400 
-U18                       AO22X1          slow            10.184400 
+U16                       OR2X1           slow            6.789600  
+U17                       OR2X1           slow            6.789600  
+U18                       OR2X1           slow            6.789600  
 U19                       AO22X1          slow            10.184400 
 U20                       AO22X1          slow            10.184400 
 U21                       AO22X1          slow            10.184400 
-U22                       OR2X1           slow            6.789600  
-U23                       OR2X1           slow            6.789600  
-U24                       OR2X1           slow            6.789600  
+U22                       AO22X1          slow            10.184400 
+U23                       AO22X1          slow            10.184400 
+U24                       AO22X1          slow            10.184400 
 U25                       OR2X1           slow            6.789600  
 U26                       OR2X1           slow            6.789600  
 U27                       AO22X1          slow            10.184400 
@@ -129,9 +131,6 @@ U53                       NAND2X1         slow            5.092200
 U54                       NOR2X1          slow            5.092200  
 U55                       XOR2X1          slow            11.881800 
 U56                       CLKINVX1        slow            3.394800  
-U57                       INVXL           slow            3.394800  
-U58                       INVXL           slow            3.394800  
-U59                       INVXL           slow            3.394800  
 encoder_U/Cell[1]         EncodeCell_0_test_1             936.964780
                                                                     h, n
 encoder_U/Cell[2]         EncodeCell_1_test_1             936.964780
@@ -145,5 +144,5 @@ encoder_U/Cell[5]         EncodeCell_4_test_1             936.964780
 encoder_U/Cell[6]         EncodeCell_5_test_1             936.964780
                                                                     h, n
 --------------------------------------------------------------------------------
-Total 104 cells                                           22422.653758
+Total 102 cells                                           21721.627595
 1
